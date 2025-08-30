@@ -52,6 +52,15 @@
   <build>
   <testSourceDirectory>src/main/java</testSourceDirectory>
   <plugins>
+  <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.8.1</version> <!-- Make sure this is the version you're using -->
+      <configuration>
+        <source>1.8</source>  <!-- Set Java version to 1.8 -->
+        <target>1.8</target>  <!-- Set Java version to 1.8 -->
+      </configuration>
+    </plugin>
    </plugins>
   </build>
 </project>
