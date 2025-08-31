@@ -26,7 +26,7 @@ public class Generic_codes {
 		
 	}
 	
-    public void WebElementWaits(List<WebElement> elements){
+    public void WebElementWait(List<WebElement> elements){
 		
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
 		

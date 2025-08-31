@@ -2,20 +2,20 @@
 <testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-30T23:14:27 IST" name="Default suite" finished-at="2025-08-30T23:14:35 IST" duration-ms="8755">
+  <suite started-at="2025-08-31T20:35:33 IST" name="Default suite" finished-at="2025-08-31T20:36:01 IST" duration-ms="28321">
     <groups>
     </groups>
-    <test started-at="2025-08-30T23:14:27 IST" name="Default test" finished-at="2025-08-30T23:14:35 IST" duration-ms="8755">
+    <test started-at="2025-08-31T20:35:33 IST" name="Default test" finished-at="2025-08-31T20:36:01 IST" duration-ms="28321">
       <class name="Whippets.com.Admin.Product_module">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Product_module@78691363]" started-at="2025-08-30T23:14:27 IST" name="Setup" finished-at="2025-08-30T23:14:29 IST" duration-ms="2289" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Product_module@78691363]" started-at="2025-08-31T20:35:33 IST" name="Setup" finished-at="2025-08-31T20:35:52 IST" duration-ms="19347" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="Product_list_Accessor()[pri:0, instance:Whippets.com.Admin.Product_module@78691363]" started-at="2025-08-30T23:14:29 IST" name="Product_list_Accessor" finished-at="2025-08-30T23:14:35 IST" duration-ms="5820" status="PASS">
+        <test-method signature="Product_list_Accessor()[pri:0, instance:Whippets.com.Admin.Product_module@78691363]" started-at="2025-08-31T20:35:52 IST" name="Product_list_Accessor" finished-at="2025-08-31T20:36:00 IST" duration-ms="8012" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Product_list_Accessor -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Product_module@78691363]" started-at="2025-08-30T23:14:35 IST" name="Process_Kill" finished-at="2025-08-30T23:14:35 IST" duration-ms="616" status="PASS">
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Product_module@78691363]" started-at="2025-08-31T20:36:00 IST" name="Process_Kill" finished-at="2025-08-31T20:36:01 IST" duration-ms="926" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Process_Kill -->

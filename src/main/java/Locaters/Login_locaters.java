@@ -40,7 +40,7 @@ public class Login_locaters extends Generic_codes{
 		WebElementWait(Banner_Text);
 		return Banner_Text;}
 	    public List <WebElement> all_input_feilds(){
-		WebElementWaits(all_input_feilds);
+	    WebElementWait(all_input_feilds);
 		return all_input_feilds;}
 		public WebElement submit_button(){
 		WebElementWait(submit_button);

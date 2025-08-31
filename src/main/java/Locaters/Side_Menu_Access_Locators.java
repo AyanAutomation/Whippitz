@@ -34,7 +34,7 @@ public class Side_Menu_Access_Locators extends Generic_codes{
     public List<WebElement> Sidemenus(){
     sidebar();
     List<WebElement> Sidemenus = sidebar().findElements(By.xpath(".//a[@href='#']"));
-    WebElementWaits(Sidemenus);
+    WebElementWait(Sidemenus);
     return Sidemenus;} 
     public WebElement Product_Submenu_list(){
     WebElementWait(Product_Submenu_list);
@@ -42,7 +42,7 @@ public class Side_Menu_Access_Locators extends Generic_codes{
     public List<WebElement> options(){
     Product_Submenu_list();
     List<WebElement> options = Product_Submenu_list().findElements(By.xpath(".//a"));
-    WebElementWaits(options);
+    WebElementWait(options);
     return options;}
     public WebElement page_title(){
     WebElementWait(page_title);
