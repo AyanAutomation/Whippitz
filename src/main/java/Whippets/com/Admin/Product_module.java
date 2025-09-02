@@ -3,6 +3,8 @@ package Whippets.com.Admin;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeSet;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Listeners;
@@ -21,6 +23,7 @@ public class Product_module extends Side_Menu_options_Accessor{
 		
 		Product_Module_locaters p = new Product_Module_locaters(d);
 		
+		products.clear();
 		Product_menu_Accessor("Product List");
 		p.select_dropdown();
 		Select s = new Select(p.select_dropdown());
@@ -34,14 +37,22 @@ public class Product_module extends Side_Menu_options_Accessor{
 			System.out.println();}}
 		
 		
+	@Test	
+	public void Duplicate_value_checker()throws IOException, InterruptedException{
 		
-	public void Duplicate_value_checker(){
-		
-		
-		
-		
+		Product_Module_locaters p = new Product_Module_locaters(d);
 		
 		
+		Product_list_Accessor();
+		TreeSet<String> Uniqueproductset = new TreeSet<String>();
+		
+		for(String Product:products){
+			
+			
+			System.out.println(Uniqueproductset.contains(Product) ? " Duplicate product found "+ Product+" Testcase Failed" :"Duplicate product not found testcase Passed");
+			System.out.println();	
+			Uniqueproductset.add(Product);
+		}
 		
 		
 		

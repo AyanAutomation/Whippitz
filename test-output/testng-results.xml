@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-31T20:35:33 IST" name="Default suite" finished-at="2025-08-31T20:36:01 IST" duration-ms="28321">
+  <suite started-at="2025-09-02T13:43:55 IST" name="Default suite" finished-at="2025-09-02T13:44:03 IST" duration-ms="7976">
     <groups>
     </groups>
-    <test started-at="2025-08-31T20:35:33 IST" name="Default test" finished-at="2025-08-31T20:36:01 IST" duration-ms="28321">
+    <test started-at="2025-09-02T13:43:55 IST" name="Default test" finished-at="2025-09-02T13:44:03 IST" duration-ms="7976">
       <class name="Whippets.com.Admin.Product_module">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Product_module@78691363]" started-at="2025-08-31T20:35:33 IST" name="Setup" finished-at="2025-08-31T20:35:52 IST" duration-ms="19347" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Product_module@1f59a598]" started-at="2025-09-02T13:43:55 IST" name="Setup" finished-at="2025-09-02T13:43:57 IST" duration-ms="1672" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="Product_list_Accessor()[pri:0, instance:Whippets.com.Admin.Product_module@78691363]" started-at="2025-08-31T20:35:52 IST" name="Product_list_Accessor" finished-at="2025-08-31T20:36:00 IST" duration-ms="8012" status="PASS">
+        <test-method signature="Duplicate_value_checker()[pri:0, instance:Whippets.com.Admin.Product_module@1f59a598]" started-at="2025-09-02T13:43:57 IST" name="Duplicate_value_checker" finished-at="2025-09-02T13:44:03 IST" duration-ms="6098" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Product_list_Accessor -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Product_module@78691363]" started-at="2025-08-31T20:36:00 IST" name="Process_Kill" finished-at="2025-08-31T20:36:01 IST" duration-ms="926" status="PASS">
+        </test-method> <!-- Duplicate_value_checker -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Product_module@1f59a598]" started-at="2025-09-02T13:44:03 IST" name="Process_Kill" finished-at="2025-09-02T13:44:03 IST" duration-ms="165" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Process_Kill -->

@@ -14,6 +14,7 @@ public class Base {
 	
 	public String id;
 	public String pass;
+	public String URL;
 	
 	public WebDriver d;
 	
@@ -25,7 +26,8 @@ public class Base {
 		Data_Reader file = new Data_Reader();
 		id = file.ReadFile("Id");
 		pass = file.ReadFile("Pass");
-		String browsername = file.ReadFile("Browser1");
+		URL = System.getProperty("urls")!=null ? System.getProperty("urls") : file.ReadFile("Url");
+        String browsername = System.getProperty("Browser")!=null ? System.getProperty("Browser") : file.ReadFile("Browser1");
 		
 		if(browsername.equalsIgnoreCase("chrome")){
 			
@@ -35,9 +37,7 @@ public class Base {
 		if(browsername.equalsIgnoreCase("firefox")){
 			WebDriverManager.firefoxdriver().setup();
 			d = new FirefoxDriver();
-			
-			
-		}}
+			}}
 	
 	
 	@AfterMethod

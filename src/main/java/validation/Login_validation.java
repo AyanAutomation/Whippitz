@@ -18,7 +18,7 @@ public class Login_validation extends Base{
 		Data_Reader file = new Data_Reader();
 		Login_locaters p = new Login_locaters(d);
 		
-		d.navigate().to(file.ReadFile("Url"));
+		d.navigate().to(URL);
 		d.manage().window().maximize();	
 		p.Banner_Text();
 		p.all_input_feilds().get(0).sendKeys(id);
