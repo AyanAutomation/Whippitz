@@ -51,16 +51,46 @@ public class Product_module extends Side_Menu_options_Accessor{
 			
 			System.out.println(Uniqueproductset.contains(Product) ? " Duplicate product found "+ Product+" Testcase Failed" :"Duplicate product not found testcase Passed");
 			System.out.println();	
-			Uniqueproductset.add(Product);
+			Uniqueproductset.add(Product);}}
+		
+		@Test
+	     public void Product_search() throws IOException, InterruptedException{
+	    	 
+	    	 Product_Module_locaters p = new Product_Module_locaters(d); 
+	    	
+	    	 Product_list_Accessor();
+	    	 String Productname = products.get(2);
+	    	 
+	    	 p.search_box().sendKeys(Productname);
+	    	 Thread.sleep(800);
+	    	 System.out.println(Productname.equalsIgnoreCase(p.Second_column().get(0).getText().trim())? "Testcase Passsed Search Working":"Testcase Failed Search not working");
+	    	 System.out.println();
+	     }
+	
+	
+		@Test
+		public void product_delete() throws IOException, InterruptedException{
+			
+			Product_Module_locaters p = new Product_Module_locaters(d);
+			
+			try {
+				
+				p.Delete_buttons().get(0).click();
+				p.Delete_button().click();
+			}
+			catch(Exception ko) {
+				Product_list_Accessor();
+				p.Delete_buttons().get(0).click();
+				p.Delete_button().click();}}
+		
+		
+		public void product_list_countcheck(){
+			
+			
+			
 		}
 		
-		
-		
-		
-	}
-		
-		
-		
+	
 	}
 	
 

@@ -19,7 +19,7 @@ public class Generic_codes {
 	
 	public void WebElementWait(WebElement element){
 		
-		WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
+		WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(5));
 		
 		w.until(ExpectedConditions.visibilityOf(element));
 		
