@@ -23,7 +23,27 @@ public class Product_Module_locaters extends Generic_codes{
 	@FindBy(xpath="//i[@class='fas fa-trash delete-icon']")
 	private List <WebElement> Delete_buttons; 
 	@FindBy(xpath="//*[@class='sweet-alert showSweetAlert visible']")
-	private WebElement  Delete_popup; /*
+	private WebElement  Delete_popup; 
+	@FindBy(xpath="//form")
+	private WebElement  Add_Edit_form; 
+	@FindBy(xpath="//iframe")
+	private WebElement  Description_frame; 
+	@FindBy(xpath="//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']")
+	private WebElement  Description_ck_Editor; 
+	@FindBy(xpath="//input[@placeholder='Enter Product Discount Price']")
+	private WebElement  discount_field; /*
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -58,16 +78,61 @@ public class Product_Module_locaters extends Generic_codes{
     Delete_popup();
     WebElement Delete_button = Delete_popup().findElement(By.xpath(".//button[@class='confirm']"));
     WebElementWait(Delete_button);
-    return Delete_button;} /*
+    return Delete_button;} 
+    public WebElement Add_Edit_form(){
+    WebElementWait(Add_Edit_form);
+    return Add_Edit_form;} 
+    public List <WebElement> input_fields(){
+    Add_Edit_form();
+    List<WebElement> input_fields = Add_Edit_form().findElements(By.xpath(".//input[@class='form-control required']"));
+    WebElementWait(input_fields);
+    return input_fields;}
+    public WebElement Product_type_dropdowns(){
+    Add_Edit_form();
+    WebElement Product_type_dropdowns = Add_Edit_form().findElement(By.xpath(".//select[@name='product_type']"));
+    WebElementWait(Product_type_dropdowns);
+    return Product_type_dropdowns;} 
+    public WebElement Discount_type_dropdowns(){
+    Add_Edit_form();
+    WebElement Discount_type_dropdowns = Add_Edit_form().findElement(By.xpath(".//select[@name='discount_type']"));
+    WebElementWait(Discount_type_dropdowns);
+    return Discount_type_dropdowns;} 
+    public WebElement Description_frame(){
+    WebElementWait(Description_frame);
+    return Description_frame;} 
+    public WebElement Description_ck_Editor(){
+    WebElementWait(Description_ck_Editor);
+    return Description_ck_Editor;} 
+    public WebElement form_submit_button() throws InterruptedException{
+    Add_Edit_form();
+    WebElement form_submit_button = Add_Edit_form().findElement(By.xpath(".//button"));
+    WebElementWait(form_submit_button);
+    Scroll_into_view(form_submit_button);
+    return form_submit_button;}  
+    public WebElement discount_field(){
+    WebElementWait(discount_field);
+    return discount_field;} /*
     public WebElement (){
     WebElementWait();
-    return ;}
+    return ;} 
     public WebElement (){
     WebElementWait();
-    return ;}
+    return ;} 
     public WebElement (){
     WebElementWait();
-    return ;} */
+    return ;} 
+    public WebElement (){
+    WebElementWait();
+    return ;} 
+    public WebElement (){
+    WebElementWait();
+    return ;} 
+    public WebElement (){
+    WebElementWait();
+    return ;} 
+    public WebElement (){
+    WebElementWait();
+    return ;}  */
     
     
 

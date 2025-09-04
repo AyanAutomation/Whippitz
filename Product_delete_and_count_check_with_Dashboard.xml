@@ -3,7 +3,12 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="Whippets.com.Admin.AppTest"/>
+      <class name="Whippets.com.Admin.Product_module">
+      <methods>
+      <include name="product_delete"/>
+       <include name="product_list_count_Check_with_Dashboard"/>
+      </methods>
+      </class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
