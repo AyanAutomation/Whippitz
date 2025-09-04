@@ -159,13 +159,10 @@ public class Product_module extends Side_Menu_options_Accessor{
 		  @Test(dataProvider="getProductData")
 		  public void Added_Product_search_and_delete(TreeMap<String, Object> Prod) throws IOException, InterruptedException{
 			  
-			  
-			  Product_search(String.valueOf(Prod.get("Product Name")));
+              Product_search(String.valueOf(Prod.get("Product Name")));
 			  product_delete();
 			  
-			  
-			  
-		  }
+			 }
 		  
 		  
 		  
