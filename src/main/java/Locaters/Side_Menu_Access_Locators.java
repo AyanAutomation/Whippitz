@@ -15,9 +15,9 @@ public class Side_Menu_Access_Locators extends Generic_codes{
 	
 	@FindBy(xpath="//*[@class='sidebar']")
 	private WebElement  sidebar; 
-	@FindBy(xpath="(//*[@class='nav nav-treeview'])[1]")
+	@FindBy(xpath="//li[contains(@class, 'av-item menu-is-open')]")
 	private WebElement Product_Submenu_list;
-	@FindBy(xpath="//h3")
+    @FindBy(xpath="//h3")
 	private WebElement page_title; /*
 	@FindBy(xpath="")
 	private WebElement  ; */

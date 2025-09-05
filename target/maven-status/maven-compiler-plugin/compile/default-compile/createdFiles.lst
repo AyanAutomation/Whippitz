@@ -10,4 +10,5 @@ Whippets\com\Admin\Login.class
 Whippets\com\Admin\Product_module.class
 Locaters\Login_locaters.class
 Locaters\Product_Module_locaters.class
+Whippets\com\Admin\Customer_Module.class
 Whippets\com\Admin\Side_Menu_options_Accessor.class
