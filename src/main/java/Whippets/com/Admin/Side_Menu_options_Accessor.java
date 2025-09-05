@@ -27,20 +27,20 @@ public class Side_Menu_options_Accessor extends Login{
 	
 	
 	
-	public void Product_menu_Accessor(String desiredoption) throws IOException, InterruptedException{
+	public void menu_Accessor(String MenuOption, String Submenu_option ) throws IOException, InterruptedException{
 		
 		Side_Menu_Access_Locators p = new Side_Menu_Access_Locators(d);
 		
 		side_menu();
 		for(WebElement menu_item:menu_itemsList ){
 			
-			if(menu_item.getText().contains("Products")){
+			if(menu_item.getText().contains(MenuOption)){
 				
 				menu_item.click();
 			    p.Product_Submenu_list();
 			    List<WebElement> product_submenuoptionsElments = p.options();
 			    for(WebElement op:product_submenuoptionsElments){
-			    	if(op.getText().contains(desiredoption)){
+			    	if(op.getText().contains(Submenu_option)){
 			    		
 			    		op.click();
 			    		Thread.sleep(600);

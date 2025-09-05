@@ -30,7 +30,7 @@ public class Product_module extends Side_Menu_options_Accessor{
 		Product_Module_locaters p = new Product_Module_locaters(d);
 		
 		products.clear();
-		Product_menu_Accessor("Product List");
+		menu_Accessor("Products","Product List");
 		p.select_dropdown();
 		Select s = new Select(p.select_dropdown());
 		s.selectByVisibleText("100");
@@ -86,7 +86,7 @@ public class Product_module extends Side_Menu_options_Accessor{
 			Product_Module_locaters p = new Product_Module_locaters(d);
 			
 			products.clear();
-			Product_menu_Accessor("Product List");
+			menu_Accessor("Products","Product List");
 			p.select_dropdown();
 			Select s = new Select(p.select_dropdown());
 			s.selectByVisibleText("100");
@@ -142,8 +142,7 @@ public class Product_module extends Side_Menu_options_Accessor{
 		  Login_locaters ll = new Login_locaters(d);
 		  
 		  
-		
-		  Product_menu_Accessor("Add Product");
+		  menu_Accessor("Products","Add Product");
 		  p.Add_Edit_form();
 		  Astrix_mandatory_count_checker();
 		  p.input_fields();
