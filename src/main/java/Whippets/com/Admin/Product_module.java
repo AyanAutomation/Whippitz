@@ -21,7 +21,8 @@ import Repeative_codes.Generic_codes;
 public class Product_module extends Side_Menu_options_Accessor{
 	
 	List<String> products = new ArrayList<String>(); 
-	
+	TreeSet<String> Uniqueproductset = new TreeSet<String>();
+	List<String> duplicates = new ArrayList<String>();
 	@Test
 	public void Product_list_Accessor() throws IOException, InterruptedException{
 		
@@ -41,30 +42,41 @@ public class Product_module extends Side_Menu_options_Accessor{
 	@Test	
 	public void Duplicate_value_checker()throws IOException, InterruptedException{
 		
-		Product_Module_locaters p = new Product_Module_locaters(d);
-		
-		
 		product_list_data_collector();
-		TreeSet<String> Uniqueproductset = new TreeSet<String>();
-		
+		Uniqueproductset.clear();
+		duplicates.clear();
 		for(String Product:products){
 			
+			if(Uniqueproductset.contains(Product)){
+				
+			System.out.println(" Duplicate product found "+ Product+" Testcase Failed");
+			System.out.println();
+			Duplicate_Product_delete(Product);
+			d.navigate().refresh();
+			Thread.sleep(500);
+			} 
 			
-			System.out.println(Uniqueproductset.contains(Product) ? " Duplicate product found "+ Product+" Testcase Failed" :"Duplicate product not found testcase Passed");
-			System.out.println();	
-			Uniqueproductset.add(Product);}}
+			Uniqueproductset.add(Product);}
+		
+	}
 		
 		
 	     public void Product_search(String Product_name) throws IOException, InterruptedException{
 	    	 
 	    	 Product_Module_locaters p = new Product_Module_locaters(d); 
 	    	
+	        try{
+	    	String Productname = products.get(2);
+   	        p.search_box().sendKeys(Product_name);
+   	        Thread.sleep(800);
+   	        System.out.println(Productname.equalsIgnoreCase(p.Second_column().get(0).getText().trim())? "Testcase Passsed Search Working":"Testcase Failed Search not working");
+   	        System.out.println();}catch(Exception mmo) {
 	    	 product_list_data_collector();
 	    	 String Productname = products.get(2);
 	    	 p.search_box().sendKeys(Product_name);
 	    	 Thread.sleep(800);
 	    	 System.out.println(Productname.equalsIgnoreCase(p.Second_column().get(0).getText().trim())? "Testcase Passsed Search Working":"Testcase Failed Search not working");
-	    	 System.out.println();
+	    	 System.out.println();}
 	     }
 	
 		
@@ -129,9 +141,12 @@ public class Product_module extends Side_Menu_options_Accessor{
 		  Product_Module_locaters p = new Product_Module_locaters(d);	
 		  Login_locaters ll = new Login_locaters(d);
 		  
+		  
 		
 		  Product_menu_Accessor("Add Product");
 		  p.Add_Edit_form();
+		  Astrix_mandatory_count_checker();
+		  p.input_fields();
 		  p.input_fields().get(0).sendKeys(String.valueOf(data.get("Product Name"))); 
 		  Select s1 = new Select(p.Product_type_dropdowns());
 		  s1.selectByVisibleText(String.valueOf(data.get("Product Type")));
@@ -150,6 +165,7 @@ public class Product_module extends Side_Menu_options_Accessor{
 		  Thread.sleep(800);
 		  d.switchTo().defaultContent();
 		  Thread.sleep(800);
+		  p.image_upload_field().sendKeys(String.valueOf(data.get("Image Path")));
 		  p.form_submit_button().click();
 		  ll.toast();
 		  System.out.println(ll.toast().getText());
@@ -164,47 +180,62 @@ public class Product_module extends Side_Menu_options_Accessor{
 			  
 			 }
 		  
+		 public void Duplicate_Product_delete(String Duplicate_products) throws IOException, InterruptedException{
+			 
+			 Product_search(Duplicate_products);
+			 Thread.sleep(900);
+			 product_delete();}
+		  
 		  
 		  
 		  @DataProvider
 		    public Object[][] getProductData() {
 		        
-		        TreeMap<String, Object> product1 = new TreeMap<>();
+			    
+			  
+			  
+			  String Dynamic_file_path = System.getProperty("user.dir") + "//ProductImages//";
+
+		        TreeMap<String, String> product1 = new TreeMap<>();
 		        product1.put("Product Name", "Whippitz N₂O Cylinder – Mint Cream");
 		        product1.put("Product Type", "Single");
-		        product1.put("Stock", 100);
-		        product1.put("Product Price (AUD)", 42.00);
+		        product1.put("Stock", "100");
+		        product1.put("Product Price (AUD)", "42.00");
 		        product1.put("Discount Type", "Fixed Discount");
-		        product1.put("Discount Price (AUD)", 5.00);
+		        product1.put("Discount Price (AUD)", "5.00");
 		        product1.put("Short Description", "Refreshing mint cream flavour, ideal for topping desserts and beverages.");
-		        
-		        TreeMap<String, Object> product2 = new TreeMap<>();
+		        product1.put("Image Path", Dynamic_file_path + "mint_cream.png");
+
+		        TreeMap<String, String> product2 = new TreeMap<>();
 		        product2.put("Product Name", "Whippitz N₂O Cylinder – Caramel Cream Pack");
 		        product2.put("Product Type", "Group");
-		        product2.put("Stock", 50);
-		        product2.put("Product Price (AUD)", 120.00);
+		        product2.put("Stock", "50");
+		        product2.put("Product Price (AUD)", "120.00");
 		        product2.put("Discount Type", "Percentage Discount");
-		        product2.put("Discount Price (AUD)", 10); // percentage
+		        product2.put("Discount Price (AUD)", "10");
 		        product2.put("Short Description", "Rich caramel cream, perfect for cafés and bakeries. Comes in value group packs.");
-		        
-		        TreeMap<String, Object> product3 = new TreeMap<>();
+		        product2.put("Image Path", Dynamic_file_path + "caramel_cream.png");
+
+		        TreeMap<String, String> product3 = new TreeMap<>();
 		        product3.put("Product Name", "Whippitz N₂O Cylinder – Berry Bliss");
 		        product3.put("Product Type", "Single");
-		        product3.put("Stock", 80);
-		        product3.put("Product Price (AUD)", 45.00);
+		        product3.put("Stock", "80");
+		        product3.put("Product Price (AUD)", "45.00");
 		        product3.put("Discount Type", "Fixed Discount");
-		        product3.put("Discount Price (AUD)", 3.00);
+		        product3.put("Discount Price (AUD)", "3.00");
 		        product3.put("Short Description", "Fruity berry flavour, delicious for milkshakes, cakes, and party desserts.");
-		        
-		        TreeMap<String, Object> product4 = new TreeMap<>();
+		        product3.put("Image Path", Dynamic_file_path + "berry_bliss.png");
+
+		        TreeMap<String, String> product4 = new TreeMap<>();
 		        product4.put("Product Name", "Whippitz N₂O Cylinder – Vanilla Cream Bulk Pack");
 		        product4.put("Product Type", "Group");
-		        product4.put("Stock", 40);
-		        product4.put("Product Price (AUD)", 200.00);
+		        product4.put("Stock", "40");
+		        product4.put("Product Price (AUD)", "200.00");
 		        product4.put("Discount Type", "Percentage Discount");
-		        product4.put("Discount Price (AUD)", 15); // percentage
+		        product4.put("Discount Price (AUD)", "15");
 		        product4.put("Short Description", "Classic vanilla cream cylinders in bulk pack for professional use.");
-		        
+		        product4.put("Image Path", Dynamic_file_path + "vanilla_cream.png");
+
 		        return new Object[][] {
 		            { product1 },
 		            { product2 },
@@ -215,7 +246,24 @@ public class Product_module extends Side_Menu_options_Accessor{
 		
 		
 		
-		
+		public void Astrix_mandatory_count_checker() throws InterruptedException{
+			
+			  Product_Module_locaters p = new Product_Module_locaters(d);	
+			  Generic_codes g = new Generic_codes(d);
+			
+			  p.form_submit_button().click();
+			  int Error_Mesage_count = p.error_messages().size();
+			  Thread.sleep(800);
+			  g.Scroll_into_view(p.Top_oftheForm());
+			  Thread.sleep(800);
+			  p.Asteriks();
+			  int Asterisk_count = p.Asteriks().size();
+			  System.out.println(Error_Mesage_count==Asterisk_count ? "Testcase Passed ErrorMessage Count "+Error_Mesage_count+" is Equals to Astrix Count "+Asterisk_count: "Testcase Fail ErrorMessage Count "+Error_Mesage_count+" NOT Equals to Astrix Count "+Asterisk_count);
+			  System.out.println();
+			
+			
+			
+		}
 		
 		
 	

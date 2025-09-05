@@ -31,11 +31,11 @@ public class Product_Module_locaters extends Generic_codes{
 	@FindBy(xpath="//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']")
 	private WebElement  Description_ck_Editor; 
 	@FindBy(xpath="//input[@placeholder='Enter Product Discount Price']")
-	private WebElement  discount_field; /*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private WebElement  discount_field; 
+	@FindBy(xpath="//*[@class='errorMessage']")
+	private List <WebElement>  error_messages; 
+	@FindBy(xpath="//h3")
+	private WebElement  Top_oftheForm; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -84,7 +84,7 @@ public class Product_Module_locaters extends Generic_codes{
     return Add_Edit_form;} 
     public List <WebElement> input_fields(){
     Add_Edit_form();
-    List<WebElement> input_fields = Add_Edit_form().findElements(By.xpath(".//input[@class='form-control required']"));
+    List<WebElement> input_fields = Add_Edit_form().findElements(By.xpath(".//input[@class='form-control required errorClass']"));
     WebElementWait(input_fields);
     return input_fields;}
     public WebElement Product_type_dropdowns(){
@@ -111,19 +111,24 @@ public class Product_Module_locaters extends Generic_codes{
     return form_submit_button;}  
     public WebElement discount_field(){
     WebElementWait(discount_field);
-    return discount_field;} /*
-    public WebElement (){
-    WebElementWait();
-    return ;} 
-    public WebElement (){
-    WebElementWait();
-    return ;} 
-    public WebElement (){
-    WebElementWait();
-    return ;} 
-    public WebElement (){
-    WebElementWait();
-    return ;} 
+    return discount_field;} 
+    public WebElement image_upload_field() throws InterruptedException{
+    Add_Edit_form();
+    WebElement image_upload_field = Add_Edit_form().findElement(By.xpath(".//input[@type='file']"));
+    WebElementWait(image_upload_field);
+    Scroll_into_view(image_upload_field);
+    return image_upload_field; } 
+    public List <WebElement> error_messages(){
+    WebElementWait(error_messages);
+    return error_messages;}
+    public List <WebElement> Asteriks(){
+    Add_Edit_form();
+    List<WebElement> Asteriks = Add_Edit_form().findElements(By.xpath(".//*[@class='required-asterisk']"));
+    WebElementWait(Asteriks);
+    return Asteriks;}  
+    public WebElement Top_oftheForm(){
+     WebElementWait(Top_oftheForm);
+    return Top_oftheForm;} /*
     public WebElement (){
     WebElementWait();
     return ;} 

@@ -5,8 +5,8 @@
     <classes>
       <class name="Whippets.com.Admin.Product_module">
         <methods>
+          <include name="Added_Product_search_and_delete" invocation-numbers="2 3"/>
           <include name="Process_Kill"/>
-          <include name="Product_Add" invocation-numbers="0 2"/>
           <include name="Setup"/>
         </methods>
       </class> <!-- Whippets.com.Admin.Product_module -->
