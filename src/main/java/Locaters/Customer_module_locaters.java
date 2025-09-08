@@ -39,7 +39,47 @@ public class Customer_module_locaters extends Generic_codes{
 	@FindBy(xpath="//input[@placeholder='Enter Longitude']")
 	private WebElement  longitudeInput; 
 	@FindBy(xpath="//div[@id='toast-container']")
-	private WebElement Success_toast; /*
+	private WebElement Success_toast; 
+	@FindBy(xpath="(//table)[1]//tr[2]//input")
+	private List <WebElement>  customer_list_filter_inputs;/*
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -114,7 +154,28 @@ public class Customer_module_locaters extends Generic_codes{
     public WebElement Success_toast(){
     WebElementWait(Success_toast);
     Move_to_element(Success_toast);
-    return Success_toast;} /*
+    return Success_toast;} 
+    public List <WebElement> customer_list_filter_inputs(){
+    WebElementWait(customer_list_filter_inputs);
+    return customer_list_filter_inputs;} /*
+    public WebElement (){
+    WebElementWait();
+    return ;} 
+    public WebElement (){
+    WebElementWait();
+    return ;} 
+    public WebElement (){
+    WebElementWait();
+    return ;} 
+    public WebElement (){
+    WebElementWait();
+    return ;} 
+    public WebElement (){
+    WebElementWait();
+    return ;} 
+    public WebElement (){
+    WebElementWait();
+    return ;}
     public WebElement (){
     WebElementWait();
     return ;} 

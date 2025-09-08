@@ -96,10 +96,8 @@ public class Customer_Module extends Product_module{
 		dsh.DashBoard_Redirection(d); */
 		menu_Accessor("Customers","Add Customer");
 		for(Map.Entry<String, String> pair:customerNames_phnumbers.entrySet()){
-			
 			System.out.println(pair.getKey()+"  "+pair.getValue());
-			System.out.println();
-		}
+			System.out.println();}
 		p.first_name().sendKeys(customerData.get("First Name"));
 		p.last_name().sendKeys(customerData.get("Last Name"));
 		p.email().sendKeys(customerData.get("Email"));
@@ -119,14 +117,12 @@ public class Customer_Module extends Product_module{
 		Thread.sleep(800);
         js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
         p.submit_button().click();
-   try {
+        try {
         p.Success_toast();
         System.out.println(p.Success_toast().getText());
         System.out.println();}catch(Exception mko){
         	System.out.println("Success Toast is not locateble");
-            System.out.println();  	
-        	
-        }}
+            System.out.println();}}
     
 	
    
@@ -207,12 +203,28 @@ public class Customer_Module extends Product_module{
         return new Object[][] {
             { c1 }, { c2 }, { c3 }, { c4 }, { c5 },
             { c6 }, { c7 }, { c8 }, { c9 }, { c10 } 
-        };
-    }
+        };}
     
     
-    
-    
+     @Test(dataProvider="customerData")
+      public void added_customer_delete(TreeMap<String, String> customerData) throws IOException, InterruptedException{
+    	  
+    	 Customer_module_locaters p = new Customer_module_locaters(d);
+    	 Product_Module_locaters pm = new Product_Module_locaters(d);
+    	  
+    	 customer_list_Accessor();
+    	 String Customer_fullname = customerData.get("First Name")+" "+customerData.get("Last Name");
+    	 p.customer_list_filter_inputs().get(0).sendKeys(Customer_fullname);
+    	 Thread.sleep(800);
+    	 if(p.names().get(0).getText().contains(Customer_fullname)){
+    		 System.out.println("Added user found Proceeding to delete");
+    		 System.out.println();
+    		 pm.Delete_buttons();
+    		 pm.Delete_buttons().get(0).click();
+			 pm.Delete_button().click();
+			 p.Success_toast();
+		        System.out.println(p.Success_toast().getText());
+		        System.out.println();}}
     
     
     
