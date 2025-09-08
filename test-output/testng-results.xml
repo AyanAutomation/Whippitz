@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="8" total="9" passed="1" failed="0" skipped="0">
+<testng-results ignored="9" total="10" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-07T19:15:26 IST" name="Default suite" finished-at="2025-09-07T19:16:35 IST" duration-ms="69594">
+  <suite started-at="2025-09-08T12:40:11 IST" name="Default suite" finished-at="2025-09-08T12:41:43 IST" duration-ms="92298">
     <groups>
     </groups>
-    <test started-at="2025-09-07T19:15:26 IST" name="Default test" finished-at="2025-09-07T19:16:35 IST" duration-ms="69594">
+    <test started-at="2025-09-08T12:40:11 IST" name="Default test" finished-at="2025-09-08T12:41:43 IST" duration-ms="92298">
       <class name="Whippets.com.Admin.Customer_Module">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@c730b35]" started-at="2025-09-07T19:15:26 IST" name="Setup" finished-at="2025-09-07T19:15:33 IST" duration-ms="6977" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@7b02881e]" started-at="2025-09-08T12:40:11 IST" name="Setup" finished-at="2025-09-08T12:40:12 IST" duration-ms="1656" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="customer_list_Accessor()[pri:0, instance:Whippets.com.Admin.Customer_Module@c730b35]" started-at="2025-09-07T19:15:33 IST" name="customer_list_Accessor" finished-at="2025-09-07T19:16:34 IST" duration-ms="61517" status="PASS">
+        <test-method signature="customer_add()[pri:0, instance:Whippets.com.Admin.Customer_Module@7b02881e]" started-at="2025-09-08T12:40:12 IST" name="customer_add" finished-at="2025-09-08T12:41:43 IST" duration-ms="90385" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- customer_list_Accessor -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@c730b35]" started-at="2025-09-07T19:16:34 IST" name="Process_Kill" finished-at="2025-09-07T19:16:35 IST" duration-ms="1073" status="PASS">
+        </test-method> <!-- customer_add -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@7b02881e]" started-at="2025-09-08T12:41:43 IST" name="Process_Kill" finished-at="2025-09-08T12:41:43 IST" duration-ms="217" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Process_Kill -->

@@ -20,9 +20,11 @@ public class Side_Menu_options_Accessor extends Login{
 		
 		Side_Menu_Access_Locators p = new Side_Menu_Access_Locators(d);
 		
+		try {p.sidebar();
+		menu_itemsList = p.Sidemenus();}catch(Exception ko) {
 		login();
 		p.sidebar();
-		menu_itemsList = p.Sidemenus();}
+		menu_itemsList = p.Sidemenus();}}
 	
 	
 	
@@ -31,30 +33,23 @@ public class Side_Menu_options_Accessor extends Login{
 		
 		Side_Menu_Access_Locators p = new Side_Menu_Access_Locators(d);
 		
-		side_menu();
-		for(WebElement menu_item:menu_itemsList ){
-			
+		
+		
+		
+			side_menu();
+			for(WebElement menu_item:menu_itemsList ){
 			if(menu_item.getText().contains(MenuOption)){
-				
-				menu_item.click();
-			    p.Product_Submenu_list();
-			    List<WebElement> product_submenuoptionsElments = p.options();
-			    for(WebElement op:product_submenuoptionsElments){
-			    	if(op.getText().contains(Submenu_option)){
-			    		
-			    		op.click();
-			    		Thread.sleep(600);
-			    		p.page_title();
-			    		System.out.println("Page tile =  "+p.page_title().getText());
-			    		System.out.println();
-			    		break;}}break;}}
-		
-		
-		
-		
-		
-		
-	}
+			menu_item.click();
+			p.Product_Submenu_list();
+			List<WebElement> product_submenuoptionsElments = p.options();
+			for(WebElement op:product_submenuoptionsElments){
+		    if(op.getText().contains(Submenu_option)){
+			op.click();
+			Thread.sleep(600);
+			p.page_title();
+			System.out.println("Page tile =  "+p.page_title().getText());
+			System.out.println();
+			break;}}break;}}
 	
 
-}
+}}

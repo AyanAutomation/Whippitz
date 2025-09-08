@@ -7,7 +7,7 @@
         <methods>
           <include name="Process_Kill"/>
           <include name="Setup"/>
-          <include name="customer_list_Accessor"/>
+          <include name="customer_add"/>
         </methods>
       </class> <!-- Whippets.com.Admin.Customer_Module -->
     </classes>

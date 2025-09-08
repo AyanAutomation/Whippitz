@@ -17,7 +17,25 @@ public class Customer_module_locaters extends Generic_codes{
 	@FindBy(xpath="//*[text()='Admin | Customer']")
 	private WebElement  Landed_on_customer_list; 
 	@FindBy(xpath="//tbody")
-	private WebElement customer_list; /*
+	private WebElement customer_list; 
+	@FindBy(name="first_name")
+	private WebElement  first_name;
+	@FindBy(name="last_name")
+	private WebElement  last_name;
+	@FindBy(name="email")
+	private WebElement  email;
+	@FindBy(name="phone")
+	private WebElement  phone;
+	@FindBy(xpath="//select[@name='account_status']")
+	private WebElement  Status_select_dropdown;
+	@FindBy(xpath="//gmp-place-autocomplete")
+	private WebElement  Address_Autocomplete_feild;
+	@FindBy(xpath="//input[@type='file']")
+	private WebElement  Image_upload_field; 
+	@FindBy(xpath="//button[@type='submit']")
+	private WebElement submit_button; /*
+	@FindBy(xpath="")
+	private WebElement  ;
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -62,31 +80,31 @@ public class Customer_module_locaters extends Generic_codes{
     customer_list();
     List<WebElement> stats = customer_list().findElements(By.xpath(".//td[6]"));
     WebElementWait(stats);
-    return stats;} /*
-    public WebElement (){
-    WebElementWait();
-    return ;} 
-    public WebElement (){
-    WebElementWait();
-    return ;} 
-    public WebElement (){
-    WebElementWait();
-    return ;} 
-    public WebElement (){
-    WebElementWait();
-    return ;} 
-    public WebElement (){
-    WebElementWait();
-    return ;} 
-    public WebElement (){
-    WebElementWait();
-    return ;} 
-    public WebElement (){
-    WebElementWait();
-    return ;} 
-    public WebElement (){
-    WebElementWait();
-    return ;} 
+    return stats;} 
+    public WebElement first_name(){
+    WebElementWait(first_name);
+    return first_name;} 
+    public WebElement last_name(){
+    WebElementWait(last_name);
+    return last_name;} 
+    public WebElement email(){
+    WebElementWait(email);
+    return email;} 
+    public WebElement phone(){
+    WebElementWait(phone);
+    return phone;} 
+    public WebElement Status_select_dropdown(){
+    WebElementWait(Status_select_dropdown);
+    return Status_select_dropdown;} 
+    public WebElement Address_Autocomplete_feild(){
+    WebElementWait(Address_Autocomplete_feild);
+    return Address_Autocomplete_feild;} 
+    public WebElement Image_upload_field(){
+    WebElementWait(Image_upload_field);
+    return Image_upload_field;} 
+    public WebElement submit_button(){
+    WebElementWait(submit_button);
+    return submit_button;} /*
     public WebElement (){
     WebElementWait();
     return ;} 
