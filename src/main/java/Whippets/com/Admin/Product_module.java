@@ -144,15 +144,22 @@ public class Product_module extends Side_Menu_options_Accessor{
 		  
 		  menu_Accessor("Products","Add Product");
 		  p.Add_Edit_form();
-		  Astrix_mandatory_count_checker();
+		  Astrix_mandatory_count_checker(String.valueOf(data.get("Product Type")));
 		  p.input_fields();
 		  p.input_fields().get(0).sendKeys(String.valueOf(data.get("Product Name"))); 
 		  Select s1 = new Select(p.Product_type_dropdowns());
 		  s1.selectByVisibleText(String.valueOf(data.get("Product Type")));
+		  if(String.valueOf(data.get("Product Type")).equalsIgnoreCase("")){
+			  Select s3 = new Select(p.Variation_type_dropdowns());
+			  s3.selectByVisibleText(String.valueOf(data.get("")));
+		  }
 		  p.input_fields().get(1).sendKeys(String.valueOf(data.get("Stock")));
 		  p.input_fields().get(2).sendKeys(String.valueOf(data.get("Product Price (AUD)")));
 		  Select s2 = new Select(p.Discount_type_dropdowns());
 		  s2.selectByVisibleText(String.valueOf(data.get("Discount Type")));
+		  if(String.valueOf(data.get("Discount Type")).equalsIgnoreCase("")){
+			 p.percentage_field().sendKeys(String.valueOf(data.get("")));
+		  }
 		  p.discount_field().click();
 		  p.discount_field().sendKeys(String.valueOf(data.get("Discount Price (AUD)")));
 		  Thread.sleep(800);
@@ -245,11 +252,25 @@ public class Product_module extends Side_Menu_options_Accessor{
 		
 		
 		
-		public void Astrix_mandatory_count_checker() throws InterruptedException{
+		public void Astrix_mandatory_count_checker(String productType) throws InterruptedException{
 			
 			  Product_Module_locaters p = new Product_Module_locaters(d);	
 			  Generic_codes g = new Generic_codes(d);
 			
+			  if(productType.equals("Group")){
+				  Select s1 = new Select(p.Product_type_dropdowns());
+				  s1.selectByVisibleText(productType);
+				  p.form_submit_button().click();
+				  int Error_Mesage_count = p.error_messages().size();
+				  Thread.sleep(800);
+				  g.Scroll_into_view(p.Top_oftheForm());
+				  Thread.sleep(800);
+				  p.Asteriks();
+				  int Asterisk_count = p.Asteriks().size();
+				  System.out.println(Error_Mesage_count==Asterisk_count ? "Testcase Passed ErrorMessage Count "+Error_Mesage_count+" is Equals to Astrix Count "+Asterisk_count: "Testcase Fail ErrorMessage Count "+Error_Mesage_count+" NOT Equals to Astrix Count "+Asterisk_count);
+				  System.out.println();
+			  }
+			  else {
 			  p.form_submit_button().click();
 			  int Error_Mesage_count = p.error_messages().size();
 			  Thread.sleep(800);
@@ -259,7 +280,7 @@ public class Product_module extends Side_Menu_options_Accessor{
 			  int Asterisk_count = p.Asteriks().size();
 			  System.out.println(Error_Mesage_count==Asterisk_count ? "Testcase Passed ErrorMessage Count "+Error_Mesage_count+" is Equals to Astrix Count "+Asterisk_count: "Testcase Fail ErrorMessage Count "+Error_Mesage_count+" NOT Equals to Astrix Count "+Asterisk_count);
 			  System.out.println();
-			
+			  }
 			
 			
 		}

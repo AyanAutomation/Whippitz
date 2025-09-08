@@ -33,11 +33,11 @@ public class Customer_module_locaters extends Generic_codes{
 	@FindBy(xpath="//input[@type='file']")
 	private WebElement  Image_upload_field; 
 	@FindBy(xpath="//button[@type='submit']")
-	private WebElement submit_button; /*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private WebElement submit_button; 
+	@FindBy(xpath="//input[@placeholder='Enter Latitude']")
+	private WebElement  latitudeInput;
+	@FindBy(xpath="//input[@placeholder='Enter Longitude']")
+	private WebElement  longitudeInput; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -104,13 +104,13 @@ public class Customer_module_locaters extends Generic_codes{
     return Image_upload_field;} 
     public WebElement submit_button(){
     WebElementWait(submit_button);
-    return submit_button;} /*
-    public WebElement (){
-    WebElementWait();
-    return ;} 
-    public WebElement (){
-    WebElementWait();
-    return ;} 
+    return submit_button;} 
+    public WebElement latitudeInput(){
+    WebElementWait(latitudeInput);
+    return latitudeInput;} 
+    public WebElement longitudeInput(){
+    WebElementWait(longitudeInput);
+    return longitudeInput;} /*
     public WebElement (){
     WebElementWait();
     return ;} 

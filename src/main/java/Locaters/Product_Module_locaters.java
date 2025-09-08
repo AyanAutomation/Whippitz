@@ -97,6 +97,18 @@ public class Product_Module_locaters extends Generic_codes{
     WebElement Discount_type_dropdowns = Add_Edit_form().findElement(By.xpath(".//select[@name='discount_type']"));
     WebElementWait(Discount_type_dropdowns);
     return Discount_type_dropdowns;} 
+
+    public WebElement Variation_type_dropdowns(){
+    Add_Edit_form();
+    WebElement Variation_type_dropdowns = Add_Edit_form().findElement(By.xpath(".//select[@name='variation']"));
+    WebElementWait(Variation_type_dropdowns);
+    return Variation_type_dropdowns;}
+    public WebElement percentage_field(){
+        Add_Edit_form();
+        WebElement percentage_field = Add_Edit_form().findElement(By.xpath(".//*[@name='discount_percentage']"));
+        WebElementWait(percentage_field);
+        return percentage_field;}
+    
     public WebElement Description_frame(){
     WebElementWait(Description_frame);
     return Description_frame;} 
