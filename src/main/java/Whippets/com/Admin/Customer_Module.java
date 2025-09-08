@@ -12,12 +12,14 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import Locaters.Customer_module_locaters;
 import Locaters.Login_locaters;
 import Locaters.Product_Module_locaters;
 import Repeative_codes.Generic_codes;
 
+@Listeners(Listeners_Reports.Listen.class)
 public class Customer_Module extends Product_module{
 	
 	
@@ -117,9 +119,15 @@ public class Customer_Module extends Product_module{
 		Thread.sleep(800);
         js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
         p.submit_button().click();
-        Thread.sleep(800);/*
-        lk.toast();
-        System.out.println(lk.toast().getText());*/}
+   try {
+        p.Success_toast();
+        System.out.println(p.Success_toast().getText());
+        System.out.println();}catch(Exception mko){
+        	System.out.println("Success Toast is not locateble");
+            System.out.println();  	
+        	
+        }}
+    
 	
    
     @DataProvider

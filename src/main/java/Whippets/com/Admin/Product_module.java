@@ -149,16 +149,16 @@ public class Product_module extends Side_Menu_options_Accessor{
 		  p.input_fields().get(0).sendKeys(String.valueOf(data.get("Product Name"))); 
 		  Select s1 = new Select(p.Product_type_dropdowns());
 		  s1.selectByVisibleText(String.valueOf(data.get("Product Type")));
-		  if(String.valueOf(data.get("Product Type")).equalsIgnoreCase("")){
+		  if(String.valueOf(data.get("Product Type")).equalsIgnoreCase("Group")){
 			  Select s3 = new Select(p.Variation_type_dropdowns());
-			  s3.selectByVisibleText(String.valueOf(data.get("")));
+			  s3.selectByVisibleText(String.valueOf(data.get("Pack of")));
 		  }
 		  p.input_fields().get(1).sendKeys(String.valueOf(data.get("Stock")));
 		  p.input_fields().get(2).sendKeys(String.valueOf(data.get("Product Price (AUD)")));
 		  Select s2 = new Select(p.Discount_type_dropdowns());
 		  s2.selectByVisibleText(String.valueOf(data.get("Discount Type")));
-		  if(String.valueOf(data.get("Discount Type")).equalsIgnoreCase("")){
-			 p.percentage_field().sendKeys(String.valueOf(data.get("")));
+		  if(String.valueOf(data.get("Discount Type")).equalsIgnoreCase("Percentage Discount")){
+			 p.percentage_field().sendKeys(String.valueOf(data.get("Discount %")));
 		  }
 		  p.discount_field().click();
 		  p.discount_field().sendKeys(String.valueOf(data.get("Discount Price (AUD)")));
@@ -202,51 +202,59 @@ public class Product_module extends Side_Menu_options_Accessor{
 			  
 			  String Dynamic_file_path = System.getProperty("user.dir") + "//ProductImages//";
 
-		        TreeMap<String, String> product1 = new TreeMap<>();
-		        product1.put("Product Name", "Whippitz N₂O Cylinder – Mint Cream");
-		        product1.put("Product Type", "Single");
-		        product1.put("Stock", "100");
-		        product1.put("Product Price (AUD)", "42.00");
-		        product1.put("Discount Type", "Fixed Discount");
-		        product1.put("Discount Price (AUD)", "5.00");
-		        product1.put("Short Description", "Refreshing mint cream flavour, ideal for topping desserts and beverages.");
-		        product1.put("Image Path", Dynamic_file_path + "mint_cream.png");
+			  TreeMap<String, String> product1 = new TreeMap<>();
+			  product1.put("Product Name", "Whippitz N₂O Cylinder – Mint Cream");
+			  product1.put("Product Type", "Single");
+			  product1.put("Stock", "100");
+			  product1.put("Product Price (AUD)", "42.00");
+			  product1.put("Pack of", "");                         // not needed for Single
+			  product1.put("Discount Type", "Fixed Discount");
+			  product1.put("Discount %", "");                      // not needed for Fixed
+			  product1.put("Discount Price (AUD)", "5.00");
+			  product1.put("Short Description", "Refreshing mint cream flavour, ideal for topping desserts and beverages.");
+			  product1.put("Image Path", Dynamic_file_path + "mint_cream.png");
 
-		        TreeMap<String, String> product2 = new TreeMap<>();
-		        product2.put("Product Name", "Whippitz N₂O Cylinder – Caramel Cream Pack");
-		        product2.put("Product Type", "Group");
-		        product2.put("Stock", "50");
-		        product2.put("Product Price (AUD)", "120.00");
-		        product2.put("Discount Type", "Percentage Discount");
-		        product2.put("Discount Price (AUD)", "10");
-		        product2.put("Short Description", "Rich caramel cream, perfect for cafés and bakeries. Comes in value group packs.");
-		        product2.put("Image Path", Dynamic_file_path + "caramel_cream.png");
+			  TreeMap<String, String> product2 = new TreeMap<>();
+			  product2.put("Product Name", "Whippitz N₂O Cylinder – Caramel Cream Pack");
+			  product2.put("Product Type", "Group");
+			  product2.put("Stock", "50");
+			  product2.put("Product Price (AUD)", "120.00");
+			  product2.put("Pack of", "Pack of 6");                // shown only for Group
+			  product2.put("Discount Type", "Percentage Discount");
+			  product2.put("Discount %", "10");                    // % field appears
+			  product2.put("Discount Price (AUD)", "");            // AUD field disabled/ignored
+			  product2.put("Short Description", "Rich caramel cream, perfect for cafés and bakeries. Comes in value group packs.");
+			  product2.put("Image Path", Dynamic_file_path + "caramel_cream.png");
 
-		        TreeMap<String, String> product3 = new TreeMap<>();
-		        product3.put("Product Name", "Whippitz N₂O Cylinder – Berry Bliss");
-		        product3.put("Product Type", "Single");
-		        product3.put("Stock", "80");
-		        product3.put("Product Price (AUD)", "45.00");
-		        product3.put("Discount Type", "Fixed Discount");
-		        product3.put("Discount Price (AUD)", "3.00");
-		        product3.put("Short Description", "Fruity berry flavour, delicious for milkshakes, cakes, and party desserts.");
-		        product3.put("Image Path", Dynamic_file_path + "berry_bliss.png");
+			  TreeMap<String, String> product3 = new TreeMap<>();
+			  product3.put("Product Name", "Whippitz N₂O Cylinder – Berry Bliss");
+			  product3.put("Product Type", "Single");
+			  product3.put("Stock", "80");
+			  product3.put("Product Price (AUD)", "45.00");
+			  product3.put("Pack of", "");                         // not needed for Single
+			  product3.put("Discount Type", "Fixed Discount");
+			  product3.put("Discount %", "");                      // not needed for Fixed
+			  product3.put("Discount Price (AUD)", "3.00");
+			  product3.put("Short Description", "Fruity berry flavour, delicious for milkshakes, cakes, and party desserts.");
+			  product3.put("Image Path", Dynamic_file_path + "berry_bliss.png");
 
-		        TreeMap<String, String> product4 = new TreeMap<>();
-		        product4.put("Product Name", "Whippitz N₂O Cylinder – Vanilla Cream Bulk Pack");
-		        product4.put("Product Type", "Group");
-		        product4.put("Stock", "40");
-		        product4.put("Product Price (AUD)", "200.00");
-		        product4.put("Discount Type", "Percentage Discount");
-		        product4.put("Discount Price (AUD)", "15");
-		        product4.put("Short Description", "Classic vanilla cream cylinders in bulk pack for professional use.");
-		        product4.put("Image Path", Dynamic_file_path + "vanilla_cream.png");
+			  TreeMap<String, String> product4 = new TreeMap<>();
+			  product4.put("Product Name", "Whippitz N₂O Cylinder – Vanilla Cream Bulk Pack");
+			  product4.put("Product Type", "Group");
+			  product4.put("Stock", "40");
+			  product4.put("Product Price (AUD)", "200.00");
+			  product4.put("Pack of", "Pack of 12");               // shown only for Group
+			  product4.put("Discount Type", "Percentage Discount");
+			  product4.put("Discount %", "15");                    // % field appears
+			  product4.put("Discount Price (AUD)", "");            // AUD field disabled/ignored
+			  product4.put("Short Description", "Classic vanilla cream cylinders in bulk pack for professional use.");
+			  product4.put("Image Path", Dynamic_file_path + "vanilla_cream.png");
 
-		        return new Object[][] {
-		            { product1 },
-		            { product2 },
-		            { product3 },
-		            { product4 }
+			  return new Object[][] {
+			      { product1 },
+			      { product2 },
+			      { product3 },
+			      { product4 }
 		        };
 		    }
 		

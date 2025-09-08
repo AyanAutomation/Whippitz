@@ -37,9 +37,9 @@ public class Customer_module_locaters extends Generic_codes{
 	@FindBy(xpath="//input[@placeholder='Enter Latitude']")
 	private WebElement  latitudeInput;
 	@FindBy(xpath="//input[@placeholder='Enter Longitude']")
-	private WebElement  longitudeInput; /*
-	@FindBy(xpath="")
-	private WebElement  ;
+	private WebElement  longitudeInput; 
+	@FindBy(xpath="//div[@id='toast-container']")
+	private WebElement Success_toast; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -110,10 +110,11 @@ public class Customer_module_locaters extends Generic_codes{
     return latitudeInput;} 
     public WebElement longitudeInput(){
     WebElementWait(longitudeInput);
-    return longitudeInput;} /*
-    public WebElement (){
-    WebElementWait();
-    return ;} 
+    return longitudeInput;} 
+    public WebElement Success_toast(){
+    WebElementWait(Success_toast);
+    Move_to_element(Success_toast);
+    return Success_toast;} /*
     public WebElement (){
     WebElementWait();
     return ;} 
