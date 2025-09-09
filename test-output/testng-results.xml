@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="9" total="19" passed="10" failed="0" skipped="0">
+<testng-results ignored="10" total="11" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-08T19:19:23 IST" name="Default suite" finished-at="2025-09-08T19:22:58 IST" duration-ms="214945">
+  <suite started-at="2025-09-09T12:17:23 IST" name="Default suite" finished-at="2025-09-09T12:18:13 IST" duration-ms="49940">
     <groups>
     </groups>
-    <test started-at="2025-09-08T19:19:23 IST" name="Default test" finished-at="2025-09-08T19:22:58 IST" duration-ms="214945">
+    <test started-at="2025-09-09T12:17:23 IST" name="Default test" finished-at="2025-09-09T12:18:13 IST" duration-ms="49940">
       <class name="Whippets.com.Admin.Customer_Module">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:19:23 IST" name="Setup" finished-at="2025-09-08T19:19:25 IST" duration-ms="1707" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@3c0be339]" started-at="2025-09-09T12:17:24 IST" name="Setup" finished-at="2025-09-09T12:17:25 IST" duration-ms="1689" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="customer_add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:19:25 IST" name="customer_add" data-provider="customerData" finished-at="2025-09-08T19:19:48 IST" duration-ms="23249" status="PASS">
+        <test-method signature="added_customer_delete(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@3c0be339]" started-at="2025-09-09T12:17:25 IST" name="added_customer_delete" data-provider="customerData" finished-at="2025-09-09T12:18:13 IST" duration-ms="47973" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -19,181 +19,60 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of all [] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.80, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53709}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53709/devtoo..., se:cdpVersion: 140.0.7339.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4446ad38cc9a7243321a1da811aa7a04]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.80, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53709}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53709/devtoo..., se:cdpVersion: 140.0.7339.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4446ad38cc9a7243321a1da811aa7a04
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at Repeative_codes.Generic_codes.WebElementWait(Generic_codes.java:36)
+at Locaters.Customer_module_locaters.names(Customer_module_locaters.java:107)
+at Whippets.com.Admin.Customer_Module.added_customer_delete(Customer_Module.java:220)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- customer_add -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:19:48 IST" name="Process_Kill" finished-at="2025-09-08T19:19:48 IST" duration-ms="253" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Process_Kill -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:19:48 IST" name="Setup" finished-at="2025-09-08T19:19:49 IST" duration-ms="818" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="customer_add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:19:49 IST" name="customer_add" data-provider="customerData" finished-at="2025-09-08T19:20:07 IST" duration-ms="17900" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Address=55 Nevsky Prospect, St. Petersburg, Email=olga.sokolova982@yopmail.com, First Name=Olga, Last Name=Sokolova, Phone=+61-498765432, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\olga.png, Status=Inactive}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- customer_add -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:20:07 IST" name="Process_Kill" finished-at="2025-09-08T19:20:07 IST" duration-ms="187" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Process_Kill -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:20:07 IST" name="Setup" finished-at="2025-09-08T19:20:08 IST" duration-ms="844" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="customer_add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:20:08 IST" name="customer_add" data-provider="customerData" finished-at="2025-09-08T19:20:26 IST" duration-ms="18033" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Address=88 Arbat Street, Moscow, Email=dmitry.volkov753@yopmail.com, First Name=Dmitry, Last Name=Volkov, Phone=+61-487654321, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\dmitry.png, Status=Active}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- customer_add -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:20:26 IST" name="Process_Kill" finished-at="2025-09-08T19:20:26 IST" duration-ms="184" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Process_Kill -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:20:26 IST" name="Setup" finished-at="2025-09-08T19:20:27 IST" duration-ms="685" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="customer_add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:20:27 IST" name="customer_add" data-provider="customerData" finished-at="2025-09-08T19:20:54 IST" duration-ms="26896" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Address=14 Tverskaya Street, Moscow, Email=natalia.smirnova604@yopmail.com, First Name=Natalia, Last Name=Smirnova, Phone=+61-423456789, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\natalia.png, Status=Inactive}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- customer_add -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:20:54 IST" name="Process_Kill" finished-at="2025-09-08T19:20:54 IST" duration-ms="164" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Process_Kill -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:20:54 IST" name="Setup" finished-at="2025-09-08T19:20:55 IST" duration-ms="884" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="customer_add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:20:55 IST" name="customer_add" data-provider="customerData" finished-at="2025-09-08T19:21:13 IST" duration-ms="18299" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Address=32 Kirov Avenue, Kazan, Email=sergey.ivanov871@yopmail.com, First Name=Sergey, Last Name=Ivanov, Phone=+61-434567890, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\sergey.png, Status=Active}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- customer_add -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:21:13 IST" name="Process_Kill" finished-at="2025-09-08T19:21:14 IST" duration-ms="213" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Process_Kill -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:21:14 IST" name="Setup" finished-at="2025-09-08T19:21:14 IST" duration-ms="847" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="customer_add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:21:14 IST" name="customer_add" data-provider="customerData" finished-at="2025-09-08T19:21:33 IST" duration-ms="18137" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Address=19 Fontanka Embankment, St. Petersburg, Email=elena.kuznetsova229@yopmail.com, First Name=Elena, Last Name=Kuznetsova, Phone=+61-445678901, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\elena.png, Status=Inactive}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- customer_add -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:21:33 IST" name="Process_Kill" finished-at="2025-09-08T19:21:33 IST" duration-ms="213" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Process_Kill -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:21:33 IST" name="Setup" finished-at="2025-09-08T19:21:34 IST" duration-ms="813" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="customer_add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:21:34 IST" name="customer_add" data-provider="customerData" finished-at="2025-09-08T19:21:51 IST" duration-ms="17649" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Address=77 Bauman Street, Kazan, Email=andrei.morozov557@yopmail.com, First Name=Andrei, Last Name=Morozov, Phone=+61-456789012, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\andrei.png, Status=Active}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- customer_add -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:21:51 IST" name="Process_Kill" finished-at="2025-09-08T19:21:51 IST" duration-ms="201" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Process_Kill -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:21:51 IST" name="Setup" finished-at="2025-09-08T19:21:52 IST" duration-ms="835" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="customer_add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:21:52 IST" name="customer_add" data-provider="customerData" finished-at="2025-09-08T19:22:15 IST" duration-ms="23053" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Address=5 Lenin Square, Novosibirsk, Email=tatiana.orlova118@yopmail.com, First Name=Tatiana, Last Name=Orlova, Phone=+61-467890123, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\tatiana.png, Status=Inactive}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- customer_add -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:22:15 IST" name="Process_Kill" finished-at="2025-09-08T19:22:16 IST" duration-ms="172" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Process_Kill -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:22:16 IST" name="Setup" finished-at="2025-09-08T19:22:16 IST" duration-ms="809" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="customer_add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:22:16 IST" name="customer_add" data-provider="customerData" finished-at="2025-09-08T19:22:34 IST" duration-ms="17695" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Address=42 Gorky Street, Yekaterinburg, Email=mikhail.egorov442@yopmail.com, First Name=Mikhail, Last Name=Egorov, Phone=+61-478901234, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\mikhail.png, Status=Active}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- customer_add -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:22:34 IST" name="Process_Kill" finished-at="2025-09-08T19:22:34 IST" duration-ms="186" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Process_Kill -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:22:34 IST" name="Setup" finished-at="2025-09-08T19:22:35 IST" duration-ms="862" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="customer_add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:22:35 IST" name="customer_add" data-provider="customerData" finished-at="2025-09-08T19:22:58 IST" duration-ms="22842" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Address=8 Sovetskaya Street, Rostov-on-Don, Email=anna.pavlova905@yopmail.com, First Name=Anna, Last Name=Pavlova, Phone=+61-489012345, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\anna.png, Status=Inactive}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- customer_add -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@1ebd319f]" started-at="2025-09-08T19:22:58 IST" name="Process_Kill" finished-at="2025-09-08T19:22:58 IST" duration-ms="236" status="PASS">
+        </test-method> <!-- added_customer_delete -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@3c0be339]" started-at="2025-09-09T12:18:13 IST" name="Process_Kill" finished-at="2025-09-09T12:18:13 IST" duration-ms="201" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Process_Kill -->

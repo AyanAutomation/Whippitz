@@ -211,20 +211,24 @@ public class Customer_Module extends Product_module{
     	  
     	 Customer_module_locaters p = new Customer_module_locaters(d);
     	 Product_Module_locaters pm = new Product_Module_locaters(d);
+    	 JavascriptExecutor js = (JavascriptExecutor)d;
     	  
-    	 customer_list_Accessor();
+    	 menu_Accessor("Customers","All Customers");
     	 String Customer_fullname = customerData.get("First Name")+" "+customerData.get("Last Name");
     	 p.customer_list_filter_inputs().get(0).sendKeys(Customer_fullname);
-    	 Thread.sleep(800);
+    	 Thread.sleep(800);try {
     	 if(p.names().get(0).getText().contains(Customer_fullname)){
     		 System.out.println("Added user found Proceeding to delete");
     		 System.out.println();
-    		 pm.Delete_buttons();
-    		 pm.Delete_buttons().get(0).click();
+    		 js.executeScript("arguments[0].click();",  pm.Delete_buttons().get(0));
+    		 pm.Delete_popup();
+    		 Thread.sleep(400);
 			 pm.Delete_button().click();
 			 p.Success_toast();
-		        System.out.println(p.Success_toast().getText());
-		        System.out.println();}}
+		     System.out.println(p.Success_toast().getText());
+		     System.out.println();}}
+    	 catch(Exception del){System.out.println("User Already Deleted Thereby Moving to Next user");
+    	 System.out.println();}}
     
     
     

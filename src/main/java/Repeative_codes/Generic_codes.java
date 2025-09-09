@@ -24,7 +24,7 @@ public class Generic_codes {
 		
 		WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(5));
 		
-		w.until(ExpectedConditions.visibilityOf(element));
+		w.until(d->element.isDisplayed());
 		
 		
 	}
