@@ -30,6 +30,8 @@ public class Customer_Module extends Product_module{
 	List <String> customers_phones = new ArrayList<String>();
 	List <String> customers_Emails= new ArrayList<String>();
 	List <String> customers_Statuses= new ArrayList<String>();
+	String Customer_MailID;
+	String Customer_Phone_Number; 
 	
 	@Test
 	public void customer_list_Accessor() throws IOException, InterruptedException{
@@ -92,16 +94,17 @@ public class Customer_Module extends Product_module{
 		JavascriptExecutor js = (JavascriptExecutor)d;
 		Login_locaters lk = new Login_locaters(d);
 		
-	/*	customer_List_Data_Collector();
-		dsh.DashBoard_Redirection(d); */
+		Customer_MailID = customerData.get("Email");
+		Customer_Phone_Number = customerData.get("Phone"); 
 		menu_Accessor("Customers","Add Customer");
 		for(Map.Entry<String, String> pair:customerNames_phnumbers.entrySet()){
 			System.out.println(pair.getKey()+"  "+pair.getValue());
 			System.out.println();}
+		Customer_mandatory_field_Checker();
 		p.first_name().sendKeys(customerData.get("First Name"));
 		p.last_name().sendKeys(customerData.get("Last Name"));
-		p.email().sendKeys(customerData.get("Email"));
-		p.phone().sendKeys(customerData.get("Phone"));
+		p.email().sendKeys(Customer_MailID);
+		p.phone().sendKeys(Customer_Phone_Number);
 		Select s = new Select(p.Status_select_dropdown());
 		s.selectByVisibleText(customerData.get("Status"));
 		p.Address_Autocomplete_feild().click();
@@ -119,8 +122,21 @@ public class Customer_Module extends Product_module{
         p.submit_button().click();
         try {
         p.Success_toast();
-        System.out.println(p.Success_toast().getText());
-        System.out.println();}catch(Exception mko){
+        String toast = p.Success_toast().getText();
+        System.out.println(toast);
+        System.out.println();
+        if(toast.contains("The email has already been taken."))
+        {
+        	customer_add_edit_form_email_validation();
+        	String Toast_two= p.Success_toast().getText();
+        	System.out.println(Toast_two);
+            System.out.println();
+        	try{if(Toast_two.contains("")){
+        		
+        	}}
+        	
+        }        
+        }catch(Exception mko){
         	System.out.println("Success Toast is not locateble");
             System.out.println();}}
     
@@ -229,8 +245,56 @@ public class Customer_Module extends Product_module{
 		     System.out.println();}}
     	 catch(Exception del){System.out.println("User Already Deleted Thereby Moving to Next user");
     	 System.out.println();}}
+     
+     
+     public void Customer_mandatory_field_Checker() throws InterruptedException{
+    	 
+    	 Product_Module_locaters p = new Product_Module_locaters(d);	
+		 Generic_codes g = new Generic_codes(d);
+    	 
+		  p.form_submit_button().click();
+		  int Error_Mesage_count = p.error_messages().size();
+		  Thread.sleep(800);
+		  g.Scroll_into_view(p.Top_oftheForm());
+		  Thread.sleep(800);
+		  p.Asteriks();
+		  int Asterisk_count = p.Asteriks().size();
+		  System.out.println(Error_Mesage_count==Asterisk_count ? "Testcase Passed ErrorMessage Count "+Error_Mesage_count+" is Equals to Astrix Count "+Asterisk_count: "Testcase Fail ErrorMessage Count "+Error_Mesage_count+" NOT Equals to Astrix Count "+Asterisk_count);
+		  System.out.println();}
     
+     
+     
+       public void customer_add_edit_form_email_validation(){
+    	   
+    	   JavascriptExecutor js = (JavascriptExecutor)d;
+    	   Customer_module_locaters p = new Customer_module_locaters(d);
+    	   
+    	   System.out.println("Email Feild Unique Validation is present");
+           System.out.println();
+           StringBuffer bf = new StringBuffer(Customer_MailID);
+           bf.replace(12, 14, "22");
+           js.executeScript("arguments[0].scrollIntoView(true);",p.email());
+           p.email().sendKeys(bf);
+           js.executeScript("arguments[0].scrollIntoView(true);",p.email());
+           js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
+           p.submit_button().click();
+           }
     
+       
+       
+       public void customer_add_edit_form_Phone_validation(){
+    	   
+    	   JavascriptExecutor js = (JavascriptExecutor)d;
+    	   Customer_module_locaters p = new Customer_module_locaters(d);
+    	   
+    	   System.out.println("Phone number Feild Unique Validation is present");
+           System.out.println();
+           StringBuffer bf = new StringBuffer(Customer_Phone_Number);
+           bf.replace(12, 14, "22");
+           js.executeScript("arguments[0].scrollIntoView(true);",p.phone());
+           p.phone().sendKeys(bf);
+           js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
+           p.submit_button().click();}
     
     
     
