@@ -131,12 +131,10 @@ public class Customer_Module extends Product_module{
         	String Toast_two= p.Success_toast().getText();
         	System.out.println(Toast_two);
             System.out.println();
-        	try{if(Toast_two.contains("")){
-        		
-        	}}
-        	
-        }        
-        }catch(Exception mko){
+        	try{if(Toast_two.contains("The phone has already been taken.")){
+        		customer_add_edit_form_Phone_validation();
+        	}}catch(Exception mkl){System.out.println("Success Toast is not locateble");
+            System.out.println();}}}catch(Exception mko){
         	System.out.println("Success Toast is not locateble");
             System.out.println();}}
     
@@ -272,15 +270,14 @@ public class Customer_Module extends Product_module{
     	   System.out.println("Email Feild Unique Validation is present");
            System.out.println();
            StringBuffer bf = new StringBuffer(Customer_MailID);
-           bf.replace(12, 14, "22");
+           bf.replace(12, 14, "102");
            js.executeScript("arguments[0].scrollIntoView(true);",p.email());
+           p.email().clear();
            p.email().sendKeys(bf);
            js.executeScript("arguments[0].scrollIntoView(true);",p.email());
            js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
            p.submit_button().click();
            }
-    
-       
        
        public void customer_add_edit_form_Phone_validation(){
     	   
@@ -290,8 +287,9 @@ public class Customer_Module extends Product_module{
     	   System.out.println("Phone number Feild Unique Validation is present");
            System.out.println();
            StringBuffer bf = new StringBuffer(Customer_Phone_Number);
-           bf.replace(12, 14, "22");
+           bf.replace(5, 8, "010");
            js.executeScript("arguments[0].scrollIntoView(true);",p.phone());
+           p.phone().clear();
            p.phone().sendKeys(bf);
            js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
            p.submit_button().click();}
