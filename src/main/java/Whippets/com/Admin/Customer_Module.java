@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.stream.IntStream;
-
+import Listeners_Reports.Listen;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -14,6 +14,11 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
+import Listeners_Reports.Reports;
 import Locaters.Customer_module_locaters;
 import Locaters.Login_locaters;
 import Locaters.Product_Module_locaters;
@@ -90,11 +95,10 @@ public class Customer_Module extends Product_module{
 	public void customer_add(TreeMap<String, String> customerData) throws IOException, InterruptedException{
 		
 		Customer_module_locaters p = new Customer_module_locaters(d);
-		Dashboard_Module dsh = new Dashboard_Module();
 		JavascriptExecutor js = (JavascriptExecutor)d;
-		Login_locaters lk = new Login_locaters(d);
 		
-		Customer_MailID = customerData.get("Email");
+		
+	    Customer_MailID = customerData.get("Email");
 		Customer_Phone_Number = customerData.get("Phone"); 
 		menu_Accessor("Customers","Add Customer");
 		for(Map.Entry<String, String> pair:customerNames_phnumbers.entrySet()){
@@ -126,7 +130,7 @@ public class Customer_Module extends Product_module{
         System.out.println(toast);
         System.out.println();
         if(toast.contains("The email has already been taken."))
-        {
+        {    
         	customer_add_edit_form_email_validation();
         	String Toast_two= p.Success_toast().getText();
         	System.out.println(Toast_two);
@@ -136,7 +140,9 @@ public class Customer_Module extends Product_module{
         	}}catch(Exception mkl){System.out.println("Success Toast is not locateble");
             System.out.println();}}}catch(Exception mko){
         	System.out.println("Success Toast is not locateble");
-            System.out.println();}}
+            System.out.println();}
+       
+    }
     
 	
    
@@ -267,8 +273,9 @@ public class Customer_Module extends Product_module{
     	   JavascriptExecutor js = (JavascriptExecutor)d;
     	   Customer_module_locaters p = new Customer_module_locaters(d);
     	   
+    	   
     	   System.out.println("Email Feild Unique Validation is present");
-           System.out.println();
+    	   System.out.println();
            StringBuffer bf = new StringBuffer(Customer_MailID);
            bf.replace(12, 14, "102");
            js.executeScript("arguments[0].scrollIntoView(true);",p.email());
@@ -277,6 +284,7 @@ public class Customer_Module extends Product_module{
            js.executeScript("arguments[0].scrollIntoView(true);",p.email());
            js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
            p.submit_button().click();
+           
            }
        
        public void customer_add_edit_form_Phone_validation(){
@@ -284,15 +292,17 @@ public class Customer_Module extends Product_module{
     	   JavascriptExecutor js = (JavascriptExecutor)d;
     	   Customer_module_locaters p = new Customer_module_locaters(d);
     	   
+    	   
     	   System.out.println("Phone number Feild Unique Validation is present");
-           System.out.println();
+    	   System.out.println();
            StringBuffer bf = new StringBuffer(Customer_Phone_Number);
            bf.replace(5, 8, "010");
            js.executeScript("arguments[0].scrollIntoView(true);",p.phone());
            p.phone().clear();
            p.phone().sendKeys(bf);
            js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
-           p.submit_button().click();}
+           p.submit_button().click();
+         }
     
     
     
