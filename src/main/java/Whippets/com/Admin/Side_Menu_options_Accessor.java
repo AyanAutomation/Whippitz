@@ -24,11 +24,12 @@ public class Side_Menu_options_Accessor extends Login{
 		
 		Side_Menu_Access_Locators p = new Side_Menu_Access_Locators(d);
 		
-		try {p.sidebar();
-		menu_itemsList = p.Sidemenus();}catch(Exception ko) {
+		try{p.sidebar();
+		menu_itemsList = p.Sidemenus();}
+		catch(Exception ko) {
 		login();
 		p.sidebar();
-		menu_itemsList = p.Sidemenus();}}
+		}}
 	
 	
 	
@@ -38,9 +39,8 @@ public class Side_Menu_options_Accessor extends Login{
 		Side_Menu_Access_Locators p = new Side_Menu_Access_Locators(d);
 		
 		
-		
-		
-			side_menu();
+		    side_menu();
+		    menu_itemsList = p.Sidemenus();
 			for(WebElement menu_item:menu_itemsList ){
 			if(menu_item.getText().contains(MenuOption)){
 			menu_item.click();

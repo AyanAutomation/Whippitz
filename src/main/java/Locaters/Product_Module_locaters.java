@@ -35,9 +35,9 @@ public class Product_Module_locaters extends Generic_codes{
 	@FindBy(xpath="//*[@class='errorMessage']")
 	private List <WebElement>  error_messages; 
 	@FindBy(xpath="//h3")
-	private WebElement  Top_oftheForm; /*
-	@FindBy(xpath="")
-	private WebElement  ;
+	private WebElement  Top_oftheForm; 
+	@FindBy(xpath="(//tbody//td[7]//a[2])")
+	private List <WebElement>  Edit_buttons; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -138,10 +138,10 @@ public class Product_Module_locaters extends Generic_codes{
     return Asteriks;}  
     public WebElement Top_oftheForm(){
      WebElementWait(Top_oftheForm);
-    return Top_oftheForm;} /*
-    public WebElement (){
-    WebElementWait();
-    return ;} 
+    return Top_oftheForm;} 
+    public List<WebElement> Edit_buttons(){
+    WebElementWait(Edit_buttons);
+    return Edit_buttons;} /*
     public WebElement (){
     WebElementWait();
     return ;} 

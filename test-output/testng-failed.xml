@@ -7,7 +7,7 @@
         <methods>
           <include name="Process_Kill"/>
           <include name="Setup"/>
-          <include name="added_customer_delete" invocation-numbers="0"/>
+          <include name="customer_edit_check" invocation-numbers="0"/>
         </methods>
       </class> <!-- Whippets.com.Admin.Customer_Module -->
     </classes>

@@ -219,8 +219,8 @@ public class Customer_Module extends Product_module{
 
 
         return new Object[][] {
-            { c1 }, { c2 }, { c3 }, { c4 }, { c5 },
-            { c6 }, { c7 }, { c8 }, { c9 }, { c10 } 
+            { c1 },/* { c2 }, { c3 }, { c4 }, { c5 },
+            { c6 }, { c7 }, { c8 }, { c9 }, { c10 } */
         };}
     
     
@@ -249,6 +249,50 @@ public class Customer_Module extends Product_module{
     	 Listen.Print_in_Report().log(Status.INFO, "User Already Deleted Thereby Moving to Next user");
          }}
      
+         
+     @Test(dataProvider="customerData")
+     public void customer_edit_check(TreeMap<String, String> customerData) throws IOException, InterruptedException{
+    	 
+    	 Customer_module_locaters p = new Customer_module_locaters(d);
+    	 Product_Module_locaters pm = new Product_Module_locaters(d);
+    	 JavascriptExecutor js = (JavascriptExecutor)d;
+    	 
+    	 
+    	 String Firstname = customerData.get("First Name");
+    	 menu_Accessor("Customers","All Customers");
+    	 String Customer_mail = customerData.get("Email");
+         p.customer_list_filter_inputs().get(1).sendKeys(Customer_mail);
+    	 Thread.sleep(800);
+    	 Listen.Print_in_Report().log(Status.INFO, p.Customer_email().get(0).getText().contains(Customer_mail) ? "Testcase Passed Searched Customer found in Result":"Testcase Failed Searched Customer not found in Result");
+    	 js.executeScript("arguments[0].click();",  pm.Edit_buttons().get(0));
+    	 Listen.Print_in_Report().log(Status.INFO, pm.Top_oftheForm().getText().trim().contains("Edit Customer") ? "Testcase Passed Edit Button working":"Testcase Failed Edit Button not working");
+    	 StringBuffer Buffer = new StringBuffer(Firstname);
+    	 Buffer.append("ao");
+    	 p.first_name().clear();
+    	 p.first_name().sendKeys(Buffer);
+    	 Thread.sleep(800);
+    	 p.email().clear();
+    	 p.email().sendKeys(customerData.get("Email"));
+    	 Thread.sleep(800);
+         js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
+         p.submit_button().click();
+         String Successtoast = p.Success_toast().getText();
+         Listen.Print_in_Report().log(Status.INFO,Successtoast);
+    	 
+    	 
+    	 
+    	 
+    	 
+    	 
+    	 
+    	 
+    	 
+    	 
+     }
+     
+     
+     
+     
      
      public void Customer_mandatory_field_Checker() throws InterruptedException{
     	 
@@ -265,8 +309,6 @@ public class Customer_Module extends Product_module{
 		  Listen.Print_in_Report().log(Status.INFO,Error_Mesage_count==Asterisk_count ? " Testcase Passed ErrorMessage Count "+Error_Mesage_count+" is Equals to Astrix Count "+Asterisk_count: " Testcase Fail Error Message Count "+Error_Mesage_count+" NOT Equals to Astrix Count "+Asterisk_count);
 		  }
     
-     
-     
        public void customer_add_edit_form_email_validation(){
     	   
     	   JavascriptExecutor js = (JavascriptExecutor)d;
@@ -281,9 +323,7 @@ public class Customer_Module extends Product_module{
            p.email().sendKeys(bf);
            js.executeScript("arguments[0].scrollIntoView(true);",p.email());
            js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
-           p.submit_button().click();
-           
-           }
+           p.submit_button().click();}
        
        public void customer_add_edit_form_Phone_validation(){
     	   
@@ -298,8 +338,7 @@ public class Customer_Module extends Product_module{
            p.phone().clear();
            p.phone().sendKeys(bf);
            js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
-           p.submit_button().click();
-         }
+           p.submit_button().click();}
     
     
     
