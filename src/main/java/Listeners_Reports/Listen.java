@@ -24,7 +24,7 @@ public class Listen extends Reports implements ITestListener {
 	public void onTestStart(ITestResult result) {
 		
 		String method_Name = result.getMethod().getMethodName();
-		Log_reader.set(Report.createTest(method_Name)); /* Here Log_reader is storing the MEthod name and since
+		Log_reader.set(Report.createTest(method_Name)); /* Here Log_reader is storing the MEthod name and since*/
 	}
 
 	@Override
