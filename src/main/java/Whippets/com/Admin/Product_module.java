@@ -12,6 +12,9 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
+import Listeners_Reports.Listen;
 import Locaters.Dashboard_Locaters;
 import Locaters.Login_locaters;
 import Locaters.Product_Module_locaters;
@@ -49,8 +52,7 @@ public class Product_module extends Side_Menu_options_Accessor{
 			
 			if(Uniqueproductset.contains(Product)){
 				
-			System.out.println(" Duplicate product found "+ Product+" Testcase Failed");
-			System.out.println();
+			Listen.Print_in_Report().log(Status.INFO," Duplicate product found "+ Product+" Testcase Failed");
 			Duplicate_Product_delete(Product);
 			d.navigate().refresh();
 			Thread.sleep(500);
@@ -69,14 +71,14 @@ public class Product_module extends Side_Menu_options_Accessor{
 	    	String Productname = products.get(2);
    	        p.search_box().sendKeys(Product_name);
    	        Thread.sleep(800);
-   	        System.out.println(Productname.equalsIgnoreCase(p.Second_column().get(0).getText().trim())? "Testcase Passsed Search Working":"Testcase Failed Search not working");
-   	        System.out.println();}catch(Exception mmo) {
+   	        Listen.Print_in_Report().log(Status.INFO,Productname.equalsIgnoreCase(p.Second_column().get(0).getText().trim())? "Testcase Passsed Search Working":"Testcase Failed Search not working");
+   	         }catch(Exception mmo) {
 	    	 product_list_data_collector();
 	    	 String Productname = products.get(2);
 	    	 p.search_box().sendKeys(Product_name);
 	    	 Thread.sleep(800);
-	    	 System.out.println(Productname.equalsIgnoreCase(p.Second_column().get(0).getText().trim())? "Testcase Passsed Search Working":"Testcase Failed Search not working");
-	    	 System.out.println();}
+	    	 Listen.Print_in_Report().log(Status.INFO,Productname.equalsIgnoreCase(p.Second_column().get(0).getText().trim())? "Testcase Passsed Search Working":"Testcase Failed Search not working");
+	    	 }
 	     }
 	
 		
@@ -97,8 +99,8 @@ public class Product_module extends Side_Menu_options_Accessor{
 			for(WebElement Product:Product_in_list){
 				
 				products.add(Product.getText());
-		/*		System.out.println("Products are  "+Product.getText());
-				System.out.println();*/}}
+		/*		Listen.Print_in_Report().log(Status.INFO,"Products are  "+Product.getText());
+				*/}}
 		
 		
 	
@@ -131,8 +133,8 @@ public class Product_module extends Side_Menu_options_Accessor{
 			p.Dashboard_land_confirmation();
 			String number_of_prod = p.Dashbaord_status_cards().get(1).getText();
 			String number_of_products_in_list = Integer.toString(products.size());
-			System.out.println(number_of_prod.equals(number_of_products_in_list)?"Testcase Passed "+number_of_prod+" is Matching with "+number_of_products_in_list:"Testcase Failed"+number_of_prod+" is not MAtching with  "+number_of_products_in_list);
-			System.out.println();}
+			Listen.Print_in_Report().log(Status.INFO,number_of_prod.equals(number_of_products_in_list)?"Testcase Passed "+number_of_prod+" is Matching with "+number_of_products_in_list:"Testcase Failed"+number_of_prod+" is not MAtching with  "+number_of_products_in_list);
+			}
 		
 		
 		  @Test(dataProvider="getProductData")
@@ -174,8 +176,8 @@ public class Product_module extends Side_Menu_options_Accessor{
 		  p.image_upload_field().sendKeys(String.valueOf(data.get("Image Path")));
 		  p.form_submit_button().click();
 		  ll.toast();
-		  System.out.println(ll.toast().getText());
-		  System.out.println();
+		  Listen.Print_in_Report().log(Status.INFO,ll.toast().getText());
+		
 		  }
 		
 		  @Test(dataProvider="getProductData")
@@ -275,8 +277,8 @@ public class Product_module extends Side_Menu_options_Accessor{
 				  Thread.sleep(800);
 				  p.Asteriks();
 				  int Asterisk_count = p.Asteriks().size();
-				  System.out.println(Error_Mesage_count==Asterisk_count ? "Testcase Passed ErrorMessage Count "+Error_Mesage_count+" is Equals to Astrix Count "+Asterisk_count: "Testcase Fail ErrorMessage Count "+Error_Mesage_count+" NOT Equals to Astrix Count "+Asterisk_count);
-				  System.out.println();
+				  Listen.Print_in_Report().log(Status.INFO,Error_Mesage_count==Asterisk_count ? "Testcase Passed ErrorMessage Count "+Error_Mesage_count+" is Equals to Astrix Count "+Asterisk_count: "Testcase Fail ErrorMessage Count "+Error_Mesage_count+" NOT Equals to Astrix Count "+Asterisk_count);
+				  
 			  }
 			  else {
 			  p.form_submit_button().click();
@@ -286,8 +288,8 @@ public class Product_module extends Side_Menu_options_Accessor{
 			  Thread.sleep(800);
 			  p.Asteriks();
 			  int Asterisk_count = p.Asteriks().size();
-			  System.out.println(Error_Mesage_count==Asterisk_count ? "Testcase Passed ErrorMessage Count "+Error_Mesage_count+" is Equals to Astrix Count "+Asterisk_count: "Testcase Fail ErrorMessage Count "+Error_Mesage_count+" NOT Equals to Astrix Count "+Asterisk_count);
-			  System.out.println();
+			  Listen.Print_in_Report().log(Status.INFO,Error_Mesage_count==Asterisk_count ? "Testcase Passed ErrorMessage Count "+Error_Mesage_count+" is Equals to Astrix Count "+Asterisk_count: "Testcase Fail ErrorMessage Count "+Error_Mesage_count+" NOT Equals to Astrix Count "+Asterisk_count);
+			
 			  }
 			
 			

@@ -11,30 +11,39 @@ import com.aventstack.extentreports.Status;
 public class Listen extends Reports implements ITestListener {
 
 	
-	private static final ThreadLocal<ExtentTest> Log_reader = new ThreadLocal<>();
+	// must be static so all tests can access the same ThreadLocal
+    private static final ThreadLocal<ExtentTest> Log_reader = new ThreadLocal<>();
 	ExtentReports Report = Reporter();
 	
+	
+	public static ExtentTest Print_in_Report() {
+        return Log_reader.get();
+    }	
 	
 	@Override
 	public void onTestStart(ITestResult result) {
 		
 		String method_Name = result.getMethod().getMethodName();
-		Report.createTest(method_Name);
-		Log_reader.set(Report.createTest(method_Name));
+		Log_reader.set(Report.createTest(method_Name)); /* Here Log_reader is storing the MEthod name and since
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		
-		String method_Name = result.getMethod().getMethodName();
+		/* Since createTest()(Log_reader also storing extent report) and method_Name has been Stored in "Log_reader" object on " onTestStart(ITestResult result)" 
+		so in this Method execution no need to write it( Code :- "String method_Name = result.getMethod().getMethodName();" ) here again. */
+		
 		Log_reader.get().log(Status.PASS, "Test passed");
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		
-		String method_Name = result.getMethod().getMethodName();
-		Report.createTest(method_Name).fail(result.getThrowable());
+
+		/* Since createTest() and method_Name has been Stored in "Log_reader" object on " onTestStart(ITestResult result)" 
+		so in this Method execution no need to write it( Code :- "String method_Name = result.getMethod().getMethodName();" ) here again. */
+		
+		Log_reader.get().fail(result.getThrowable());
 	}
 
 	@Override

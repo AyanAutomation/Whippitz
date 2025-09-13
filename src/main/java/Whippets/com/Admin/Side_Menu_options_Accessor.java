@@ -6,6 +6,10 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.Status;
+
+import Listeners_Reports.Listen;
 import Locaters.Side_Menu_Access_Locators;
 
 public class Side_Menu_options_Accessor extends Login{
@@ -46,9 +50,6 @@ public class Side_Menu_options_Accessor extends Login{
 		    if(op.getText().contains(Submenu_option)){
 			op.click();
 			Thread.sleep(600);
-			p.page_title();
-			System.out.println("Page tile =  "+p.page_title().getText());
-			System.out.println();
 			break;}}break;}}
 	
 

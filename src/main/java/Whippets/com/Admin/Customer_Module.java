@@ -14,15 +14,14 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
 import Listeners_Reports.Reports;
 import Locaters.Customer_module_locaters;
 import Locaters.Login_locaters;
 import Locaters.Product_Module_locaters;
 import Repeative_codes.Generic_codes;
+
 
 @Listeners(Listeners_Reports.Listen.class)
 public class Customer_Module extends Product_module{
@@ -57,7 +56,7 @@ public class Customer_Module extends Product_module{
 	public void customer_List_Data_Collector() throws IOException, InterruptedException{
 		
 		Customer_module_locaters p = new Customer_module_locaters(d);
-		Product_Module_locaters po = new Product_Module_locaters(d);
+	
 		
 		customer_list_Accessor();
 		p.customer_list();
@@ -102,8 +101,8 @@ public class Customer_Module extends Product_module{
 		Customer_Phone_Number = customerData.get("Phone"); 
 		menu_Accessor("Customers","Add Customer");
 		for(Map.Entry<String, String> pair:customerNames_phnumbers.entrySet()){
-			System.out.println(pair.getKey()+"  "+pair.getValue());
-			System.out.println();}
+			Listen.Print_in_Report().log(Status.INFO,pair.getKey()+"  "+pair.getValue());
+			}
 		Customer_mandatory_field_Checker();
 		p.first_name().sendKeys(customerData.get("First Name"));
 		p.last_name().sendKeys(customerData.get("Last Name"));
@@ -115,7 +114,8 @@ public class Customer_Module extends Product_module{
 		Thread.sleep(800);
 		p.Address_Autocomplete_feild().sendKeys(customerData.get("Address"));
 		Thread.sleep(800);
-		Generic_codes.commitAutocomplete( d,p.Address_Autocomplete_feild(), p.latitudeInput(), p.longitudeInput(), customerData.get("Address"),15);
+		Generic_codes.commitAutocomplete( 
+		d,p.Address_Autocomplete_feild(), p.latitudeInput(), p.longitudeInput(), customerData.get("Address"),15);
 		Thread.sleep(800);
 		p.Address_Autocomplete_feild().sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
 		Thread.sleep(800);
@@ -127,20 +127,18 @@ public class Customer_Module extends Product_module{
         try {
         p.Success_toast();
         String toast = p.Success_toast().getText();
-        System.out.println(toast);
-        System.out.println();
-        if(toast.contains("The email has already been taken."))
-        {    
+        Listen.Print_in_Report().log(Status.INFO,toast);
+        if(toast.contains("The email has already been taken.")){   
         	customer_add_edit_form_email_validation();
         	String Toast_two= p.Success_toast().getText();
-        	System.out.println(Toast_two);
-            System.out.println();
-        	try{if(Toast_two.contains("The phone has already been taken.")){
+        	Listen.Print_in_Report().log(Status.INFO,Toast_two);
+            try{if(Toast_two.contains("The phone has already been taken.")){
         		customer_add_edit_form_Phone_validation();
-        	}}catch(Exception mkl){System.out.println("Success Toast is not locateble");
-            System.out.println();}}}catch(Exception mko){
-        	System.out.println("Success Toast is not locateble");
-            System.out.println();}
+        	}}catch(Exception mkl){
+        	Listen.Print_in_Report().log(Status.INFO,"Success Toast is not locateble");
+            }}}catch(Exception mko){
+            Listen.Print_in_Report().log(Status.INFO,"Success Toast is not locateble");
+            }
        
     }
     
@@ -232,23 +230,24 @@ public class Customer_Module extends Product_module{
     	 Customer_module_locaters p = new Customer_module_locaters(d);
     	 Product_Module_locaters pm = new Product_Module_locaters(d);
     	 JavascriptExecutor js = (JavascriptExecutor)d;
-    	  
+    	 
+    	 
     	 menu_Accessor("Customers","All Customers");
     	 String Customer_fullname = customerData.get("First Name")+" "+customerData.get("Last Name");
     	 p.customer_list_filter_inputs().get(0).sendKeys(Customer_fullname);
     	 Thread.sleep(800);try {
     	 if(p.names().get(0).getText().contains(Customer_fullname)){
-    		 System.out.println("Added user found Proceeding to delete");
-    		 System.out.println();
+    		 Listen.Print_in_Report().log(Status.INFO, "Added user found Proceeding to delete");
     		 js.executeScript("arguments[0].click();",  pm.Delete_buttons().get(0));
     		 pm.Delete_popup();
     		 Thread.sleep(400);
 			 pm.Delete_button().click();
 			 p.Success_toast();
-		     System.out.println(p.Success_toast().getText());
-		     System.out.println();}}
-    	 catch(Exception del){System.out.println("User Already Deleted Thereby Moving to Next user");
-    	 System.out.println();}}
+			 Listen.Print_in_Report().log(Status.INFO,p.Success_toast().getText());
+		     }}
+    	 catch(Exception del){
+    	 Listen.Print_in_Report().log(Status.INFO, "User Already Deleted Thereby Moving to Next user");
+         }}
      
      
      public void Customer_mandatory_field_Checker() throws InterruptedException{
@@ -263,8 +262,8 @@ public class Customer_Module extends Product_module{
 		  Thread.sleep(800);
 		  p.Asteriks();
 		  int Asterisk_count = p.Asteriks().size();
-		  System.out.println(Error_Mesage_count==Asterisk_count ? "Testcase Passed ErrorMessage Count "+Error_Mesage_count+" is Equals to Astrix Count "+Asterisk_count: "Testcase Fail ErrorMessage Count "+Error_Mesage_count+" NOT Equals to Astrix Count "+Asterisk_count);
-		  System.out.println();}
+		  Listen.Print_in_Report().log(Status.INFO,Error_Mesage_count==Asterisk_count ? " Testcase Passed ErrorMessage Count "+Error_Mesage_count+" is Equals to Astrix Count "+Asterisk_count: " Testcase Fail Error Message Count "+Error_Mesage_count+" NOT Equals to Astrix Count "+Asterisk_count);
+		  }
     
      
      
@@ -274,9 +273,8 @@ public class Customer_Module extends Product_module{
     	   Customer_module_locaters p = new Customer_module_locaters(d);
     	   
     	   
-    	   System.out.println("Email Feild Unique Validation is present");
-    	   System.out.println();
-           StringBuffer bf = new StringBuffer(Customer_MailID);
+    	   Listen.Print_in_Report().log(Status.INFO,"Email Feild Unique Validation is present");
+    	   StringBuffer bf = new StringBuffer(Customer_MailID);
            bf.replace(12, 14, "102");
            js.executeScript("arguments[0].scrollIntoView(true);",p.email());
            p.email().clear();
@@ -293,9 +291,8 @@ public class Customer_Module extends Product_module{
     	   Customer_module_locaters p = new Customer_module_locaters(d);
     	   
     	   
-    	   System.out.println("Phone number Feild Unique Validation is present");
-    	   System.out.println();
-           StringBuffer bf = new StringBuffer(Customer_Phone_Number);
+    	   Listen.Print_in_Report().log(Status.INFO,"Phone number Feild Unique Validation is present");
+    	   StringBuffer bf = new StringBuffer(Customer_Phone_Number);
            bf.replace(5, 8, "010");
            js.executeScript("arguments[0].scrollIntoView(true);",p.phone());
            p.phone().clear();

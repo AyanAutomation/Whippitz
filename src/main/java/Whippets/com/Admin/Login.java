@@ -5,6 +5,9 @@ import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
+import Listeners_Reports.Listen;
 import Locaters.Login_locaters;
 
 public class Login extends Base{
@@ -23,8 +26,7 @@ public class Login extends Base{
 		p.all_input_feilds().get(1).sendKeys(pass);
 		p.submit_button().click();
 		try{
-			System.out.println(p.toast().getText());}
+			Listen.Print_in_Report().log(Status.INFO,p.toast().getText());}
 		catch(Exception k) {
-			System.out.println("login Toast not implemented");
-			System.out.println();
+			Listen.Print_in_Report().log(Status.INFO,"login Toast not implemented");
 		p.Login_confirmation();}}}
