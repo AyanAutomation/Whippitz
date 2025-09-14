@@ -1,6 +1,7 @@
 validation\Login_validation.class
 Locaters\Side_Menu_Access_Locators.class
 Whippets\com\Admin\Base.class
+Whippets\com\Admin\Driver_module.class
 Listeners_Reports\Listen.class
 Repeative_codes\Generic_codes.class
 Whippets\com\Admin\Data_Reader.class
@@ -8,6 +9,7 @@ Locaters\Customer_module_locaters.class
 Whippets\com\Admin\Dashboard_Module.class
 Locaters\Dashboard_Locaters.class
 Listeners_Reports\Reports.class
+Locaters\Driver_Module_locaters.class
 Whippets\com\Admin\Login.class
 Whippets\com\Admin\Product_module.class
 Locaters\Login_locaters.class
