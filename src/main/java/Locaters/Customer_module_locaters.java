@@ -25,7 +25,7 @@ public class Customer_module_locaters extends Generic_codes{
 	@FindBy(name="email")
 	private WebElement  email;
 	@FindBy(name="phone")
-	private WebElement  phone;
+	private WebElement phone;
 	@FindBy(xpath="//select[@name='account_status']")
 	private WebElement  Status_select_dropdown;
 	@FindBy(xpath="//gmp-place-autocomplete")

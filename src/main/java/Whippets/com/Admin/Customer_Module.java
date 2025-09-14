@@ -233,10 +233,10 @@ public class Customer_Module extends Product_module{
     	 
     	 
     	 menu_Accessor("Customers","All Customers");
-    	 String Customer_fullname = customerData.get("First Name")+" "+customerData.get("Last Name");
-    	 p.customer_list_filter_inputs().get(0).sendKeys(Customer_fullname);
+    	 String Customer_mail = customerData.get("Email");;
+    	 p.customer_list_filter_inputs().get(1).sendKeys(Customer_mail);
     	 Thread.sleep(800);try {
-    	 if(p.names().get(0).getText().contains(Customer_fullname)){
+    	 if(p.Customer_email().get(0).getText().contains(Customer_mail)){
     		 Listen.Print_in_Report().log(Status.INFO, "Added user found Proceeding to delete");
     		 js.executeScript("arguments[0].click();",  pm.Delete_buttons().get(0));
     		 pm.Delete_popup();
@@ -256,38 +256,52 @@ public class Customer_Module extends Product_module{
     	 Customer_module_locaters p = new Customer_module_locaters(d);
     	 Product_Module_locaters pm = new Product_Module_locaters(d);
     	 JavascriptExecutor js = (JavascriptExecutor)d;
+    	 Generic_codes gc = new Generic_codes(d);
     	 
-    	 
-    	 String Firstname = customerData.get("First Name");
-    	 menu_Accessor("Customers","All Customers");
+         customer_List_Data_Collector();
     	 String Customer_mail = customerData.get("Email");
          p.customer_list_filter_inputs().get(1).sendKeys(Customer_mail);
     	 Thread.sleep(800);
     	 Listen.Print_in_Report().log(Status.INFO, p.Customer_email().get(0).getText().contains(Customer_mail) ? "Testcase Passed Searched Customer found in Result":"Testcase Failed Searched Customer not found in Result");
     	 js.executeScript("arguments[0].click();",  pm.Edit_buttons().get(0));
     	 Listen.Print_in_Report().log(Status.INFO, pm.Top_oftheForm().getText().trim().contains("Edit Customer") ? "Testcase Passed Edit Button working":"Testcase Failed Edit Button not working");
-    	 StringBuffer Buffer = new StringBuffer(Firstname);
-    	 Buffer.append("ao");
-    	 p.first_name().clear();
-    	 p.first_name().sendKeys(Buffer);
     	 Thread.sleep(800);
     	 p.email().clear();
-    	 p.email().sendKeys(customerData.get("Email"));
+    	 p.email().sendKeys(customerNames_Emails.get("Andrei Morozov"));
     	 Thread.sleep(800);
-         js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
+    	 js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
          p.submit_button().click();
-         String Successtoast = p.Success_toast().getText();
-         Listen.Print_in_Report().log(Status.INFO,Successtoast);
-    	 
-    	 
-    	 
-    	 
-    	 
-    	 
-    	 
-    	 
-    	 
-    	 
+         gc.Move_to_element(p.Success_toast());
+         String Success_toast = p.Success_toast().getText();
+         Listen.Print_in_Report().log(Status.INFO,Success_toast);
+         String[] message = Success_toast.split("The ");
+         if(message[1].trim().contains("email has already been taken.")){
+        	 js.executeScript("arguments[0].scrollIntoView(true);", p.email());
+        	 p.email().clear();
+        	 p.email().sendKeys(customerData.get("Email"));
+        	 String value = p.phone().getAttribute("value");
+        	 Listen.Print_in_Report().log(Status.INFO,"default ph is"+value);
+        	 if(!value.contains(customerNames_phnumbers.get("Tatiana Orlova"))){
+        	 p.phone().clear();
+        	 p.phone().click();
+        	 p.phone().sendKeys("+61"+customerNames_phnumbers.get("Tatiana Orlova"));
+        	 js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
+             p.submit_button().click();
+        	 }/*
+        	 
+             Thread.sleep(1800);
+             gc.Move_to_element(p.Success_toast());
+             String toast_two = p.Success_toast().getText();
+             Listen.Print_in_Report().log(Status.INFO,toast_two);/*
+             if(toast_two.contains("")){
+            	 js.executeScript("arguments[0].click();",   p.phone());
+            	 p.phone().clear();
+            	 p.phone().sendKeys(customerData.get("Phone"));
+            	 js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
+                 p.submit_button().click();}*/}
+                 else{
+                	 Listen.Print_in_Report().log(Status.INFO, "Else Block Executed phone number validation toast not shown");
+                	 }            
      }
      
      
