@@ -54,6 +54,15 @@ public class Generic_codes {
      	Thread.sleep(800);}
      
      
+     public void Hidden_Element_unhide(WebElement element){
+    	 
+    	JavascriptExecutor js =  (JavascriptExecutor)d;
+    	 
+    	js.executeScript(element.isDisplayed()? "void 0;" : "arguments[0].classList.remove('d-none');arguments[0].removeAttribute('hidden');arguments[0].style.cssText='display:block !important;visibility:visible !important;opacity:1 !important;width:1px;height:1px;position:fixed;left:0;top:0;z-index:9999;';", element);
+     }
+     
+     
+     
      
      
      public static boolean commitAutocomplete(WebDriver d,
