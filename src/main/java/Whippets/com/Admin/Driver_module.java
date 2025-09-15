@@ -33,7 +33,7 @@ public class Driver_module extends Customer_Module{
 		Thread.sleep(800);}
 	
 	@Test (dataProvider="driverData")
-	public void driveradd(TreeMap<String,String> driver_data) throws IOException, InterruptedException{
+	public void Driver_Add(TreeMap<String,String> driver_data) throws IOException, InterruptedException{
 		
 		Driver_Module_locaters p = new Driver_Module_locaters(d);
 		Customer_module_locaters pc = new Customer_module_locaters(d);
@@ -41,8 +41,7 @@ public class Driver_module extends Customer_Module{
 		
 		
 		menu_Accessor("Drivers","Add Driver");
-
-		p.profile_image_upload().sendKeys(driver_data.get("Profile Image"));
+        p.profile_image_upload().sendKeys(driver_data.get("Profile Image"));
 	    pc.first_name().sendKeys(driver_data.get("Driver First Name"));
 	    pc.last_name().sendKeys(driver_data.get("Driver Last Name"));
 	    pc.email().sendKeys(driver_data.get("Email"));
@@ -102,8 +101,29 @@ public class Driver_module extends Customer_Module{
 	        { driver2 },
 	        { driver3 },
 	        { driver4 } 
-	    };
+	    };}
 	
-	
+      @Test(dataProvider="driverData")
+      public void Added_driver_Delete(TreeMap<String,String> Driver_Datas) throws IOException, InterruptedException{
+    	  
+    	  Product_Module_locaters pd = new Product_Module_locaters(d);
+    	  Driver_Module_locaters p = new Driver_Module_locaters(d);
+    	  Customer_module_locaters pc = new Customer_module_locaters(d);
+    	  
+    	  String Search_mail = Driver_Datas.get("Email");
+    	  
+    	  Driver_list_Accessor();
+    	  pd.search_box().sendKeys(Search_mail);try {
+    	  Listen.Print_in_Report().log(Status.INFO, p.Fifth_column().get(0).getText().trim().contains(Search_mail)?"Testcase Passed Search Mail "+Search_mail+ " Showing in Result":"Testcase Failed Search Mail"+Search_mail+" not shown in result");
+    	  pd.Delete_buttons().get(0).click();
+    	  pd.Delete_popup();
+    	  pd.Delete_button().click();
+    	  Listen.Print_in_Report().log(Status.INFO, pc.Success_toast().getText());
+    	  }catch(Exception del) {Listen.Print_in_Report().log(Status.INFO,"USer May Have Already Been Deleted");}} 
 
-}}
+
+
+
+
+
+}

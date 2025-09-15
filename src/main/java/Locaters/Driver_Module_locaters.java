@@ -1,5 +1,8 @@
 package Locaters;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,9 +18,9 @@ public class Driver_Module_locaters extends Generic_codes{
 	@FindBy(xpath="//input[@id='avatar-upload' and @type='file']")
 	private WebElement  profile_image_upload; 
 	@FindBy(name="password")
-	private WebElement  password_field; /*
-	@FindBy(xpath="")
-	private WebElement  ;
+	private WebElement  password_field; 
+	@FindBy(xpath="//tbody")
+	private WebElement list; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -75,11 +78,30 @@ public class Driver_Module_locaters extends Generic_codes{
     return profile_image_upload;} 
     public WebElement password_field(){
     WebElementWait(password_field);
-    return password_field;} /*
-    public WebElement (){
-    WebElementWait();
-    return ;} 
-    public WebElement (){
+    return password_field;} 
+    public WebElement list(){
+    WebElementWait(list);
+    return list;} 
+    public List<WebElement> Third_column(){
+    list();
+    List<WebElement> Third_column = list().findElements(By.xpath(".//td[3]"));
+    WebElementWait(Third_column);
+    return Third_column;} 
+    public List<WebElement> Fourth_column(){
+    list();
+    List<WebElement> Fourth_column = list().findElements(By.xpath(".//td[4]"));
+    WebElementWait(Fourth_column);
+    return Fourth_column;} 
+    public List<WebElement> Fifth_column(){
+    list();
+    List<WebElement> Fifth_column = list().findElements(By.xpath(".//td[5]"));
+    WebElementWait(Fifth_column);
+    return Fifth_column;}
+    public List<WebElement> Seventh_column(){
+    list();
+    List<WebElement> Seventh_column = list().findElements(By.xpath(".//td[7]"));
+    WebElementWait(Seventh_column);
+    return Seventh_column;} /*
     WebElementWait();
     return ;} 
     public WebElement (){
