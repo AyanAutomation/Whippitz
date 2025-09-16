@@ -3,6 +3,7 @@ package Repeative_codes;
 import java.util.List;
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -27,6 +28,14 @@ public class Generic_codes {
 		w.until(ExpectedConditions.visibilityOf(element));
 		
 		
+	}
+	public WebElement WebElementWait_By(By element){
+		
+		WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
+	
+		w.until(ExpectedConditions.presenceOfElementLocated(element));
+		w.until(ExpectedConditions.visibilityOfElementLocated(element));
+		return d.findElement(element);
 	}
 	
     public void WebElementWait(List<WebElement> elements){

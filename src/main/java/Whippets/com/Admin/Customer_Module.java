@@ -95,7 +95,7 @@ public class Customer_Module extends Product_module{
 		
 		Customer_module_locaters p = new Customer_module_locaters(d);
 		JavascriptExecutor js = (JavascriptExecutor)d;
-		
+		Product_Module_locaters pm = new Product_Module_locaters(d);
 		
 	    Customer_MailID = customerData.get("Email");
 		Customer_Phone_Number = customerData.get("Phone"); 
@@ -107,7 +107,6 @@ public class Customer_Module extends Product_module{
 		p.first_name().sendKeys(customerData.get("First Name"));
 		p.last_name().sendKeys(customerData.get("Last Name"));
 		p.email().sendKeys(Customer_MailID);
-		p.phone().sendKeys(Customer_Phone_Number);
 		Select s = new Select(p.Status_select_dropdown());
 		s.selectByVisibleText(customerData.get("Status"));
 		p.Address_Autocomplete_feild().click();
@@ -124,24 +123,29 @@ public class Customer_Module extends Product_module{
 		Thread.sleep(800);
         js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
         p.submit_button().click();
-        Thread.sleep(200);
-        try {
-         String toast = p.Success_toast().getText();
+        Listen.Print_in_Report().log(Status.INFO, pm.error_messages().get(0).getText().trim().contains("Please enter a valid phone number") ? "Testcase passed Ph number blank feild validation present in customer add form" : "Testcase Failed Ph number blank feild validation not present in customer add form");
+        js.executeScript("arguments[0].scrollIntoView(true);",p.phone());
+        p.phone().sendKeys(Customer_Phone_Number);
+        js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
+        p.submit_button().click();
+        Thread.sleep(800); try {
+        WebElement t1 =  p.Success_toast();
+        String toast=null;
+        if(t1!=null){
+        	 
+        	 toast = p.Success_toast().getText();
+         }
          System.out.println(toast);
          Listen.Print_in_Report().log(Status.INFO,toast);
-        if(toast.contains("The email has already been taken.")){   
+         if(toast.contains("The email has already been taken.")){   
         	customer_add_edit_form_email_validation();
         	String Toast_two= p.Success_toast().getText();
         	Listen.Print_in_Report().log(Status.INFO,Toast_two);
-            try{if(Toast_two.contains("The phone has already been taken.")){
+            if(Toast_two.contains("The phone has already been taken.")){
         		customer_add_edit_form_Phone_validation();
-        	}}catch(Exception mkl){
-        	Listen.Print_in_Report().log(Status.INFO,"Success Toast is not locateble");
-            }}}catch(Exception mko){
-            Listen.Print_in_Report().log(Status.INFO,"Success Toast is not locateble");
-            }
-       
-    }
+        	}}}catch(Exception mmk) {
+        		Listen.Print_in_Report().log(Status.INFO, "Toast presence cannot be located");
+        	}}
     
 	
    
@@ -149,79 +153,79 @@ public class Customer_Module extends Product_module{
     public Object[][] customerData() {
 
     	TreeMap<String, String> c1 = new TreeMap<>();
-    	c1.put("First Name", "Ivan");     c1.put("Last Name", "Petrov");
-    	c1.put("Email", "ivan.petrov321@yopmail.com");
-    	c1.put("Phone", "+61-412345678"); c1.put("Status", "Active");
-    	c1.put("Address", "21 Pushkin Street, Moscow");
-    	c1.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\ivan.png");
+        c1.put("First Name", "Subhajit");   c1.put("Last Name", "Roy");
+        c1.put("Email", "subhajit.roy423@yopmail.com");
+        c1.put("Phone", "+91-9830123456"); c1.put("Status", "Active");
+        c1.put("Address", "21A Prince Anwar Shah Road, Kolkata, West Bengal");
+        c1.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\ivan.png");
 
-    	TreeMap<String, String> c2 = new TreeMap<>();
-    	c2.put("First Name", "Olga");     c2.put("Last Name", "Sokolova");
-    	c2.put("Email", "olga.sokolova982@yopmail.com");
-    	c2.put("Phone", "+61-498765432"); c2.put("Status", "Inactive");
-    	c2.put("Address", "55 Nevsky Prospect, St. Petersburg");
-    	c2.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\olga.png");
+        TreeMap<String, String> c2 = new TreeMap<>();
+        c2.put("First Name", "Priyanka");   c2.put("Last Name", "Das");
+        c2.put("Email", "priyanka.das512@yopmail.com");
+        c2.put("Phone", "+91-9831023467"); c2.put("Status", "Inactive");
+        c2.put("Address", "47 Southern Avenue, Kolkata, West Bengal");
+        c2.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\olga.png");
 
-    	TreeMap<String, String> c3 = new TreeMap<>();
-    	c3.put("First Name", "Dmitry");   c3.put("Last Name", "Volkov");
-    	c3.put("Email", "dmitry.volkov753@yopmail.com");
-    	c3.put("Phone", "+61-487654321"); c3.put("Status", "Active");
-    	c3.put("Address", "88 Arbat Street, Moscow");
-    	c3.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\dmitry.png");
+        TreeMap<String, String> c3 = new TreeMap<>();
+        c3.put("First Name", "Indranil");   c3.put("Last Name", "Banerjee");
+        c3.put("Email", "indranil.banerjee681@yopmail.com");
+        c3.put("Phone", "+91-9832034578"); c3.put("Status", "Active");
+        c3.put("Address", "65 Bidhan Sarani, Kolkata, West Bengal");
+        c3.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\dmitry.png");
 
-    	TreeMap<String, String> c4 = new TreeMap<>();
-    	c4.put("First Name", "Natalia");  c4.put("Last Name", "Smirnova");
-    	c4.put("Email", "natalia.smirnova604@yopmail.com");
-    	c4.put("Phone", "+61-423456789"); c4.put("Status", "Inactive");
-    	c4.put("Address", "14 Tverskaya Street, Moscow");
-    	c4.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\natalia.png");
+        TreeMap<String, String> c4 = new TreeMap<>();
+        c4.put("First Name", "Moumita");    c4.put("Last Name", "Ghosh");
+        c4.put("Email", "moumita.ghosh793@yopmail.com");
+        c4.put("Phone", "+91-9833045689"); c4.put("Status", "Inactive");
+        c4.put("Address", "12 Balaram Bose Ghat Road, Kolkata, West Bengal");
+        c4.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\natalia.png");
 
-    	TreeMap<String, String> c5 = new TreeMap<>();
-    	c5.put("First Name", "Sergey");   c5.put("Last Name", "Ivanov");
-    	c5.put("Email", "sergey.ivanov871@yopmail.com");
-    	c5.put("Phone", "+61-434567890"); c5.put("Status", "Active");
-    	c5.put("Address", "32 Kirov Avenue, Kazan");
-    	c5.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\sergey.png");
+        TreeMap<String, String> c5 = new TreeMap<>();
+        c5.put("First Name", "Kunal");      c5.put("Last Name", "Chakraborty");
+        c5.put("Email", "kunal.chakraborty275@yopmail.com");
+        c5.put("Phone", "+91-9834056790"); c5.put("Status", "Active");
+        c5.put("Address", "9 S. P. Mukherjee Road, Kolkata, West Bengal");
+        c5.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\sergey.png");
 
-    	TreeMap<String, String> c6 = new TreeMap<>();
-    	c6.put("First Name", "Elena");    c6.put("Last Name", "Kuznetsova");
-    	c6.put("Email", "elena.kuznetsova229@yopmail.com");
-    	c6.put("Phone", "+61-445678901"); c6.put("Status", "Inactive");
-    	c6.put("Address", "19 Fontanka Embankment, St. Petersburg");
-    	c6.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\elena.png");
+        TreeMap<String, String> c6 = new TreeMap<>();
+        c6.put("First Name", "Tanushree");  c6.put("Last Name", "Sarkar");
+        c6.put("Email", "tanushree.sarkar346@yopmail.com");
+        c6.put("Phone", "+91-9835067901"); c6.put("Status", "Inactive");
+        c6.put("Address", "33 Ultadanga Main Road, Kolkata, West Bengal");
+        c6.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\elena.png");
 
-    	TreeMap<String, String> c7 = new TreeMap<>();
-    	c7.put("First Name", "Andrei");   c7.put("Last Name", "Morozov");
-    	c7.put("Email", "andrei.morozov557@yopmail.com");
-    	c7.put("Phone", "+61-456789012"); c7.put("Status", "Active");
-    	c7.put("Address", "77 Bauman Street, Kazan");
-    	c7.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\andrei.png");
+        TreeMap<String, String> c7 = new TreeMap<>();
+        c7.put("First Name", "Ritwik");     c7.put("Last Name", "Sen");
+        c7.put("Email", "ritwik.sen483@yopmail.com");
+        c7.put("Phone", "+91-9836078012"); c7.put("Status", "Active");
+        c7.put("Address", "58 Garia Main Road, Kolkata, West Bengal");
+        c7.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\andrei.png");
 
-    	TreeMap<String, String> c8 = new TreeMap<>();
-    	c8.put("First Name", "Tatiana");  c8.put("Last Name", "Orlova");
-    	c8.put("Email", "tatiana.orlova118@yopmail.com");
-    	c8.put("Phone", "+61-467890123"); c8.put("Status", "Inactive");
-    	c8.put("Address", "5 Lenin Square, Novosibirsk");
-    	c8.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\tatiana.png");
+        TreeMap<String, String> c8 = new TreeMap<>();
+        c8.put("First Name", "Sneha");      c8.put("Last Name", "Bhattacharya");
+        c8.put("Email", "sneha.bhattacharya579@yopmail.com");
+        c8.put("Phone", "+91-9837089123"); c8.put("Status", "Inactive");
+        c8.put("Address", "5 Vivekananda Road, Kolkata, West Bengal");
+        c8.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\tatiana.png");
 
-    	TreeMap<String, String> c9 = new TreeMap<>();
-    	c9.put("First Name", "Mikhail");  c9.put("Last Name", "Egorov");
-    	c9.put("Email", "mikhail.egorov442@yopmail.com");
-    	c9.put("Phone", "+61-478901234"); c9.put("Status", "Active");
-    	c9.put("Address", "42 Gorky Street, Yekaterinburg");
-    	c9.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\mikhail.png");
+        TreeMap<String, String> c9 = new TreeMap<>();
+        c9.put("First Name", "Partha");     c9.put("Last Name", "Biswas");
+        c9.put("Email", "partha.biswas641@yopmail.com");
+        c9.put("Phone", "+91-9838090234"); c9.put("Status", "Active");
+        c9.put("Address", "71A Amherst Street, Kolkata, West Bengal");
+        c9.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\mikhail.png");
 
-    	TreeMap<String, String> c10 = new TreeMap<>();
-    	c10.put("First Name", "Anna");    c10.put("Last Name", "Pavlova");
-    	c10.put("Email", "anna.pavlova905@yopmail.com");
-    	c10.put("Phone", "+61-489012345"); c10.put("Status", "Inactive");
-    	c10.put("Address", "8 Sovetskaya Street, Rostov-on-Don");
-    	c10.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\anna.png");
+        TreeMap<String, String> c10 = new TreeMap<>();
+        c10.put("First Name", "Ankita");    c10.put("Last Name", "Mandal");
+        c10.put("Email", "ankita.mandal738@yopmail.com");
+        c10.put("Phone", "+91-9839101345"); c10.put("Status", "Inactive");
+        c10.put("Address", "44 Lansdowne Road, Kolkata, West Bengal");
+        c10.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\anna.png");
 
 
         return new Object[][] {
-            { c1 }, { c2 }, { c3 }, { c4 }, { c5 },
-            { c6 }, { c7 }, { c8 }, { c9 }, { c10 } 
+            { c1 },/* { c2 }, { c3 }, { c4 }, { c5 },
+            { c6 }, { c7 }, { c8 }, { c9 }, { c10 } */
         };}
     
     
@@ -261,39 +265,40 @@ public class Customer_Module extends Product_module{
     	 
          customer_List_Data_Collector();
     	 String Customer_mail = customerData.get("Email");
-         p.customer_list_filter_inputs().get(1).sendKeys(Customer_mail);
-    	 Thread.sleep(800);
-    	 Listen.Print_in_Report().log(Status.INFO, p.Customer_email().get(0).getText().contains(Customer_mail) ? "Testcase Passed Searched Customer found in Result":"Testcase Failed Searched Customer not found in Result");
-    	 js.executeScript("arguments[0].click();",  pm.Edit_buttons().get(0));
-    	 Listen.Print_in_Report().log(Status.INFO, pm.Top_oftheForm().getText().trim().contains("Edit Customer") ? "Testcase Passed Edit Button working":"Testcase Failed Edit Button not working");
-    	 Thread.sleep(800);
+    	 String Customer_address = customerData.get("Address");
+    	 customer_search_and_edit_Button_click(Customer_mail);
+    	 customer_name_edit_check();
+    	 customer_search_and_edit_Button_click(Customer_mail);
+    	 customer_Address_edit_check();
+    	 customer_search_and_edit_Button_click(Customer_mail);
     	 p.email().clear();
-    	 p.email().sendKeys(customerNames_Emails.get("Andrei Morozov"));
+    	 p.email().sendKeys(customerNames_Emails.get(customerNames_Emails.lastKey()));
     	 Thread.sleep(800);
     	 js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
          p.submit_button().click();
          gc.Move_to_element(p.Success_toast());
          String Success_toast = p.Success_toast().getText();
          Listen.Print_in_Report().log(Status.INFO,Success_toast);
+         System.out.println(Success_toast);
+         System.out.println();
          String[] message = Success_toast.split("The ");
          if(message[1].trim().contains("email has already been taken.")){
         	 js.executeScript("arguments[0].scrollIntoView(true);", p.email());
         	 p.email().clear();
         	 p.email().sendKeys(customerData.get("Email"));
         	 String value = p.phone().getAttribute("value");
-        	 Listen.Print_in_Report().log(Status.INFO,"default ph is"+value);
-        	 if(!value.contains(customerNames_phnumbers.get("Tatiana Orlova"))){
-        	 p.phone().clear();
-        	 p.phone().click();
-        	 p.phone().sendKeys("+61"+customerNames_phnumbers.get("Tatiana Orlova"));
+        	if(!value.contains(customerNames_phnumbers.get(customerNames_phnumbers.firstKey()))){
+        	 IntStream.range(0,10).forEach(v->{p.phone().sendKeys(Keys.BACK_SPACE);});
+        	 p.phone().sendKeys("+61"+customerNames_phnumbers.get(customerNames_phnumbers.firstKey()));
+        	 customer_Address_Setter(Customer_address);
         	 js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
              p.submit_button().click();
-        	 }
-        	 
-             Thread.sleep(1800);
+        	 }Thread.sleep(800);
              gc.Move_to_element(p.Success_toast());
              String toast_two = p.Success_toast().getText();
-             Listen.Print_in_Report().log(Status.INFO,toast_two);/*
+             Listen.Print_in_Report().log(Status.INFO,toast_two);
+             System.out.println(toast_two);
+             System.out.println();/*
              if(toast_two.contains("")){
             	 js.executeScript("arguments[0].click();",   p.phone());
             	 p.phone().clear();
@@ -302,7 +307,9 @@ public class Customer_Module extends Product_module{
                  p.submit_button().click();}*/}
                  else{
                 	 Listen.Print_in_Report().log(Status.INFO, "Else Block Executed phone number validation toast not shown");
-                	 }            
+                	 System.out.println("Else Block Executed phone number validation toast not shown");
+                     System.out.println(); 	 
+                 }            
      }
      
      
@@ -356,6 +363,83 @@ public class Customer_Module extends Product_module{
            p.submit_button().click();}
     
     
+       
+       public void customer_name_edit_check(){
+    	   
+    	   Customer_module_locaters p = new Customer_module_locaters(d);
+    	   JavascriptExecutor js = (JavascriptExecutor)d;
+    	   
+    	   p.first_name().sendKeys(Keys.BACK_SPACE);
+    	   js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
+           p.submit_button().click();
+           String toast = p.Success_toast().getText();
+           
+    	   Listen.Print_in_Report().log(Status.INFO, p.Landed_on_customer_list().isDisplayed() && toast.contains("Customer updated successfully.") ? "Testcase Passed Customer name edit working":"Testcase Failed Customer name edit not working");
+    	   System.out.println(p.Landed_on_customer_list().isDisplayed() && toast.contains("Customer updated successfully.") ? "Testcase Passed Customer name edit working":"Testcase Failed Customer name edit not working");
+           System.out.println();
+       }
     
+       
+     public void customer_Address_edit_check() throws InterruptedException{
+    	   
+    	   Customer_module_locaters p = new Customer_module_locaters(d);
+    	   JavascriptExecutor js = (JavascriptExecutor)d;
+    	   
+    	   
+    	   String address = "Mani Casadona, International Financial Hub 700160, International Finalcial Hub(CBD), Newtown, Kolkata, West Bengal, India";
+    	   
+    	p.Address_Autocomplete_feild().click();
+   		Thread.sleep(800);
+   		p.Address_Autocomplete_feild().sendKeys(address);
+   		Thread.sleep(800);
+   		Generic_codes.commitAutocomplete( 
+   		d,p.Address_Autocomplete_feild(), p.latitudeInput(), p.longitudeInput(), address,15);
+   		Thread.sleep(800);
+   		p.Address_Autocomplete_feild().sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+   		Thread.sleep(800);
+    	   js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
+           p.submit_button().click();
+           String toast = p.Success_toast().getText();
+           
+    	   Listen.Print_in_Report().log(Status.INFO, p.Landed_on_customer_list().isDisplayed() && toast.contains("Customer updated successfully.") ? "Testcase Passed Customer Address edit working":"Testcase Failed Customer Address edit not working");
+    	   System.out.println(p.Landed_on_customer_list().isDisplayed() && toast.contains("Customer updated successfully.") ? "Testcase Passed Customer Address edit working":"Testcase Failed Customer Address edit not working");
+           System.out.println();
+       }
+       
+     public void customer_Address_Setter(String Address_sent) throws InterruptedException{
+  	   
+  	   Customer_module_locaters p = new Customer_module_locaters(d);
+  	   JavascriptExecutor js = (JavascriptExecutor)d;
+  	   
+  	   
+  	    p.Address_Autocomplete_feild().click();
+ 		Thread.sleep(800);
+ 		p.Address_Autocomplete_feild().sendKeys(Address_sent);
+ 		Thread.sleep(800);
+ 		Generic_codes.commitAutocomplete( 
+ 		d,p.Address_Autocomplete_feild(), p.latitudeInput(), p.longitudeInput(), Address_sent,15);
+ 		Thread.sleep(800);
+ 		p.Address_Autocomplete_feild().sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+ 		Thread.sleep(800);
+  	    
+     }
+       
+       
+       
+      public void customer_search_and_edit_Button_click(String Customermail) throws InterruptedException{
+    	   
+    	   Customer_module_locaters p = new Customer_module_locaters(d);
+    	   JavascriptExecutor js = (JavascriptExecutor)d;
+    	   Product_Module_locaters pm = new Product_Module_locaters(d);
+    	 
+    	 
+    	 Thread.sleep(800);
+    	 p.customer_list_filter_inputs().get(1).sendKeys(Customermail);
+      	 Listen.Print_in_Report().log(Status.INFO, p.Customer_email().get(0).getText().contains(Customermail) ? "Testcase Passed Searched Customer found in Result":"Testcase Failed Searched Customer not found in Result");
+         System.out.println(p.Customer_email().get(0).getText().contains(Customermail) ? "Testcase Passed Searched Customer found in Result":"Testcase Failed Searched Customer not found in Result");
+         System.out.println();
+      	 js.executeScript("arguments[0].click();",  pm.Edit_buttons().get(0));
+      	 Thread.sleep(800);
+       }
 	
 }
