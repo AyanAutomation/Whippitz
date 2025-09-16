@@ -127,7 +127,8 @@ public class Customer_Module extends Product_module{
         Thread.sleep(200);
         try {
          String toast = p.Success_toast().getText();
-        Listen.Print_in_Report().log(Status.INFO,toast);
+         System.out.println(toast);
+         Listen.Print_in_Report().log(Status.INFO,toast);
         if(toast.contains("The email has already been taken.")){   
         	customer_add_edit_form_email_validation();
         	String Toast_two= p.Success_toast().getText();
