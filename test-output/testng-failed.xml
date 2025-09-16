@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Whippets.com.Admin.Driver_module">
+      <class name="Whippets.com.Admin.Customer_Module">
         <methods>
-          <include name="driveradd" invocation-numbers="0"/>
           <include name="Process_Kill"/>
           <include name="Setup"/>
+          <include name="customer_edit_check" invocation-numbers="0"/>
         </methods>
-      </class> <!-- Whippets.com.Admin.Driver_module -->
+      </class> <!-- Whippets.com.Admin.Customer_Module -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

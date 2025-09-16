@@ -124,9 +124,9 @@ public class Customer_Module extends Product_module{
 		Thread.sleep(800);
         js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
         p.submit_button().click();
+        Thread.sleep(200);
         try {
-        p.Success_toast();
-        String toast = p.Success_toast().getText();
+         String toast = p.Success_toast().getText();
         Listen.Print_in_Report().log(Status.INFO,toast);
         if(toast.contains("The email has already been taken.")){   
         	customer_add_edit_form_email_validation();
@@ -219,8 +219,8 @@ public class Customer_Module extends Product_module{
 
 
         return new Object[][] {
-            { c1 },/* { c2 }, { c3 }, { c4 }, { c5 },
-            { c6 }, { c7 }, { c8 }, { c9 }, { c10 } */
+            { c1 }, { c2 }, { c3 }, { c4 }, { c5 },
+            { c6 }, { c7 }, { c8 }, { c9 }, { c10 } 
         };}
     
     
@@ -287,7 +287,7 @@ public class Customer_Module extends Product_module{
         	 p.phone().sendKeys("+61"+customerNames_phnumbers.get("Tatiana Orlova"));
         	 js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
              p.submit_button().click();
-        	 }/*
+        	 }
         	 
              Thread.sleep(1800);
              gc.Move_to_element(p.Success_toast());
