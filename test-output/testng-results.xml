@@ -1,32 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="11" total="12" passed="1" failed="0" skipped="0">
+<testng-results ignored="14" total="18" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-16T19:45:20 IST" name="Default suite" finished-at="2025-09-16T19:46:40 IST" duration-ms="79922">
+  <suite started-at="2025-09-18T11:56:07 IST" name="Default suite" finished-at="2025-09-18T11:58:17 IST" duration-ms="129729">
     <groups>
     </groups>
-    <test started-at="2025-09-16T19:45:20 IST" name="Default test" finished-at="2025-09-16T19:46:40 IST" duration-ms="79922">
-      <class name="Whippets.com.Admin.Customer_Module">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@2638011]" started-at="2025-09-16T19:45:20 IST" name="Setup" finished-at="2025-09-16T19:45:22 IST" duration-ms="1809" status="PASS">
+    <test started-at="2025-09-18T11:56:07 IST" name="Default test" finished-at="2025-09-18T11:58:17 IST" duration-ms="129729">
+      <class name="Whippets.com.Admin.Driver_module">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Driver_module@548e6d58]" started-at="2025-09-18T11:56:07 IST" name="Setup" finished-at="2025-09-18T11:56:22 IST" duration-ms="14769" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="customer_edit_check(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@2638011]" started-at="2025-09-16T19:45:22 IST" name="customer_edit_check" data-provider="customerData" finished-at="2025-09-16T19:46:39 IST" duration-ms="77849" status="PASS">
+        <test-method signature="Driver_Add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Driver_module@548e6d58]" started-at="2025-09-18T11:56:22 IST" name="Driver_Add" data-provider="driverData" finished-at="2025-09-18T11:56:48 IST" duration-ms="25961" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Address=21A Prince Anwar Shah Road, Kolkata, West Bengal, Email=subhajit.roy423@yopmail.com, First Name=Subhajit, Last Name=Roy, Phone=+91-9830123456, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\ivan.png, Status=Active}]]>
+                <![CDATA[{Account Status=Active, Driver First Name=Li, Driver Last Name=Wei, Email=li.wei88@yopmail.com, Password=LiWei@123, Phone=+86-13987654321, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Driver Images\li_wei.png}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- customer_edit_check -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@2638011]" started-at="2025-09-16T19:46:39 IST" name="Process_Kill" finished-at="2025-09-16T19:46:40 IST" duration-ms="214" status="PASS">
+        </test-method> <!-- Driver_Add -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Driver_module@548e6d58]" started-at="2025-09-18T11:56:48 IST" name="Process_Kill" finished-at="2025-09-18T11:56:48 IST" duration-ms="185" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Process_Kill -->
-      </class> <!-- Whippets.com.Admin.Customer_Module -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Driver_module@548e6d58]" started-at="2025-09-18T11:56:48 IST" name="Setup" finished-at="2025-09-18T11:56:49 IST" duration-ms="862" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="Driver_Add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Driver_module@548e6d58]" started-at="2025-09-18T11:56:49 IST" name="Driver_Add" data-provider="driverData" finished-at="2025-09-18T11:57:17 IST" duration-ms="28378" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Account Status=Active, Driver First Name=Wang, Driver Last Name=Yuan, Email=wang.yuan77@yopmail.com, Password=WangYuan@123, Phone=+86-13776543210, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Driver Images\wang_yuan.png}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Driver_Add -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Driver_module@548e6d58]" started-at="2025-09-18T11:57:17 IST" name="Process_Kill" finished-at="2025-09-18T11:57:17 IST" duration-ms="241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Process_Kill -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Driver_module@548e6d58]" started-at="2025-09-18T11:57:17 IST" name="Setup" finished-at="2025-09-18T11:57:18 IST" duration-ms="807" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="Driver_Add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Driver_module@548e6d58]" started-at="2025-09-18T11:57:18 IST" name="Driver_Add" data-provider="driverData" finished-at="2025-09-18T11:57:43 IST" duration-ms="24975" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Account Status=Active, Driver First Name=Nikolai, Driver Last Name=Petrov, Email=nikolai.petrov66@yopmail.com, Password=Nikolai@123, Phone=+7-9215556677, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Driver Images\nikolai_petrov.png}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Driver_Add -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Driver_module@548e6d58]" started-at="2025-09-18T11:57:43 IST" name="Process_Kill" finished-at="2025-09-18T11:57:43 IST" duration-ms="208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Process_Kill -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Driver_module@548e6d58]" started-at="2025-09-18T11:57:43 IST" name="Setup" finished-at="2025-09-18T11:57:44 IST" duration-ms="876" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="Driver_Add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Driver_module@548e6d58]" started-at="2025-09-18T11:57:44 IST" name="Driver_Add" data-provider="driverData" finished-at="2025-09-18T11:58:16 IST" duration-ms="31826" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Account Status=Active, Driver First Name=Irina, Driver Last Name=Volkova, Email=irina.volkova55@yopmail.com, Password=Irina@123, Phone=+7-9258887766, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Driver Images\irina_volkova.png}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Driver_Add -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Driver_module@548e6d58]" started-at="2025-09-18T11:58:16 IST" name="Process_Kill" finished-at="2025-09-18T11:58:17 IST" duration-ms="566" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Process_Kill -->
+      </class> <!-- Whippets.com.Admin.Driver_module -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

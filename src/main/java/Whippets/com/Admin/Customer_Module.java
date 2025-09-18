@@ -224,8 +224,8 @@ public class Customer_Module extends Product_module{
 
 
         return new Object[][] {
-            { c1 },/* { c2 }, { c3 }, { c4 }, { c5 },
-            { c6 }, { c7 }, { c8 }, { c9 }, { c10 } */
+            { c1 }, { c2 }, { c3 }, { c4 }, { c5 },
+            { c6 }, { c7 }, { c8 }, { c9 }, { c10} 
         };}
     
     
@@ -298,13 +298,14 @@ public class Customer_Module extends Product_module{
              String toast_two = p.Success_toast().getText();
              Listen.Print_in_Report().log(Status.INFO,toast_two);
              System.out.println(toast_two);
-             System.out.println();/*
-             if(toast_two.contains("")){
+             System.out.println();
+             if(toast_two.contains("The phone has already been taken.")){
             	 js.executeScript("arguments[0].click();",   p.phone());
-            	 p.phone().clear();
+            	 Thread.sleep(800);            	
             	 p.phone().sendKeys(customerData.get("Phone"));
+            	 Thread.sleep(800); 
             	 js.executeScript("arguments[0].scrollIntoView(true);",p.submit_button());
-                 p.submit_button().click();}*/}
+                 p.submit_button().click();}}
                  else{
                 	 Listen.Print_in_Report().log(Status.INFO, "Else Block Executed phone number validation toast not shown");
                 	 System.out.println("Else Block Executed phone number validation toast not shown");
@@ -409,8 +410,6 @@ public class Customer_Module extends Product_module{
      public void customer_Address_Setter(String Address_sent) throws InterruptedException{
   	   
   	   Customer_module_locaters p = new Customer_module_locaters(d);
-  	   JavascriptExecutor js = (JavascriptExecutor)d;
-  	   
   	   
   	    p.Address_Autocomplete_feild().click();
  		Thread.sleep(800);
