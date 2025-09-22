@@ -37,9 +37,9 @@ public class Product_Module_locaters extends Generic_codes{
 	@FindBy(xpath="//h3")
 	private WebElement  Top_oftheForm; 
 	@FindBy(xpath="(//tbody//td[7]//a[2])")
-	private List <WebElement>  Edit_buttons; /*
-	@FindBy(xpath="")
-	private WebElement  ;
+	private List <WebElement>  Edit_buttons; 
+	@FindBy(xpath="//div[@class='toast-message']")
+	private WebElement  product_toast;/*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -146,10 +146,10 @@ public class Product_Module_locaters extends Generic_codes{
     return Top_oftheForm;} 
     public List<WebElement> Edit_buttons(){
     WebElementWait(Edit_buttons);
-    return Edit_buttons;} /*
-    public WebElement (){
-    WebElementWait();
-    return ;} 
+    return Edit_buttons;} 
+    public WebElement product_toast(){
+    WebElementWait(product_toast);
+    return product_toast;} /*
     public WebElement (){
     WebElementWait();
     return ;}  */

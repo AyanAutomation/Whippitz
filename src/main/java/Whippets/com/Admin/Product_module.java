@@ -67,18 +67,21 @@ public class Product_module extends Side_Menu_options_Accessor{
 	    	 
 	    	 Product_Module_locaters p = new Product_Module_locaters(d); 
 	    	
+	    	 
 	        try{
-	    	String Productname = products.get(2);
+	    	String Productname = products.size()>1 ? products.get(2) :products.get(0);
    	        p.search_box().sendKeys(Product_name);
    	        Thread.sleep(800);
+   	     if(p.Second_column().get(0)!=null) {
    	        Listen.Print_in_Report().log(Status.INFO,Productname.equalsIgnoreCase(p.Second_column().get(0).getText().trim())? "Testcase Passsed Search Working":"Testcase Failed Search not working");
-   	         }catch(Exception mmo) {
+   	     }else{Listen.Print_in_Report().log(Status.INFO, "Product May have Already Been Deleted");}}catch(Exception mmo) {
 	    	 product_list_data_collector();
-	    	 String Productname = products.get(2);
+	    	 String Productname = products.size()>1 ? products.get(2) :products.get(0);
 	    	 p.search_box().sendKeys(Product_name);
 	    	 Thread.sleep(800);
-	    	 Listen.Print_in_Report().log(Status.INFO,Productname.equalsIgnoreCase(p.Second_column().get(0).getText().trim())? "Testcase Passsed Search Working":"Testcase Failed Search not working");
-	    	 }
+	    	 if(p.Second_column().get(0)!=null) {
+	    	 Listen.Print_in_Report().log(Status.INFO,Productname.equalsIgnoreCase(p.Second_column().get(0).getText().trim()) ? "Testcase Passsed Search Working":"Testcase Failed Search not working");
+	    	 }else{Listen.Print_in_Report().log(Status.INFO, "Product May have Already Been Deleted");}}
 	     }
 	
 		
@@ -141,7 +144,7 @@ public class Product_module extends Side_Menu_options_Accessor{
 		  public void Product_Add(TreeMap<String, Object> data) throws IOException, InterruptedException{
 			  
 		  Product_Module_locaters p = new Product_Module_locaters(d);	
-		  Login_locaters ll = new Login_locaters(d);
+		
 		  
 		  String ProductType = String.valueOf(data.get("Product Type"));
 		  
@@ -175,8 +178,8 @@ public class Product_module extends Side_Menu_options_Accessor{
 		  Thread.sleep(800);
 		  p.image_upload_field().sendKeys(String.valueOf(data.get("Image Path")));
 		  p.form_submit_button().click();
-		  ll.toast();
-		  Listen.Print_in_Report().log(Status.INFO,ll.toast().getText());
+		  p.product_toast();
+		  Listen.Print_in_Report().log(Status.INFO,p.product_toast().getText());
 		
 		  }
 		

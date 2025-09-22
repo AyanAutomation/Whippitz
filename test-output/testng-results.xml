@@ -1,92 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="7" passed="0" failed="1" skipped="0">
+<testng-results ignored="6" total="10" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-22T12:33:35 IST" name="Default suite" finished-at="2025-09-22T12:34:02 IST" duration-ms="27094">
+  <suite started-at="2025-09-22T19:38:51 IST" name="Default suite" finished-at="2025-09-22T19:40:41 IST" duration-ms="109864">
     <groups>
     </groups>
-    <test started-at="2025-09-22T12:33:35 IST" name="Default test" finished-at="2025-09-22T12:34:02 IST" duration-ms="27094">
+    <test started-at="2025-09-22T19:38:51 IST" name="Default test" finished-at="2025-09-22T19:40:41 IST" duration-ms="109864">
       <class name="Whippets.com.Admin.Product_module">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Product_module@424e1977]" started-at="2025-09-22T12:33:35 IST" name="Setup" finished-at="2025-09-22T12:33:37 IST" duration-ms="1582" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Product_module@424e1977]" started-at="2025-09-22T19:38:51 IST" name="Setup" finished-at="2025-09-22T19:38:53 IST" duration-ms="1607" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="Product_Add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Product_module@424e1977]" started-at="2025-09-22T12:33:37 IST" name="Product_Add" data-provider="getProductData" finished-at="2025-09-22T12:34:02 IST" duration-ms="25268" status="FAIL">
+        <test-method signature="Product_Add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Product_module@424e1977]" started-at="2025-09-22T19:38:53 IST" name="Product_Add" data-provider="getProductData" finished-at="2025-09-22T19:39:21 IST" duration-ms="27921" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Discount %=, Discount Price (AUD)=6.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//choco_mint.png, Pack of=Pack of 3, Product Name=Whippitz N₂O Cylinder – Choco Mint, Product Price (AUD)=48.00, Product Type=Group, Short Description=Refreshing chocolate-mint blend, ideal for gourmet desserts and iced beverages., Stock=90}]]>
+                <![CDATA[{Discount %=, Discount Price (AUD)=6.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//strawberry_swirl.png, Pack of=Pack of 3, Product Name=Whippitz N₂O Cylinder – Strawberry Swirl, Product Price (AUD)=48.00, Product Type=Group, Short Description=Refreshing chocolate-mint blend, ideal for gourmet desserts and iced beverages., Stock=90}]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.InvalidArgumentException">
-            <message>
-              <![CDATA[invalid argument: File not found : C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//choco_mint.png
-  (Session info: chrome=140.0.7339.128)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0c82271efdce8d92d998856b59135faa, sendKeysToElement {id=f.8F30012C426D564CABFB611834E461F7.d.A72F3A1C1DAAA704C4ED43BA7C8EF1EC.e.127, value=[Ljava.lang.CharSequence;@41184371}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50988}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50988/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[[[ChromeDriver: chrome on windows (0c82271efdce8d92d998856b59135faa)] -> xpath: //form]] -> xpath: .//input[@type='file']]
-Session ID: 0c82271efdce8d92d998856b59135faa]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//choco_mint.png
-  (Session info: chrome=140.0.7339.128)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0c82271efdce8d92d998856b59135faa, sendKeysToElement {id=f.8F30012C426D564CABFB611834E461F7.d.A72F3A1C1DAAA704C4ED43BA7C8EF1EC.e.127, value=[Ljava.lang.CharSequence;@41184371}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50988}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50988/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[[[ChromeDriver: chrome on windows (0c82271efdce8d92d998856b59135faa)] -> xpath: //form]] -> xpath: .//input[@type='file']]
-Session ID: 0c82271efdce8d92d998856b59135faa
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-at Whippets.com.Admin.Product_module.Product_Add(Product_module.java:176)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.InvalidArgumentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Product_Add -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Product_module@424e1977]" started-at="2025-09-22T12:34:02 IST" name="Process_Kill" finished-at="2025-09-22T12:34:02 IST" duration-ms="170" status="PASS">
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Product_module@424e1977]" started-at="2025-09-22T19:39:21 IST" name="Process_Kill" finished-at="2025-09-22T19:39:21 IST" duration-ms="185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Process_Kill -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Product_module@424e1977]" started-at="2025-09-22T19:39:21 IST" name="Setup" finished-at="2025-09-22T19:39:22 IST" duration-ms="888" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="Product_Add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Product_module@424e1977]" started-at="2025-09-22T19:39:22 IST" name="Product_Add" data-provider="getProductData" finished-at="2025-09-22T19:39:47 IST" duration-ms="25325" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Discount %=12, Discount Price (AUD)=100.00, Discount Type=Percentage Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//pistachio_royale.png, Pack of=Pack of 6, Product Name=Whippitz N₂O Cylinder – Pistachio Royale, Product Price (AUD)=135.00, Product Type=Group, Short Description=Smooth coffee with caramel cream, perfect for cafés and coffee lovers. Pack of 6., Stock=60}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Product_Add -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Product_module@424e1977]" started-at="2025-09-22T19:39:47 IST" name="Process_Kill" finished-at="2025-09-22T19:39:48 IST" duration-ms="167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Process_Kill -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Product_module@424e1977]" started-at="2025-09-22T19:39:48 IST" name="Setup" finished-at="2025-09-22T19:39:48 IST" duration-ms="849" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="Product_Add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Product_module@424e1977]" started-at="2025-09-22T19:39:48 IST" name="Product_Add" data-provider="getProductData" finished-at="2025-09-22T19:40:15 IST" duration-ms="26336" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Discount %=, Discount Price (AUD)=4.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//almond_delight.png, Pack of=Pack of 10, Product Name=Whippitz N₂O Cylinder – Almond Delight Pack, Product Price (AUD)=47.00, Product Type=Group, Short Description=Exotic mango cream flavour, ideal for smoothies, cakes, and party desserts., Stock=85}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Product_Add -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Product_module@424e1977]" started-at="2025-09-22T19:40:15 IST" name="Process_Kill" finished-at="2025-09-22T19:40:15 IST" duration-ms="158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Process_Kill -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Product_module@424e1977]" started-at="2025-09-22T19:40:15 IST" name="Setup" finished-at="2025-09-22T19:40:16 IST" duration-ms="880" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="Product_Add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Product_module@424e1977]" started-at="2025-09-22T19:40:16 IST" name="Product_Add" data-provider="getProductData" finished-at="2025-09-22T19:40:41 IST" duration-ms="25353" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Discount %=18, Discount Price (AUD)=200.00, Discount Type=Percentage Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//mocha_fudge.png, Pack of=Pack of 12, Product Name=Whippitz N₂O Cylinder – Hazelnut Cream Mega Pack, Product Price (AUD)=210.00, Product Type=Group, Short Description=Rich hazelnut cream cylinders in a value mega pack for bakeries and dessert studios., Stock=35}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Product_Add -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Product_module@424e1977]" started-at="2025-09-22T19:40:41 IST" name="Process_Kill" finished-at="2025-09-22T19:40:41 IST" duration-ms="146" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Process_Kill -->
