@@ -87,6 +87,11 @@ public class Product_Module_locaters extends Generic_codes{
     List<WebElement> input_fields = Add_Edit_form().findElements(By.xpath(".//input[@class='form-control required errorClass']"));
     WebElementWait(input_fields);
     return input_fields;}
+    public List <WebElement> filled_input_feilds(){
+    Add_Edit_form();
+    List<WebElement> filled_input_feilds = Add_Edit_form().findElements(By.xpath(".//input[@class='form-control required']"));
+    WebElementWait(filled_input_feilds);
+    return filled_input_feilds;}
     public WebElement Product_type_dropdowns(){
     Add_Edit_form();
     WebElement Product_type_dropdowns = Add_Edit_form().findElement(By.xpath(".//select[@name='product_type']"));
