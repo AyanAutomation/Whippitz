@@ -6,12 +6,8 @@
       <class name="Whippets.com.Admin.Customer_Module">
       <methods>
       <include name="customer_add"/>
-       </methods>
-      </class>
-      <class name="Whippets.com.Admin.Driver_module">
-      <methods>
-      <include name="Driver_Add"/>
-       </methods>
+       <include name="customer_edit_check"/>
+      </methods>
       </class>
     </classes>
   </test> <!-- Test -->

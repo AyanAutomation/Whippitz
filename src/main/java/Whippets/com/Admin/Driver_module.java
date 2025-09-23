@@ -66,7 +66,7 @@ public class Driver_module extends Customer_Module{
 	    driver1.put("Phone", "+61-421567890");
 	    driver1.put("Password", "EthanM@123");
 	    driver1.put("Account Status", "Active");
-	    driver1.put("Profile Image", System.getProperty("user.dir") + "\\Driver Images\\li_wei.png");
+	    driver1.put("Profile Image", System.getProperty("user.dir") + "\\Driver Images\\Ethan.png");
 
 	    TreeMap<String, String> driver2 = new TreeMap<>();
 	    driver2.put("Driver First Name", "Sophie");
@@ -75,7 +75,7 @@ public class Driver_module extends Customer_Module{
 	    driver2.put("Phone", "+61-422678901");
 	    driver2.put("Password", "SophieA@123");
 	    driver2.put("Account Status", "Inactive");
-	    driver2.put("Profile Image", System.getProperty("user.dir") + "\\Driver Images\\wang_yuan.png");
+	    driver2.put("Profile Image", System.getProperty("user.dir") + "\\Driver Images\\Sophie.png");
 
 	    TreeMap<String, String> driver3 = new TreeMap<>();
 	    driver3.put("Driver First Name", "Liam");

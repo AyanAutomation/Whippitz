@@ -152,81 +152,83 @@ public class Customer_Module extends Product_module{
     @DataProvider
     public Object[][] customerData() {
 
-    	TreeMap<String, String> c1 = new TreeMap<>();
-        c1.put("First Name", "Subhajit");   c1.put("Last Name", "Roy");
-        c1.put("Email", "subhajit.roy423@yopmail.com");
-        c1.put("Phone", "+91-9830123456"); c1.put("Status", "Active");
-        c1.put("Address", "21A Prince Anwar Shah Road, Kolkata, West Bengal");
-        c1.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\ivan.png");
+        TreeMap<String, String> c1 = new TreeMap<>();
+        c1.put("First Name", "Liam");     c1.put("Last Name", "Williams");
+        c1.put("Email", "liam.williams431@yopmail.com");
+        c1.put("Phone", "+61-421345678"); c1.put("Status", "Active");
+        c1.put("Address", "12 George Street, Sydney, NSW");
+        c1.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\Liam Williams.png");
 
         TreeMap<String, String> c2 = new TreeMap<>();
-        c2.put("First Name", "Priyanka");   c2.put("Last Name", "Das");
-        c2.put("Email", "priyanka.das512@yopmail.com");
-        c2.put("Phone", "+91-9831023467"); c2.put("Status", "Inactive");
-        c2.put("Address", "47 Southern Avenue, Kolkata, West Bengal");
-        c2.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\olga.png");
+        c2.put("First Name", "Olivia");   c2.put("Last Name", "Brown");
+        c2.put("Email", "olivia.brown527@yopmail.com");
+        c2.put("Phone", "+61-422456789"); c2.put("Status", "Inactive");
+        c2.put("Address", "85 Collins Street, Melbourne, VIC");
+        c2.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\Olivia Brown.png");
 
         TreeMap<String, String> c3 = new TreeMap<>();
-        c3.put("First Name", "Indranil");   c3.put("Last Name", "Banerjee");
-        c3.put("Email", "indranil.banerjee681@yopmail.com");
-        c3.put("Phone", "+91-9832034578"); c3.put("Status", "Active");
-        c3.put("Address", "65 Bidhan Sarani, Kolkata, West Bengal");
-        c3.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\dmitry.png");
+        c3.put("First Name", "Noah");     c3.put("Last Name", "Harris");
+        c3.put("Email", "noah.harris614@yopmail.com");
+        c3.put("Phone", "+61-423567890"); c3.put("Status", "Active");
+        c3.put("Address", "45 Adelaide Terrace, Perth, WA");
+        c3.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\Noah.png");
 
         TreeMap<String, String> c4 = new TreeMap<>();
-        c4.put("First Name", "Moumita");    c4.put("Last Name", "Ghosh");
-        c4.put("Email", "moumita.ghosh793@yopmail.com");
-        c4.put("Phone", "+91-9833045689"); c4.put("Status", "Inactive");
-        c4.put("Address", "12 Balaram Bose Ghat Road, Kolkata, West Bengal");
-        c4.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\natalia.png");
+        c4.put("First Name", "Isla");     c4.put("Last Name", "Mitchell");
+        c4.put("Email", "isla.mitchell732@yopmail.com");
+        c4.put("Phone", "+61-424678901"); c4.put("Status", "Inactive");
+        c4.put("Address", "39 Elizabeth Street, Brisbane, QLD");
+        c4.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\Isla.png");
 
         TreeMap<String, String> c5 = new TreeMap<>();
-        c5.put("First Name", "Kunal");      c5.put("Last Name", "Chakraborty");
-        c5.put("Email", "kunal.chakraborty275@yopmail.com");
-        c5.put("Phone", "+91-9834056790"); c5.put("Status", "Active");
-        c5.put("Address", "9 S. P. Mukherjee Road, Kolkata, West Bengal");
-        c5.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\sergey.png");
+        c5.put("First Name", "Jack");     c5.put("Last Name", "Robinson");
+        c5.put("Email", "jack.robinson845@yopmail.com");
+        c5.put("Phone", "+61-425789012"); c5.put("Status", "Active");
+        c5.put("Address", "76 Murray Street, Hobart, TAS");
+        c5.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\Jack.png");
 
         TreeMap<String, String> c6 = new TreeMap<>();
-        c6.put("First Name", "Tanushree");  c6.put("Last Name", "Sarkar");
-        c6.put("Email", "tanushree.sarkar346@yopmail.com");
-        c6.put("Phone", "+91-9835067901"); c6.put("Status", "Inactive");
-        c6.put("Address", "33 Ultadanga Main Road, Kolkata, West Bengal");
-        c6.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\elena.png");
+        c6.put("First Name", "Grace");    c6.put("Last Name", "Edwards");
+        c6.put("Email", "grace.edwards963@yopmail.com");
+        c6.put("Phone", "+61-426890123"); c6.put("Status", "Inactive");
+        c6.put("Address", "14 North Terrace, Adelaide, SA");
+        c6.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\Henry.png");
 
         TreeMap<String, String> c7 = new TreeMap<>();
-        c7.put("First Name", "Ritwik");     c7.put("Last Name", "Sen");
-        c7.put("Email", "ritwik.sen483@yopmail.com");
-        c7.put("Phone", "+91-9836078012"); c7.put("Status", "Active");
-        c7.put("Address", "58 Garia Main Road, Kolkata, West Bengal");
-        c7.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\andrei.png");
+        c7.put("First Name", "Henry");    c7.put("Last Name", "Thompson");
+        c7.put("Email", "henry.thompson437@yopmail.com");
+        c7.put("Phone", "+61-427901234"); c7.put("Status", "Active");
+        c7.put("Address", "22 Mitchell Street, Darwin, NT");
+        c7.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\Thompson.png");
 
         TreeMap<String, String> c8 = new TreeMap<>();
-        c8.put("First Name", "Sneha");      c8.put("Last Name", "Bhattacharya");
-        c8.put("Email", "sneha.bhattacharya579@yopmail.com");
-        c8.put("Phone", "+91-9837089123"); c8.put("Status", "Inactive");
-        c8.put("Address", "5 Vivekananda Road, Kolkata, West Bengal");
-        c8.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\tatiana.png");
+        c8.put("First Name", "Chloe");    c8.put("Last Name", "White");
+        c8.put("Email", "chloe.white589@yopmail.com");
+        c8.put("Phone", "+61-428012345"); c8.put("Status", "Inactive");
+        c8.put("Address", "9 Macquarie Street, Sydney, NSW");
+        c8.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\Chloe.png");
 
         TreeMap<String, String> c9 = new TreeMap<>();
-        c9.put("First Name", "Partha");     c9.put("Last Name", "Biswas");
-        c9.put("Email", "partha.biswas641@yopmail.com");
-        c9.put("Phone", "+91-9838090234"); c9.put("Status", "Active");
-        c9.put("Address", "71A Amherst Street, Kolkata, West Bengal");
-        c9.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\mikhail.png");
+        c9.put("First Name", "Lucas");    c9.put("Last Name", "King");
+        c9.put("Email", "lucas.king673@yopmail.com");
+        c9.put("Phone", "+61-429123456"); c9.put("Status", "Active");
+        c9.put("Address", "33 Swanston Street, Melbourne, VIC");
+        c9.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\Lucas.png");
 
         TreeMap<String, String> c10 = new TreeMap<>();
-        c10.put("First Name", "Ankita");    c10.put("Last Name", "Mandal");
-        c10.put("Email", "ankita.mandal738@yopmail.com");
-        c10.put("Phone", "+91-9839101345"); c10.put("Status", "Inactive");
-        c10.put("Address", "44 Lansdowne Road, Kolkata, West Bengal");
-        c10.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\anna.png");
-
+        c10.put("First Name", "Ella");    c10.put("Last Name", "Parker");
+        c10.put("Email", "ella.parker781@yopmail.com");
+        c10.put("Phone", "+61-430234567"); c10.put("Status", "Inactive");
+        c10.put("Address", "57 St Georges Terrace, Perth, WA");
+        c10.put("Profile Image", System.getProperty("user.dir") + "\\Customer Photos\\Ella.png");
 
         return new Object[][] {
             { c1 }, { c2 }, { c3 }, { c4 }, { c5 },
-            { c6 }, { c7 }, { c8 }, { c9 }, { c10} 
-        };}
+            { c6 }, { c7 }, { c8 }, { c9 }, { c10 }
+        };
+    }
+    
+
     
     
      @Test(dataProvider="customerData")
