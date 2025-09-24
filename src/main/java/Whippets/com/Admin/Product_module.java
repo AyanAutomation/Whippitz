@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
@@ -208,52 +209,117 @@ public class Product_module extends Side_Menu_options_Accessor{
 			  String Dynamic_file_path = System.getProperty("user.dir") + "//ProductImages//";
 
 			  TreeMap<String, String> product1 = new TreeMap<>();
-			    product1.put("Product Name", "Whippitz N₂O Cylinder – Strawberry Swirl");
+			    product1.put("Product Name", "Whippitz N₂O Cylinder – Blueberry Frost");
 			    product1.put("Product Type", "Group");
-			    product1.put("Stock", "90");
-			    product1.put("Product Price (AUD)", "48.00");
-			    product1.put("Pack of", "Pack of 3");                         // not needed for Single
+			    product1.put("Stock", "95");
+			    product1.put("Product Price (AUD)", "155.00");
+			    product1.put("Pack of", "Pack of 6");
 			    product1.put("Discount Type", "Fixed Discount");
-			    product1.put("Discount %", "");                      // not needed for Fixed
-			    product1.put("Discount Price (AUD)", "6.00");
-			    product1.put("Short Description", "Refreshing chocolate-mint blend, ideal for gourmet desserts and iced beverages.");
-			    product1.put("Image Path", Dynamic_file_path + "strawberry_swirl.png");
+			    product1.put("Discount %", "");
+			    product1.put("Discount Price (AUD)", "12.00");
+			    product1.put("Short Description", "Cool blueberry cream flavour, perfect for smoothies and summer desserts.");
+			    product1.put("Image Path", Dynamic_file_path + "Blueberry Frost.png");
 
 			    TreeMap<String, String> product2 = new TreeMap<>();
-			    product2.put("Product Name", "Whippitz N₂O Cylinder – Pistachio Royale");
+			    product2.put("Product Name", "Whippitz N₂O Cylinder – Caramel Mocha Royale");
 			    product2.put("Product Type", "Group");
 			    product2.put("Stock", "60");
-			    product2.put("Product Price (AUD)", "135.00");
-			    product2.put("Pack of", "Pack of 6");                // shown only for Group
+			    product2.put("Product Price (AUD)", "178.00");
+			    product2.put("Pack of", "Pack of 8");
 			    product2.put("Discount Type", "Percentage Discount");
-			    product2.put("Discount %", "12");                    // % field appears
-			    product2.put("Discount Price (AUD)", "100.00");            // AUD field disabled/ignored
-			    product2.put("Short Description", "Smooth coffee with caramel cream, perfect for cafés and coffee lovers. Pack of 6.");
-			    product2.put("Image Path", Dynamic_file_path + "pistachio_royale.png");
+			    product2.put("Discount %", "15");
+			    product2.put("Discount Price (AUD)", "26.70");
+			    product2.put("Short Description", "Caramel mocha infusion, ideal for coffee bars and bakery frosting.");
+			    product2.put("Image Path", Dynamic_file_path + "Caramel Mocha Royale.png");
 
 			    TreeMap<String, String> product3 = new TreeMap<>();
-			    product3.put("Product Name", "Whippitz N₂O Cylinder – Almond Delight Pack");
+			    product3.put("Product Name", "Whippitz N₂O Cylinder – Tropical Mango Rush");
 			    product3.put("Product Type", "Group");
-			    product3.put("Stock", "85");
-			    product3.put("Product Price (AUD)", "47.00");
-			    product3.put("Pack of", "Pack of 10");                         // not needed for Single
+			    product3.put("Stock", "88");
+			    product3.put("Product Price (AUD)", "165.00");
+			    product3.put("Pack of", "Pack of 10");
 			    product3.put("Discount Type", "Fixed Discount");
-			    product3.put("Discount %", "");                      // not needed for Fixed
-			    product3.put("Discount Price (AUD)", "4.00");
-			    product3.put("Short Description", "Exotic mango cream flavour, ideal for smoothies, cakes, and party desserts.");
-			    product3.put("Image Path", Dynamic_file_path + "almond_delight.png");
+			    product3.put("Discount %", "");
+			    product3.put("Discount Price (AUD)", "15.00");
+			    product3.put("Short Description", "Exotic tropical mango cream, perfect for icy drinks and party desserts.");
+			    product3.put("Image Path", Dynamic_file_path + "Tropical Mango Rush.png");
 
 			    TreeMap<String, String> product4 = new TreeMap<>();
-			    product4.put("Product Name", "Whippitz N₂O Cylinder – Hazelnut Cream Mega Pack");
+			    product4.put("Product Name", "Whippitz N₂O Cylinder – Hazelnut Praline Supreme");
 			    product4.put("Product Type", "Group");
-			    product4.put("Stock", "35");
-			    product4.put("Product Price (AUD)", "210.00");
-			    product4.put("Pack of", "Pack of 12");               // shown only for Group
+			    product4.put("Stock", "42");
+			    product4.put("Product Price (AUD)", "220.00");
+			    product4.put("Pack of", "Pack of 12");
 			    product4.put("Discount Type", "Percentage Discount");
-			    product4.put("Discount %", "18");                    // % field appears
-			    product4.put("Discount Price (AUD)", "200.00");            // AUD field disabled/ignored
-			    product4.put("Short Description", "Rich hazelnut cream cylinders in a value mega pack for bakeries and dessert studios.");
-			    product4.put("Image Path", Dynamic_file_path + "mocha_fudge.png");
+			    product4.put("Discount %", "20");
+			    product4.put("Discount Price (AUD)", "44.00");
+			    product4.put("Short Description", "Premium hazelnut praline flavour, designed for luxury dessert lounges.");
+			    product4.put("Image Path", Dynamic_file_path + "Hazelnut Praline Supreme.png");
+
+			    return new Object[][] {
+			        { product1 },
+			        { product2 },
+			        { product3 },
+			        { product4 }
+			    };
+		    }
+		
+		  
+		  @DataProvider
+		    public Object[][] getProductEditData() {
+		        
+			    
+			  
+			  
+			  String Dynamic_file_path = System.getProperty("user.dir") + "//ProductImages//";
+
+			  TreeMap<String, String> product1 = new TreeMap<>();
+			    product1.put("Product Name", "Whippitz N₂O Cylinder – Raspberry Velvet");
+			    product1.put("Product Type", "Group");
+			    product1.put("Stock", "78");
+			    product1.put("Product Price (AUD)", "160.00");
+			    product1.put("Pack of", "Pack of 6");
+			    product1.put("Discount Type", "Fixed Discount");
+			    product1.put("Discount %", "");
+			    product1.put("Discount Price (AUD)", "10.00");
+			    product1.put("Short Description", "Smooth raspberry cream flavour, ideal for chilled desserts and frappes.");
+			    product1.put("Image Path", Dynamic_file_path + "Raspberry Velvet.png");
+
+			    TreeMap<String, String> product2 = new TreeMap<>();
+			    product2.put("Product Name", "Whippitz N₂O Cylinder – Mocha Almond Crush");
+			    product2.put("Product Type", "Group");
+			    product2.put("Stock", "65");
+			    product2.put("Product Price (AUD)", "175.00");
+			    product2.put("Pack of", "Pack of 8");
+			    product2.put("Discount Type", "Percentage Discount");
+			    product2.put("Discount %", "14");
+			    product2.put("Discount Price (AUD)", "24.50");
+			    product2.put("Short Description", "Coffee mocha with almond fusion, great for bakeries and gourmet beverages.");
+			    product2.put("Image Path", Dynamic_file_path + "Mocha Almond Crush.png");
+
+			    TreeMap<String, String> product3 = new TreeMap<>();
+			    product3.put("Product Name", "Whippitz N₂O Cylinder – Kiwi Lime Spark");
+			    product3.put("Product Type", "Group");
+			    product3.put("Stock", "92");
+			    product3.put("Product Price (AUD)", "152.00");
+			    product3.put("Pack of", "Pack of 10");
+			    product3.put("Discount Type", "Fixed Discount");
+			    product3.put("Discount %", "");
+			    product3.put("Discount Price (AUD)", "9.00");
+			    product3.put("Short Description", "Refreshing kiwi and lime blend, perfect for fruit tarts and tropical drinks.");
+			    product3.put("Image Path", Dynamic_file_path + "Kiwi Lime Spark.png");
+
+			    TreeMap<String, String> product4 = new TreeMap<>();
+			    product4.put("Product Name", "Whippitz N₂O Cylinder – Peanut Butter Indulgence");
+			    product4.put("Product Type", "Group");
+			    product4.put("Stock", "48");
+			    product4.put("Product Price (AUD)", "225.00");
+			    product4.put("Pack of", "Pack of 12");
+			    product4.put("Discount Type", "Percentage Discount");
+			    product4.put("Discount %", "19");
+			    product4.put("Discount Price (AUD)", "42.75");
+			    product4.put("Short Description", "Rich peanut butter cream for premium cafés and dessert lounges.");
+			    product4.put("Image Path", Dynamic_file_path + "Peanut Butter Indulgence.png");
 
 			    return new Object[][] {
 			        { product1 },
@@ -262,7 +328,10 @@ public class Product_module extends Side_Menu_options_Accessor{
 			        { product4 } 
 			    };
 		    }
-		
+		  
+		  
+		  
+		  
 		
 		
 		public void Astrix_mandatory_count_checker(String productType) throws InterruptedException{
@@ -293,10 +362,85 @@ public class Product_module extends Side_Menu_options_Accessor{
 			  int Asterisk_count = p.Asteriks().size();
 			  Listen.Print_in_Report().log(Status.INFO,Error_Mesage_count==Asterisk_count ? "Testcase Passed ErrorMessage Count "+Error_Mesage_count+" is Equals to Astrix Count "+Asterisk_count: "Testcase Fail ErrorMessage Count "+Error_Mesage_count+" NOT Equals to Astrix Count "+Asterisk_count);
 			
-			  }
+			  }}
+		
+		
+		public void product_edit_form_astrix_checker() throws InterruptedException{
+			
+			Product_Module_locaters p = new Product_Module_locaters(d);	
+			Generic_codes g = new Generic_codes(d);
+			
+			  p.form_submit_button().click();
+			  int Error_Mesage_count = p.error_messages().size();
+			  Thread.sleep(800);
+			  g.Scroll_into_view(p.Top_oftheForm());
+			  Thread.sleep(800);
+			  p.Asteriks();
+			  int Asterisk_count = p.Asteriks().size();
+			  Listen.Print_in_Report().log(Status.INFO,Error_Mesage_count==Asterisk_count ? "Testcase Passed ErrorMessage Count "+Error_Mesage_count+" is Equals to Astrix Count "+Asterisk_count: "Testcase Fail ErrorMessage Count "+Error_Mesage_count+" NOT Equals to Astrix Count "+Asterisk_count);
+			
+			
 			
 			
 		}
+		
+		
+		  
+		   @Test(dataProvider="getProductEditData")
+		   public void product_Edit(TreeMap<String,String> data) throws IOException, InterruptedException{
+			   
+			   Product_Module_locaters p = new Product_Module_locaters(d);	
+			   String ProductType = String.valueOf(data.get("Product Type")); 
+			   JavascriptExecutor js = (JavascriptExecutor)d;
+			   
+			   
+			   
+			   
+			   Product_list_Accessor();
+			   p.Edit_buttons().get(1).click();
+			   p.Add_Edit_form();
+			   js.executeScript("arguments[0].scrollIntoView(true);",p.image_upload_field());
+			   p.image_upload_field().sendKeys(String.valueOf(data.get("Image Path")));
+			   js.executeScript("arguments[0].scrollIntoView(true);",p.form_submit_button());
+			   Thread.sleep(800);
+			   p.form_submit_button().click();
+			   Listen.Print_in_Report().log(Status.INFO, p.product_toast().getText());
+			   p.search_box();
+			   p.Edit_buttons().get(0).click();
+			   p.Add_Edit_form();
+			   p.filled_input_feilds().get(0).clear();
+			   product_edit_form_astrix_checker();
+			   Thread.sleep(800);
+			   d.navigate().refresh();
+			   Thread.sleep(800);
+			   p.filled_input_feilds().get(0).clear();
+			   js.executeScript("arguments[0].scrollIntoView(true);",p.form_submit_button());
+			   Thread.sleep(800);
+			   p.form_submit_button().click();
+			   js.executeScript("arguments[0].scrollIntoView(true);",p.input_fields().get(0));
+			   p.input_fields().get(0).sendKeys(data.get("Product Name"));
+			   Thread.sleep(800);
+			   js.executeScript("arguments[0].scrollIntoView(true);",p.form_submit_button());
+			   Thread.sleep(800);
+			   p.form_submit_button().click();
+			   Thread.sleep(800);
+			   p.product_toast();
+			   Listen.Print_in_Report().log(Status.INFO, p.product_toast().getText());
+			   p.search_box();
+			   p.Edit_buttons().get(0).click();
+			   p.Add_Edit_form();
+			   p.filled_input_feilds().get(1).clear();
+			   p.filled_input_feilds().get(2).clear();
+			   product_edit_form_astrix_checker();
+			   p.input_fields().get(0).sendKeys(data.get("Stock"));
+			   p.input_fields().get(1).sendKeys(data.get("Product Price (AUD)"));
+			   js.executeScript("arguments[0].scrollIntoView(true);",p.form_submit_button());
+			   Thread.sleep(800);
+			   p.form_submit_button().click();
+			   Thread.sleep(800);
+			   Listen.Print_in_Report().log(Status.INFO, p.product_toast().getText());
+			   p.search_box();
+		   }
 		
 		
 	

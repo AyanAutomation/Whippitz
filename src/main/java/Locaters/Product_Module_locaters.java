@@ -36,7 +36,7 @@ public class Product_Module_locaters extends Generic_codes{
 	private List <WebElement>  error_messages; 
 	@FindBy(xpath="//h3")
 	private WebElement  Top_oftheForm; 
-	@FindBy(xpath="(//tbody//td[7]//a[2])")
+	@FindBy(xpath="(//tbody//td[6]//a[2])")
 	private List <WebElement>  Edit_buttons; 
 	@FindBy(xpath="//div[@class='toast-message']")
 	private WebElement  product_toast;/*

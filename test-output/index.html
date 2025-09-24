@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,12 +21,11 @@
      -->
   </head>
 
-  <body>
-    <div class="top-banner-root">
+  <body>    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>H:\Selenium Projects\Whippitz\Customer_Add_Edit_Check.xml</span>
+                    <span>C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Product_Add_Edit_check.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">14 methods,   14 passed</span>
+                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Product_module" class="method navigator-link" hash-for-method="Product_Add({Discount %=15, Discount Price (AUD)=26.70, Discount Type=Percentage Discount, Image Path=C:\Users\P...)">Product_Add({Discount %=15, Discount Price (AUD)=26.70, Discount Type=Percentage Discount, Image Path=C:\Users\P...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,72 +117,37 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Driver_module" class="method navigator-link" hash-for-method="Driver_Add({Account Status=Active, Driver First Name=Liam, Driver Last Name=Thompson, Email=liam.thompson75@yop...)">Driver_Add({Account Status=Active, Driver First Name=Liam, Driver Last Name=Thompson, Email=liam.thompson75@yop...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Product_module" class="method navigator-link" hash-for-method="Product_Add({Discount %=, Discount Price (AUD)=15.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\O...)">Product_Add({Discount %=, Discount Price (AUD)=15.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\O...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Driver_module" class="method navigator-link" hash-for-method="Driver_Add({Account Status=Active, Driver First Name=Ethan, Driver Last Name=McKenzie, Email=ethan.mckenzie94@y...)">Driver_Add({Account Status=Active, Driver First Name=Ethan, Driver Last Name=McKenzie, Email=ethan.mckenzie94@y...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Product_module" class="method navigator-link" hash-for-method="Product_Add({Discount %=20, Discount Price (AUD)=44.00, Discount Type=Percentage Discount, Image Path=C:\Users\P...)">Product_Add({Discount %=20, Discount Price (AUD)=44.00, Discount Type=Percentage Discount, Image Path=C:\Users\P...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Driver_module" class="method navigator-link" hash-for-method="Driver_Add({Account Status=Inactive, Driver First Name=Sophie, Driver Last Name=Anderson, Email=sophie.anderson...)">Driver_Add({Account Status=Inactive, Driver First Name=Sophie, Driver Last Name=Anderson, Email=sophie.anderson...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Product_module" class="method navigator-link" hash-for-method="Product_Add({Discount %=, Discount Price (AUD)=12.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\O...)">Product_Add({Discount %=, Discount Price (AUD)=12.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\O...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Driver_module" class="method navigator-link" hash-for-method="Driver_Add({Account Status=Inactive, Driver First Name=Olivia, Driver Last Name=Hughes, Email=olivia.hughes69@y...)">Driver_Add({Account Status=Inactive, Driver First Name=Olivia, Driver Last Name=Hughes, Email=olivia.hughes69@y...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Product_module" class="method navigator-link" hash-for-method="product_Edit({Discount %=, Discount Price (AUD)=10.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\O...)">product_Edit({Discount %=, Discount Price (AUD)=10.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\O...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Customer_Module" class="method navigator-link" hash-for-method="customer_add({Address=45 Adelaide Terrace, Perth, WA, Email=noah.harris614@yopmail.com, First Name=Noah, Last Nam...)">customer_add({Address=45 Adelaide Terrace, Perth, WA, Email=noah.harris614@yopmail.com, First Name=Noah, Last Nam...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Product_module" class="method navigator-link" hash-for-method="product_Edit({Discount %=19, Discount Price (AUD)=42.75, Discount Type=Percentage Discount, Image Path=C:\Users\P...)">product_Edit({Discount %=19, Discount Price (AUD)=42.75, Discount Type=Percentage Discount, Image Path=C:\Users\P...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Customer_Module" class="method navigator-link" hash-for-method="customer_add({Address=76 Murray Street, Hobart, TAS, Email=jack.robinson845@yopmail.com, First Name=Jack, Last Na...)">customer_add({Address=76 Murray Street, Hobart, TAS, Email=jack.robinson845@yopmail.com, First Name=Jack, Last Na...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Product_module" class="method navigator-link" hash-for-method="product_Edit({Discount %=14, Discount Price (AUD)=24.50, Discount Type=Percentage Discount, Image Path=C:\Users\P...)">product_Edit({Discount %=14, Discount Price (AUD)=24.50, Discount Type=Percentage Discount, Image Path=C:\Users\P...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Customer_Module" class="method navigator-link" hash-for-method="customer_add({Address=39 Elizabeth Street, Brisbane, QLD, Email=isla.mitchell732@yopmail.com, First Name=Isla, La...)">customer_add({Address=39 Elizabeth Street, Brisbane, QLD, Email=isla.mitchell732@yopmail.com, First Name=Isla, La...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Customer_Module" class="method navigator-link" hash-for-method="customer_add({Address=57 St Georges Terrace, Perth, WA, Email=ella.parker781@yopmail.com, First Name=Ella, Last N...)">customer_add({Address=57 St Georges Terrace, Perth, WA, Email=ella.parker781@yopmail.com, First Name=Ella, Last N...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Customer_Module" class="method navigator-link" hash-for-method="customer_add({Address=9 Macquarie Street, Sydney, NSW, Email=chloe.white589@yopmail.com, First Name=Chloe, Last N...)">customer_add({Address=9 Macquarie Street, Sydney, NSW, Email=chloe.white589@yopmail.com, First Name=Chloe, Last N...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Customer_Module" class="method navigator-link" hash-for-method="customer_add({Address=12 George Street, Sydney, NSW, Email=liam.williams431@yopmail.com, First Name=Liam, Last Na...)">customer_add({Address=12 George Street, Sydney, NSW, Email=liam.williams431@yopmail.com, First Name=Liam, Last Na...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Customer_Module" class="method navigator-link" hash-for-method="customer_add({Address=85 Collins Street, Melbourne, VIC, Email=olivia.brown527@yopmail.com, First Name=Olivia, La...)">customer_add({Address=85 Collins Street, Melbourne, VIC, Email=olivia.brown527@yopmail.com, First Name=Olivia, La...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Customer_Module" class="method navigator-link" hash-for-method="customer_add({Address=33 Swanston Street, Melbourne, VIC, Email=lucas.king673@yopmail.com, First Name=Lucas, Last...)">customer_add({Address=33 Swanston Street, Melbourne, VIC, Email=lucas.king673@yopmail.com, First Name=Lucas, Last...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Customer_Module" class="method navigator-link" hash-for-method="customer_add({Address=22 Mitchell Street, Darwin, NT, Email=henry.thompson437@yopmail.com, First Name=Henry, Last...)">customer_add({Address=22 Mitchell Street, Darwin, NT, Email=henry.thompson437@yopmail.com, First Name=Henry, Last...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Customer_Module" class="method navigator-link" hash-for-method="customer_add({Address=14 North Terrace, Adelaide, SA, Email=grace.edwards963@yopmail.com, First Name=Grace, Last ...)">customer_add({Address=14 North Terrace, Adelaide, SA, Email=grace.edwards963@yopmail.com, First Name=Grace, Last ...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Whippets.com.Admin.Product_module" class="method navigator-link" hash-for-method="product_Edit({Discount %=, Discount Price (AUD)=9.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\On...)">product_Edit({Discount %=, Discount Price (AUD)=9.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\On...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -184,130 +162,92 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Whippets.com.Admin.Driver_module</span>
+              <img src="failed.png"/>
+              <span class="class-name">Whippets.com.Admin.Product_module</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Driver_Add({Account Status=Active, Driver First Name=Liam, Driver Last Name=Thompson, Email=liam.thompson75@yop...)">
-                  </a> <!-- Driver_Add({Account Status=Active, Driver First Name=Liam, Driver Last Name=Thompson, Email=liam.thompson75@yop...) -->
-                  <span class="method-name">Driver_Add</span>
-                  <span class="parameters">({Account Status=Active, Driver First Name=Liam, Driver Last Name=Thompson, Email=liam.thompson75@yopmail.com, Password=LiamT@123, Phone=+61-423789012, Profile Image=H:\Selenium Projects\Whippitz\Driver Images\nikolai_petrov.png})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Driver_Add({Account Status=Active, Driver First Name=Ethan, Driver Last Name=McKenzie, Email=ethan.mckenzie94@y...)">
-                  </a> <!-- Driver_Add({Account Status=Active, Driver First Name=Ethan, Driver Last Name=McKenzie, Email=ethan.mckenzie94@y...) -->
-                  <span class="method-name">Driver_Add</span>
-                  <span class="parameters">({Account Status=Active, Driver First Name=Ethan, Driver Last Name=McKenzie, Email=ethan.mckenzie94@yopmail.com, Password=EthanM@123, Phone=+61-421567890, Profile Image=H:\Selenium Projects\Whippitz\Driver Images\Ethan.png})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Driver_Add({Account Status=Inactive, Driver First Name=Sophie, Driver Last Name=Anderson, Email=sophie.anderson...)">
-                  </a> <!-- Driver_Add({Account Status=Inactive, Driver First Name=Sophie, Driver Last Name=Anderson, Email=sophie.anderson...) -->
-                  <span class="method-name">Driver_Add</span>
-                  <span class="parameters">({Account Status=Inactive, Driver First Name=Sophie, Driver Last Name=Anderson, Email=sophie.anderson87@yopmail.com, Password=SophieA@123, Phone=+61-422678901, Profile Image=H:\Selenium Projects\Whippitz\Driver Images\Sophie.png})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Driver_Add({Account Status=Inactive, Driver First Name=Olivia, Driver Last Name=Hughes, Email=olivia.hughes69@y...)">
-                  </a> <!-- Driver_Add({Account Status=Inactive, Driver First Name=Olivia, Driver Last Name=Hughes, Email=olivia.hughes69@y...) -->
-                  <span class="method-name">Driver_Add</span>
-                  <span class="parameters">({Account Status=Inactive, Driver First Name=Olivia, Driver Last Name=Hughes, Email=olivia.hughes69@yopmail.com, Password=OliviaH@123, Phone=+61-424890123, Profile Image=H:\Selenium Projects\Whippitz\Driver Images\irina_volkova.png})</span>
+                  <a name="Product_Add({Discount %=15, Discount Price (AUD)=26.70, Discount Type=Percentage Discount, Image Path=C:\Users\P...)">
+                  </a> <!-- Product_Add({Discount %=15, Discount Price (AUD)=26.70, Discount Type=Percentage Discount, Image Path=C:\Users\P...) -->
+                  <span class="method-name">Product_Add</span>
+                  <span class="parameters">({Discount %=15, Discount Price (AUD)=26.70, Discount Type=Percentage Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//Caramel Mocha Royale.png, Pack of=Pack of 8, Product Name=Whippitz N₂O Cylinder – Caramel Mocha Royale, Product Price (AUD)=178.00, Product Type=Group, Short Description=Caramel mocha infusion, ideal for coffee bars and bakery frosting., Stock=60})</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate option with text: Pack of 8
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:167)
+	at Whippets.com.Admin.Product_module.Product_Add(Product_module.java:160)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Whippets.com.Admin.Customer_Module</span>
+              <span class="class-name">Whippets.com.Admin.Product_module</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="customer_add({Address=45 Adelaide Terrace, Perth, WA, Email=noah.harris614@yopmail.com, First Name=Noah, Last Nam...)">
-                  </a> <!-- customer_add({Address=45 Adelaide Terrace, Perth, WA, Email=noah.harris614@yopmail.com, First Name=Noah, Last Nam...) -->
-                  <span class="method-name">customer_add</span>
-                  <span class="parameters">({Address=45 Adelaide Terrace, Perth, WA, Email=noah.harris614@yopmail.com, First Name=Noah, Last Name=Harris, Phone=+61-423567890, Profile Image=H:\Selenium Projects\Whippitz\Customer Photos\Noah.png, Status=Active})</span>
+                  <a name="Product_Add({Discount %=, Discount Price (AUD)=15.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\O...)">
+                  </a> <!-- Product_Add({Discount %=, Discount Price (AUD)=15.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\O...) -->
+                  <span class="method-name">Product_Add</span>
+                  <span class="parameters">({Discount %=, Discount Price (AUD)=15.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//Tropical Mango Rush.png, Pack of=Pack of 10, Product Name=Whippitz N₂O Cylinder – Tropical Mango Rush, Product Price (AUD)=165.00, Product Type=Group, Short Description=Exotic tropical mango cream, perfect for icy drinks and party desserts., Stock=88})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="customer_add({Address=76 Murray Street, Hobart, TAS, Email=jack.robinson845@yopmail.com, First Name=Jack, Last Na...)">
-                  </a> <!-- customer_add({Address=76 Murray Street, Hobart, TAS, Email=jack.robinson845@yopmail.com, First Name=Jack, Last Na...) -->
-                  <span class="method-name">customer_add</span>
-                  <span class="parameters">({Address=76 Murray Street, Hobart, TAS, Email=jack.robinson845@yopmail.com, First Name=Jack, Last Name=Robinson, Phone=+61-425789012, Profile Image=H:\Selenium Projects\Whippitz\Customer Photos\Jack.png, Status=Active})</span>
+                  <a name="Product_Add({Discount %=20, Discount Price (AUD)=44.00, Discount Type=Percentage Discount, Image Path=C:\Users\P...)">
+                  </a> <!-- Product_Add({Discount %=20, Discount Price (AUD)=44.00, Discount Type=Percentage Discount, Image Path=C:\Users\P...) -->
+                  <span class="method-name">Product_Add</span>
+                  <span class="parameters">({Discount %=20, Discount Price (AUD)=44.00, Discount Type=Percentage Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//Hazelnut Praline Supreme.png, Pack of=Pack of 12, Product Name=Whippitz N₂O Cylinder – Hazelnut Praline Supreme, Product Price (AUD)=220.00, Product Type=Group, Short Description=Premium hazelnut praline flavour, designed for luxury dessert lounges., Stock=42})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="customer_add({Address=39 Elizabeth Street, Brisbane, QLD, Email=isla.mitchell732@yopmail.com, First Name=Isla, La...)">
-                  </a> <!-- customer_add({Address=39 Elizabeth Street, Brisbane, QLD, Email=isla.mitchell732@yopmail.com, First Name=Isla, La...) -->
-                  <span class="method-name">customer_add</span>
-                  <span class="parameters">({Address=39 Elizabeth Street, Brisbane, QLD, Email=isla.mitchell732@yopmail.com, First Name=Isla, Last Name=Mitchell, Phone=+61-424678901, Profile Image=H:\Selenium Projects\Whippitz\Customer Photos\Isla.png, Status=Inactive})</span>
+                  <a name="Product_Add({Discount %=, Discount Price (AUD)=12.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\O...)">
+                  </a> <!-- Product_Add({Discount %=, Discount Price (AUD)=12.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\O...) -->
+                  <span class="method-name">Product_Add</span>
+                  <span class="parameters">({Discount %=, Discount Price (AUD)=12.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//Blueberry Frost.png, Pack of=Pack of 6, Product Name=Whippitz N₂O Cylinder – Blueberry Frost, Product Price (AUD)=155.00, Product Type=Group, Short Description=Cool blueberry cream flavour, perfect for smoothies and summer desserts., Stock=95})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="customer_add({Address=57 St Georges Terrace, Perth, WA, Email=ella.parker781@yopmail.com, First Name=Ella, Last N...)">
-                  </a> <!-- customer_add({Address=57 St Georges Terrace, Perth, WA, Email=ella.parker781@yopmail.com, First Name=Ella, Last N...) -->
-                  <span class="method-name">customer_add</span>
-                  <span class="parameters">({Address=57 St Georges Terrace, Perth, WA, Email=ella.parker781@yopmail.com, First Name=Ella, Last Name=Parker, Phone=+61-430234567, Profile Image=H:\Selenium Projects\Whippitz\Customer Photos\Ella.png, Status=Inactive})</span>
+                  <a name="product_Edit({Discount %=, Discount Price (AUD)=10.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\O...)">
+                  </a> <!-- product_Edit({Discount %=, Discount Price (AUD)=10.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\O...) -->
+                  <span class="method-name">product_Edit</span>
+                  <span class="parameters">({Discount %=, Discount Price (AUD)=10.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//Raspberry Velvet.png, Pack of=Pack of 6, Product Name=Whippitz N₂O Cylinder – Raspberry Velvet, Product Price (AUD)=160.00, Product Type=Group, Short Description=Smooth raspberry cream flavour, ideal for chilled desserts and frappes., Stock=78})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="customer_add({Address=9 Macquarie Street, Sydney, NSW, Email=chloe.white589@yopmail.com, First Name=Chloe, Last N...)">
-                  </a> <!-- customer_add({Address=9 Macquarie Street, Sydney, NSW, Email=chloe.white589@yopmail.com, First Name=Chloe, Last N...) -->
-                  <span class="method-name">customer_add</span>
-                  <span class="parameters">({Address=9 Macquarie Street, Sydney, NSW, Email=chloe.white589@yopmail.com, First Name=Chloe, Last Name=White, Phone=+61-428012345, Profile Image=H:\Selenium Projects\Whippitz\Customer Photos\Chloe.png, Status=Inactive})</span>
+                  <a name="product_Edit({Discount %=19, Discount Price (AUD)=42.75, Discount Type=Percentage Discount, Image Path=C:\Users\P...)">
+                  </a> <!-- product_Edit({Discount %=19, Discount Price (AUD)=42.75, Discount Type=Percentage Discount, Image Path=C:\Users\P...) -->
+                  <span class="method-name">product_Edit</span>
+                  <span class="parameters">({Discount %=19, Discount Price (AUD)=42.75, Discount Type=Percentage Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//Peanut Butter Indulgence.png, Pack of=Pack of 12, Product Name=Whippitz N₂O Cylinder – Peanut Butter Indulgence, Product Price (AUD)=225.00, Product Type=Group, Short Description=Rich peanut butter cream for premium cafés and dessert lounges., Stock=48})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="customer_add({Address=12 George Street, Sydney, NSW, Email=liam.williams431@yopmail.com, First Name=Liam, Last Na...)">
-                  </a> <!-- customer_add({Address=12 George Street, Sydney, NSW, Email=liam.williams431@yopmail.com, First Name=Liam, Last Na...) -->
-                  <span class="method-name">customer_add</span>
-                  <span class="parameters">({Address=12 George Street, Sydney, NSW, Email=liam.williams431@yopmail.com, First Name=Liam, Last Name=Williams, Phone=+61-421345678, Profile Image=H:\Selenium Projects\Whippitz\Customer Photos\Liam Williams.png, Status=Active})</span>
+                  <a name="product_Edit({Discount %=14, Discount Price (AUD)=24.50, Discount Type=Percentage Discount, Image Path=C:\Users\P...)">
+                  </a> <!-- product_Edit({Discount %=14, Discount Price (AUD)=24.50, Discount Type=Percentage Discount, Image Path=C:\Users\P...) -->
+                  <span class="method-name">product_Edit</span>
+                  <span class="parameters">({Discount %=14, Discount Price (AUD)=24.50, Discount Type=Percentage Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//Mocha Almond Crush.png, Pack of=Pack of 8, Product Name=Whippitz N₂O Cylinder – Mocha Almond Crush, Product Price (AUD)=175.00, Product Type=Group, Short Description=Coffee mocha with almond fusion, great for bakeries and gourmet beverages., Stock=65})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="customer_add({Address=85 Collins Street, Melbourne, VIC, Email=olivia.brown527@yopmail.com, First Name=Olivia, La...)">
-                  </a> <!-- customer_add({Address=85 Collins Street, Melbourne, VIC, Email=olivia.brown527@yopmail.com, First Name=Olivia, La...) -->
-                  <span class="method-name">customer_add</span>
-                  <span class="parameters">({Address=85 Collins Street, Melbourne, VIC, Email=olivia.brown527@yopmail.com, First Name=Olivia, Last Name=Brown, Phone=+61-422456789, Profile Image=H:\Selenium Projects\Whippitz\Customer Photos\Olivia Brown.png, Status=Inactive})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="customer_add({Address=33 Swanston Street, Melbourne, VIC, Email=lucas.king673@yopmail.com, First Name=Lucas, Last...)">
-                  </a> <!-- customer_add({Address=33 Swanston Street, Melbourne, VIC, Email=lucas.king673@yopmail.com, First Name=Lucas, Last...) -->
-                  <span class="method-name">customer_add</span>
-                  <span class="parameters">({Address=33 Swanston Street, Melbourne, VIC, Email=lucas.king673@yopmail.com, First Name=Lucas, Last Name=King, Phone=+61-429123456, Profile Image=H:\Selenium Projects\Whippitz\Customer Photos\Lucas.png, Status=Active})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="customer_add({Address=22 Mitchell Street, Darwin, NT, Email=henry.thompson437@yopmail.com, First Name=Henry, Last...)">
-                  </a> <!-- customer_add({Address=22 Mitchell Street, Darwin, NT, Email=henry.thompson437@yopmail.com, First Name=Henry, Last...) -->
-                  <span class="method-name">customer_add</span>
-                  <span class="parameters">({Address=22 Mitchell Street, Darwin, NT, Email=henry.thompson437@yopmail.com, First Name=Henry, Last Name=Thompson, Phone=+61-427901234, Profile Image=H:\Selenium Projects\Whippitz\Customer Photos\Thompson.png, Status=Active})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="customer_add({Address=14 North Terrace, Adelaide, SA, Email=grace.edwards963@yopmail.com, First Name=Grace, Last ...)">
-                  </a> <!-- customer_add({Address=14 North Terrace, Adelaide, SA, Email=grace.edwards963@yopmail.com, First Name=Grace, Last ...) -->
-                  <span class="method-name">customer_add</span>
-                  <span class="parameters">({Address=14 North Terrace, Adelaide, SA, Email=grace.edwards963@yopmail.com, First Name=Grace, Last Name=Edwards, Phone=+61-426890123, Profile Image=H:\Selenium Projects\Whippitz\Customer Photos\Henry.png, Status=Inactive})</span>
+                  <a name="product_Edit({Discount %=, Discount Price (AUD)=9.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\On...)">
+                  </a> <!-- product_Edit({Discount %=, Discount Price (AUD)=9.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\On...) -->
+                  <span class="method-name">product_Edit</span>
+                  <span class="parameters">({Discount %=, Discount Price (AUD)=9.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//Kiwi Lime Spark.png, Pack of=Pack of 10, Product Name=Whippitz N₂O Cylinder – Kiwi Lime Spark, Product Price (AUD)=152.00, Product Type=Group, Short Description=Refreshing kiwi and lime blend, perfect for fruit tarts and tropical drinks., Stock=92})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -315,7 +255,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">H:\Selenium Projects\Whippitz\Customer_Add_Edit_Check.xml</span>
+            <span class="header-content">C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Product_Add_Edit_check.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -324,16 +264,12 @@
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Whippets.com.Admin.Customer_Module&quot;&gt;
+      &lt;class name=&quot;Whippets.com.Admin.Product_module&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;customer_add&quot;/&gt;
+          &lt;include name=&quot;Product_Add&quot;/&gt;
+          &lt;include name=&quot;product_Edit&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- Whippets.com.Admin.Customer_Module --&gt;
-      &lt;class name=&quot;Whippets.com.Admin.Driver_module&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;Driver_Add&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- Whippets.com.Admin.Driver_module --&gt;
+      &lt;/class&gt; &lt;!-- Whippets.com.Admin.Product_module --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -347,7 +283,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -373,68 +309,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(14);
+data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'customer_add')
-data.setCell(0, 2, 'Whippets.com.Admin.Customer_Module')
-data.setCell(0, 3, 208084);
+data.setCell(0, 1, 'product_Edit')
+data.setCell(0, 2, 'Whippets.com.Admin.Product_module')
+data.setCell(0, 3, 58710);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'customer_add')
-data.setCell(1, 2, 'Whippets.com.Admin.Customer_Module')
-data.setCell(1, 3, 188493);
+data.setCell(1, 1, 'product_Edit')
+data.setCell(1, 2, 'Whippets.com.Admin.Product_module')
+data.setCell(1, 3, 54893);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'customer_add')
-data.setCell(2, 2, 'Whippets.com.Admin.Customer_Module')
-data.setCell(2, 3, 185221);
+data.setCell(2, 1, 'product_Edit')
+data.setCell(2, 2, 'Whippets.com.Admin.Product_module')
+data.setCell(2, 3, 52895);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'customer_add')
-data.setCell(3, 2, 'Whippets.com.Admin.Customer_Module')
-data.setCell(3, 3, 167810);
+data.setCell(3, 1, 'product_Edit')
+data.setCell(3, 2, 'Whippets.com.Admin.Product_module')
+data.setCell(3, 3, 52819);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'customer_add')
-data.setCell(4, 2, 'Whippets.com.Admin.Customer_Module')
-data.setCell(4, 3, 159243);
+data.setCell(4, 1, 'Product_Add')
+data.setCell(4, 2, 'Whippets.com.Admin.Product_module')
+data.setCell(4, 3, 33458);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'customer_add')
-data.setCell(5, 2, 'Whippets.com.Admin.Customer_Module')
-data.setCell(5, 3, 140170);
+data.setCell(5, 1, 'Product_Add')
+data.setCell(5, 2, 'Whippets.com.Admin.Product_module')
+data.setCell(5, 3, 25747);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'customer_add')
-data.setCell(6, 2, 'Whippets.com.Admin.Customer_Module')
-data.setCell(6, 3, 89850);
+data.setCell(6, 1, 'Product_Add')
+data.setCell(6, 2, 'Whippets.com.Admin.Product_module')
+data.setCell(6, 3, 25643);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'customer_add')
-data.setCell(7, 2, 'Whippets.com.Admin.Customer_Module')
-data.setCell(7, 3, 83025);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'customer_add')
-data.setCell(8, 2, 'Whippets.com.Admin.Customer_Module')
-data.setCell(8, 3, 75574);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'customer_add')
-data.setCell(9, 2, 'Whippets.com.Admin.Customer_Module')
-data.setCell(9, 3, 68437);
-data.setCell(10, 0, 10)
-data.setCell(10, 1, 'Driver_Add')
-data.setCell(10, 2, 'Whippets.com.Admin.Driver_module')
-data.setCell(10, 3, 65279);
-data.setCell(11, 0, 11)
-data.setCell(11, 1, 'Driver_Add')
-data.setCell(11, 2, 'Whippets.com.Admin.Driver_module')
-data.setCell(11, 3, 62551);
-data.setCell(12, 0, 12)
-data.setCell(12, 1, 'Driver_Add')
-data.setCell(12, 2, 'Whippets.com.Admin.Driver_module')
-data.setCell(12, 3, 62382);
-data.setCell(13, 0, 13)
-data.setCell(13, 1, 'Driver_Add')
-data.setCell(13, 2, 'Whippets.com.Admin.Driver_module')
-data.setCell(13, 3, 60370);
+data.setCell(7, 1, 'Product_Add')
+data.setCell(7, 2, 'Whippets.com.Admin.Product_module')
+data.setCell(7, 3, 15176);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 minutes</span>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -449,66 +361,23 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">25 ignored methods</span>
+            <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">Whippets.com.Admin.Driver_module</span>
+              <span class="ignored-class-name">Whippets.com.Admin.Product_module</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">Product_list_Accessor</span>
+                <span class="ignored-method-name">Added_Product_search_and_delete</span>
                 <br/>
-                <span class="ignored-method-name">customer_List_Data_Collector</span>
+                <span class="ignored-method-name">product_delete</span>
                 <br/>
                 <span class="ignored-method-name">side_menu</span>
                 <br/>
                 <span class="ignored-method-name">product_list_count_Check_with_Dashboard</span>
                 <br/>
-                <span class="ignored-method-name">Added_Product_search_and_delete</span>
-                <br/>
-                <span class="ignored-method-name">product_delete</span>
-                <br/>
-                <span class="ignored-method-name">Added_driver_Delete</span>
-                <br/>
                 <span class="ignored-method-name">Duplicate_value_checker</span>
                 <br/>
-                <span class="ignored-method-name">Product_Add</span>
-                <br/>
-                <span class="ignored-method-name">customer_list_Accessor</span>
-                <br/>
-                <span class="ignored-method-name">customer_add</span>
-                <br/>
-                <span class="ignored-method-name">Driver_list_Accessor</span>
-                <br/>
-                <span class="ignored-method-name">added_customer_delete</span>
-                <br/>
-                <span class="ignored-method-name">customer_edit_check</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">Whippets.com.Admin.Customer_Module</span>
-              <div class="ignored-methods-div">
                 <span class="ignored-method-name">Product_list_Accessor</span>
-                <br/>
-                <span class="ignored-method-name">Added_Product_search_and_delete</span>
-                <br/>
-                <span class="ignored-method-name">customer_List_Data_Collector</span>
-                <br/>
-                <span class="ignored-method-name">product_delete</span>
-                <br/>
-                <span class="ignored-method-name">Duplicate_value_checker</span>
-                <br/>
-                <span class="ignored-method-name">side_menu</span>
-                <br/>
-                <span class="ignored-method-name">Product_Add</span>
-                <br/>
-                <span class="ignored-method-name">product_list_count_Check_with_Dashboard</span>
-                <br/>
-                <span class="ignored-method-name">customer_list_Accessor</span>
-                <br/>
-                <span class="ignored-method-name">added_customer_delete</span>
-                <br/>
-                <span class="ignored-method-name">customer_edit_check</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -520,177 +389,104 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Whippets.com.Admin.Customer_Module</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Whippets.com.Admin.Product_module</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">Setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">customer_add({Address=12 George Street, Sydney, NSW, Email=liam.williams431@yopmail.com, First Name=Liam, Last Na...)</span>
-                <span class="method-start">2860 ms</span>
+                <span class="method-name">Product_Add({Discount %=, Discount Price (AUD)=12.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\O...)</span>
+                <span class="method-start">1771 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Process_Kill</span>
-                <span class="method-start">162106 ms</span>
+                <span class="method-start">27523 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">Setup</span>
-                <span class="method-start">162818 ms</span>
+                <span class="method-start">27731 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">customer_add({Address=85 Collins Street, Melbourne, VIC, Email=olivia.brown527@yopmail.com, First Name=Olivia, La...)</span>
-                <span class="method-start">164290 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Product_Add({Discount %=15, Discount Price (AUD)=26.70, Discount Type=Percentage Discount, Image Path=C:\Users\P...)</span>
+                <span class="method-start">28581 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Process_Kill</span>
-                <span class="method-start">304461 ms</span>
+                <span class="method-start">43769 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">Setup</span>
-                <span class="method-start">305136 ms</span>
+                <span class="method-start">43925 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">customer_add({Address=45 Adelaide Terrace, Perth, WA, Email=noah.harris614@yopmail.com, First Name=Noah, Last Nam...)</span>
-                <span class="method-start">306853 ms</span>
+                <span class="method-name">Product_Add({Discount %=, Discount Price (AUD)=15.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\O...)</span>
+                <span class="method-start">44828 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Process_Kill</span>
-                <span class="method-start">474664 ms</span>
+                <span class="method-start">70474 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">Setup</span>
-                <span class="method-start">475340 ms</span>
+                <span class="method-start">70651 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">customer_add({Address=39 Elizabeth Street, Brisbane, QLD, Email=isla.mitchell732@yopmail.com, First Name=Isla, La...)</span>
-                <span class="method-start">478104 ms</span>
+                <span class="method-name">Product_Add({Discount %=20, Discount Price (AUD)=44.00, Discount Type=Percentage Discount, Image Path=C:\Users\P...)</span>
+                <span class="method-start">71486 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Process_Kill</span>
-                <span class="method-start">666598 ms</span>
+                <span class="method-start">104946 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">Setup</span>
-                <span class="method-start">667320 ms</span>
+                <span class="method-start">105157 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">customer_add({Address=76 Murray Street, Hobart, TAS, Email=jack.robinson845@yopmail.com, First Name=Jack, Last Na...)</span>
-                <span class="method-start">669209 ms</span>
+                <span class="method-name">product_Edit({Discount %=, Discount Price (AUD)=10.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\O...)</span>
+                <span class="method-start">106101 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Process_Kill</span>
-                <span class="method-start">877294 ms</span>
+                <span class="method-start">158921 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">Setup</span>
-                <span class="method-start">878051 ms</span>
+                <span class="method-start">159079 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">customer_add({Address=14 North Terrace, Adelaide, SA, Email=grace.edwards963@yopmail.com, First Name=Grace, Last ...)</span>
-                <span class="method-start">889599 ms</span>
+                <span class="method-name">product_Edit({Discount %=14, Discount Price (AUD)=24.50, Discount Type=Percentage Discount, Image Path=C:\Users\P...)</span>
+                <span class="method-start">160329 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Process_Kill</span>
-                <span class="method-start">1074821 ms</span>
+                <span class="method-start">213225 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">Setup</span>
-                <span class="method-start">1075533 ms</span>
+                <span class="method-start">213411 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">customer_add({Address=22 Mitchell Street, Darwin, NT, Email=henry.thompson437@yopmail.com, First Name=Henry, Last...)</span>
-                <span class="method-start">1077126 ms</span>
+                <span class="method-name">product_Edit({Discount %=, Discount Price (AUD)=9.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\On...)</span>
+                <span class="method-start">214258 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Process_Kill</span>
-                <span class="method-start">1145565 ms</span>
+                <span class="method-start">269154 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">Setup</span>
-                <span class="method-start">1146195 ms</span>
+                <span class="method-start">269376 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">customer_add({Address=9 Macquarie Street, Sydney, NSW, Email=chloe.white589@yopmail.com, First Name=Chloe, Last N...)</span>
-                <span class="method-start">1147449 ms</span>
+                <span class="method-name">product_Edit({Discount %=19, Discount Price (AUD)=42.75, Discount Type=Percentage Discount, Image Path=C:\Users\P...)</span>
+                <span class="method-start">270211 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Process_Kill</span>
-                <span class="method-start">1230478 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">Setup</span>
-                <span class="method-start">1231147 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">customer_add({Address=33 Swanston Street, Melbourne, VIC, Email=lucas.king673@yopmail.com, First Name=Lucas, Last...)</span>
-                <span class="method-start">1232350 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">Process_Kill</span>
-                <span class="method-start">1322204 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">Setup</span>
-                <span class="method-start">1322858 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">customer_add({Address=57 St Georges Terrace, Perth, WA, Email=ella.parker781@yopmail.com, First Name=Ella, Last N...)</span>
-                <span class="method-start">1324106 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">Process_Kill</span>
-                <span class="method-start">1399681 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Whippets.com.Admin.Driver_module</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">Setup</span>
-                <span class="method-start">1400333 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">Driver_Add({Account Status=Active, Driver First Name=Ethan, Driver Last Name=McKenzie, Email=ethan.mckenzie94@y...)</span>
-                <span class="method-start">1401623 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">Process_Kill</span>
-                <span class="method-start">1464175 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">Setup</span>
-                <span class="method-start">1464809 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">Driver_Add({Account Status=Inactive, Driver First Name=Sophie, Driver Last Name=Anderson, Email=sophie.anderson...)</span>
-                <span class="method-start">1466309 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">Process_Kill</span>
-                <span class="method-start">1531589 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">Setup</span>
-                <span class="method-start">1532231 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">Driver_Add({Account Status=Active, Driver First Name=Liam, Driver Last Name=Thompson, Email=liam.thompson75@yop...)</span>
-                <span class="method-start">1533561 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">Process_Kill</span>
-                <span class="method-start">1595944 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">Setup</span>
-                <span class="method-start">1596601 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">Driver_Add({Account Status=Inactive, Driver First Name=Olivia, Driver Last Name=Hughes, Email=olivia.hughes69@y...)</span>
-                <span class="method-start">1597877 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">Process_Kill</span>
-                <span class="method-start">1658249 ms</span>
+                <span class="method-start">328922 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
