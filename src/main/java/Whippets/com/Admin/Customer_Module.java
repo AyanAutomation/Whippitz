@@ -439,7 +439,7 @@ public class Customer_Module extends Product_module{
       	 Listen.Print_in_Report().log(Status.INFO, p.Customer_email().get(0).getText().contains(Customermail) ? "Testcase Passed Searched Customer found in Result":"Testcase Failed Searched Customer not found in Result");
          System.out.println(p.Customer_email().get(0).getText().contains(Customermail) ? "Testcase Passed Searched Customer found in Result":"Testcase Failed Searched Customer not found in Result");
          System.out.println();
-      	 js.executeScript("arguments[0].click();",  pm.Edit_buttons().get(0));
+      	 js.executeScript("arguments[0].click();",  p.customer_edit_buttons().get(0));
       	 Thread.sleep(800);
        }
 	

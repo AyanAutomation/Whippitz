@@ -41,9 +41,9 @@ public class Customer_module_locaters extends Generic_codes{
 	@FindBy(xpath="(//div[@id='toast-container']//div[contains(@class,'toast-message')])[last()]")
 	private WebElement Success_toast; 
 	@FindBy(xpath="(//table)[1]//tr[2]//input")
-	private List <WebElement>  customer_list_filter_inputs;/*
-	@FindBy(xpath="")
-	private WebElement  ;
+	private List <WebElement>  customer_list_filter_inputs;
+	@FindBy(xpath="(//tbody//td[7]//a[2])")
+	private List <WebElement>  customer_edit_buttons;/*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -156,10 +156,10 @@ public class Customer_module_locaters extends Generic_codes{
     return WebElementWait_By(success_toast_latest_by);} 
     public List <WebElement> customer_list_filter_inputs(){
     WebElementWait(customer_list_filter_inputs);
-    return customer_list_filter_inputs;} /*
-    public WebElement (){
-    WebElementWait();
-    return ;} 
+    return customer_list_filter_inputs;} 
+    public List <WebElement> customer_edit_buttons(){
+    WebElementWait(customer_edit_buttons);
+    return customer_edit_buttons;} /*
     public WebElement (){
     WebElementWait();
     return ;} 

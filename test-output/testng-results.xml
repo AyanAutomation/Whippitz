@@ -1,59 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="14" passed="7" failed="1" skipped="0">
+<testng-results ignored="12" total="22" passed="6" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-24T14:16:46 IST" name="Suite" finished-at="2025-09-24T14:22:15 IST" duration-ms="329153">
+  <suite started-at="2025-09-24T20:12:42 IST" name="Default suite" finished-at="2025-09-24T20:22:05 IST" duration-ms="562190">
     <groups>
     </groups>
-    <test started-at="2025-09-24T14:16:46 IST" name="Test" finished-at="2025-09-24T14:22:15 IST" duration-ms="329153">
-      <class name="Whippets.com.Admin.Product_module">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:16:46 IST" name="Setup" finished-at="2025-09-24T14:16:48 IST" duration-ms="1769" status="PASS">
+    <test started-at="2025-09-24T20:12:42 IST" name="Default test" finished-at="2025-09-24T20:22:05 IST" duration-ms="562190">
+      <class name="Whippets.com.Admin.Customer_Module">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:12:42 IST" name="Setup" finished-at="2025-09-24T20:12:46 IST" duration-ms="3100" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="Product_Add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:16:48 IST" name="Product_Add" data-provider="getProductData" finished-at="2025-09-24T14:17:14 IST" duration-ms="25747" status="PASS">
+        <test-method signature="customer_edit_check(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:12:46 IST" name="customer_edit_check" data-provider="customerData" finished-at="2025-09-24T20:13:36 IST" duration-ms="50438" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Discount %=, Discount Price (AUD)=12.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//Blueberry Frost.png, Pack of=Pack of 6, Product Name=Whippitz N₂O Cylinder – Blueberry Frost, Product Price (AUD)=155.00, Product Type=Group, Short Description=Cool blueberry cream flavour, perfect for smoothies and summer desserts., Stock=95}]]>
+                <![CDATA[{Address=12 George Street, Sydney, NSW, Email=liam.williams431@yopmail.com, First Name=Liam, Last Name=Williams, Phone=+61-421345678, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\Liam Williams.png, Status=Active}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Product_Add -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:17:14 IST" name="Process_Kill" finished-at="2025-09-24T14:17:14 IST" duration-ms="207" status="PASS">
+        </test-method> <!-- customer_edit_check -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:13:36 IST" name="Process_Kill" finished-at="2025-09-24T20:13:36 IST" duration-ms="183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Process_Kill -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:17:14 IST" name="Setup" finished-at="2025-09-24T14:17:15 IST" duration-ms="850" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:13:36 IST" name="Setup" finished-at="2025-09-24T20:13:37 IST" duration-ms="1043" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="Product_Add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:17:15 IST" name="Product_Add" data-provider="getProductData" finished-at="2025-09-24T14:17:30 IST" duration-ms="15176" status="FAIL">
+        <test-method signature="customer_edit_check(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:13:37 IST" name="customer_edit_check" data-provider="customerData" finished-at="2025-09-24T20:14:23 IST" duration-ms="45919" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Discount %=15, Discount Price (AUD)=26.70, Discount Type=Percentage Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//Caramel Mocha Royale.png, Pack of=Pack of 8, Product Name=Whippitz N₂O Cylinder – Caramel Mocha Royale, Product Price (AUD)=178.00, Product Type=Group, Short Description=Caramel mocha infusion, ideal for coffee bars and bakery frosting., Stock=60}]]>
+                <![CDATA[{Address=85 Collins Street, Melbourne, VIC, Email=olivia.brown527@yopmail.com, First Name=Olivia, Last Name=Brown, Phone=+61-422456789, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\Olivia Brown.png, Status=Inactive}]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- customer_edit_check -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:14:23 IST" name="Process_Kill" finished-at="2025-09-24T20:14:23 IST" duration-ms="201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Process_Kill -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:14:23 IST" name="Setup" finished-at="2025-09-24T20:14:24 IST" duration-ms="854" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="customer_edit_check(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:14:24 IST" name="customer_edit_check" data-provider="customerData" finished-at="2025-09-24T20:15:13 IST" duration-ms="48322" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Address=45 Adelaide Terrace, Perth, WA, Email=noah.harris614@yopmail.com, First Name=Noah, Last Name=Harris, Phone=+61-423567890, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\Noah.png, Status=Active}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- customer_edit_check -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:15:13 IST" name="Process_Kill" finished-at="2025-09-24T20:15:13 IST" duration-ms="173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Process_Kill -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:15:13 IST" name="Setup" finished-at="2025-09-24T20:15:14 IST" duration-ms="801" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="customer_edit_check(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:15:14 IST" name="customer_edit_check" data-provider="customerData" finished-at="2025-09-24T20:16:16 IST" duration-ms="62219" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Address=39 Elizabeth Street, Brisbane, QLD, Email=isla.mitchell732@yopmail.com, First Name=Isla, Last Name=Mitchell, Phone=+61-424678901, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\Isla.png, Status=Inactive}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- customer_edit_check -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:16:16 IST" name="Process_Kill" finished-at="2025-09-24T20:16:16 IST" duration-ms="253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Process_Kill -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:16:16 IST" name="Setup" finished-at="2025-09-24T20:16:17 IST" duration-ms="884" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="customer_edit_check(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:16:17 IST" name="customer_edit_check" data-provider="customerData" finished-at="2025-09-24T20:17:18 IST" duration-ms="60923" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Address=76 Murray Street, Hobart, TAS, Email=jack.robinson845@yopmail.com, First Name=Jack, Last Name=Robinson, Phone=+61-425789012, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\Jack.png, Status=Active}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- customer_edit_check -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:17:18 IST" name="Process_Kill" finished-at="2025-09-24T20:17:18 IST" duration-ms="338" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Process_Kill -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:17:18 IST" name="Setup" finished-at="2025-09-24T20:17:19 IST" duration-ms="1047" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="customer_edit_check(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:17:19 IST" name="customer_edit_check" data-provider="customerData" finished-at="2025-09-24T20:18:57 IST" duration-ms="97863" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Address=14 North Terrace, Adelaide, SA, Email=grace.edwards963@yopmail.com, First Name=Grace, Last Name=Edwards, Phone=+61-426890123, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\Henry.png, Status=Inactive}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- customer_edit_check -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:18:57 IST" name="Process_Kill" finished-at="2025-09-24T20:18:57 IST" duration-ms="242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Process_Kill -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:18:57 IST" name="Setup" finished-at="2025-09-24T20:18:58 IST" duration-ms="787" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="customer_edit_check(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:18:58 IST" name="customer_edit_check" data-provider="customerData" finished-at="2025-09-24T20:20:28 IST" duration-ms="90374" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Address=22 Mitchell Street, Darwin, NT, Email=henry.thompson437@yopmail.com, First Name=Henry, Last Name=Thompson, Phone=+61-427901234, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\Thompson.png, Status=Active}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Cannot locate option with text: Pack of 8
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+              <![CDATA[Expected condition failed: waiting for visibility of all [] (tried for 5 second(s) with 500 milliseconds interval)
 Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
-Driver info: driver.version: unknown]]>
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57239}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57239/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3692bf0991f9607706ad4b705b86664e]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate option with text: Pack of 8
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 5 second(s) with 500 milliseconds interval)
 Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
-Driver info: driver.version: unknown
-at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:167)
-at Whippets.com.Admin.Product_module.Product_Add(Product_module.java:160)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57239}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57239/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3692bf0991f9607706ad4b705b86664e
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at Repeative_codes.Generic_codes.WebElementWait(Generic_codes.java:45)
+at Locaters.Customer_module_locaters.Customer_email(Customer_module_locaters.java:117)
+at Whippets.com.Admin.Customer_Module.customer_search_and_edit_Button_click(Customer_Module.java:439)
+at Whippets.com.Admin.Customer_Module.customer_edit_check(Customer_Module.java:271)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -82,129 +183,225 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Product_Add -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:17:30 IST" name="Process_Kill" finished-at="2025-09-24T14:17:30 IST" duration-ms="156" status="PASS">
+        </test-method> <!-- customer_edit_check -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:20:28 IST" name="Process_Kill" finished-at="2025-09-24T20:20:29 IST" duration-ms="176" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Process_Kill -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:17:30 IST" name="Setup" finished-at="2025-09-24T14:17:31 IST" duration-ms="903" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:20:29 IST" name="Setup" finished-at="2025-09-24T20:20:30 IST" duration-ms="873" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="Product_Add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:17:31 IST" name="Product_Add" data-provider="getProductData" finished-at="2025-09-24T14:17:57 IST" duration-ms="25643" status="PASS">
+        <test-method signature="customer_edit_check(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:20:30 IST" name="customer_edit_check" data-provider="customerData" finished-at="2025-09-24T20:21:02 IST" duration-ms="32157" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Discount %=, Discount Price (AUD)=15.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//Tropical Mango Rush.png, Pack of=Pack of 10, Product Name=Whippitz N₂O Cylinder – Tropical Mango Rush, Product Price (AUD)=165.00, Product Type=Group, Short Description=Exotic tropical mango cream, perfect for icy drinks and party desserts., Stock=88}]]>
+                <![CDATA[{Address=9 Macquarie Street, Sydney, NSW, Email=chloe.white589@yopmail.com, First Name=Chloe, Last Name=White, Phone=+61-428012345, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\Chloe.png, Status=Inactive}]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of all [] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57333}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57333/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f69837b14adf4c83d97e3fe6add885b2]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57333}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57333/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f69837b14adf4c83d97e3fe6add885b2
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at Repeative_codes.Generic_codes.WebElementWait(Generic_codes.java:45)
+at Locaters.Customer_module_locaters.Customer_email(Customer_module_locaters.java:117)
+at Whippets.com.Admin.Customer_Module.customer_search_and_edit_Button_click(Customer_Module.java:439)
+at Whippets.com.Admin.Customer_Module.customer_edit_check(Customer_Module.java:271)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Product_Add -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:17:57 IST" name="Process_Kill" finished-at="2025-09-24T14:17:57 IST" duration-ms="176" status="PASS">
+        </test-method> <!-- customer_edit_check -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:21:02 IST" name="Process_Kill" finished-at="2025-09-24T20:21:02 IST" duration-ms="272" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Process_Kill -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:17:57 IST" name="Setup" finished-at="2025-09-24T14:17:58 IST" duration-ms="835" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:21:02 IST" name="Setup" finished-at="2025-09-24T20:21:03 IST" duration-ms="833" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="Product_Add(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:17:58 IST" name="Product_Add" data-provider="getProductData" finished-at="2025-09-24T14:18:31 IST" duration-ms="33458" status="PASS">
+        <test-method signature="customer_edit_check(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:21:03 IST" name="customer_edit_check" data-provider="customerData" finished-at="2025-09-24T20:21:31 IST" duration-ms="28005" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Discount %=20, Discount Price (AUD)=44.00, Discount Type=Percentage Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//Hazelnut Praline Supreme.png, Pack of=Pack of 12, Product Name=Whippitz N₂O Cylinder – Hazelnut Praline Supreme, Product Price (AUD)=220.00, Product Type=Group, Short Description=Premium hazelnut praline flavour, designed for luxury dessert lounges., Stock=42}]]>
+                <![CDATA[{Address=33 Swanston Street, Melbourne, VIC, Email=lucas.king673@yopmail.com, First Name=Lucas, Last Name=King, Phone=+61-429123456, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\Lucas.png, Status=Active}]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of all [] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57382}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57382/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef26a452c24788927013b75cae7fd9b2]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57382}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57382/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef26a452c24788927013b75cae7fd9b2
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at Repeative_codes.Generic_codes.WebElementWait(Generic_codes.java:45)
+at Locaters.Customer_module_locaters.Customer_email(Customer_module_locaters.java:117)
+at Whippets.com.Admin.Customer_Module.customer_search_and_edit_Button_click(Customer_Module.java:439)
+at Whippets.com.Admin.Customer_Module.customer_edit_check(Customer_Module.java:271)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Product_Add -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:18:31 IST" name="Process_Kill" finished-at="2025-09-24T14:18:31 IST" duration-ms="210" status="PASS">
+        </test-method> <!-- customer_edit_check -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:21:31 IST" name="Process_Kill" finished-at="2025-09-24T20:21:31 IST" duration-ms="247" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Process_Kill -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:18:31 IST" name="Setup" finished-at="2025-09-24T14:18:32 IST" duration-ms="944" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:21:31 IST" name="Setup" finished-at="2025-09-24T20:21:32 IST" duration-ms="789" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="product_Edit(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:18:32 IST" name="product_Edit" data-provider="getProductEditData" finished-at="2025-09-24T14:19:25 IST" duration-ms="52819" status="PASS">
+        <test-method signature="customer_edit_check(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:21:32 IST" name="customer_edit_check" data-provider="customerData" finished-at="2025-09-24T20:22:04 IST" duration-ms="32496" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Discount %=, Discount Price (AUD)=10.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//Raspberry Velvet.png, Pack of=Pack of 6, Product Name=Whippitz N₂O Cylinder – Raspberry Velvet, Product Price (AUD)=160.00, Product Type=Group, Short Description=Smooth raspberry cream flavour, ideal for chilled desserts and frappes., Stock=78}]]>
+                <![CDATA[{Address=57 St Georges Terrace, Perth, WA, Email=ella.parker781@yopmail.com, First Name=Ella, Last Name=Parker, Phone=+61-430234567, Profile Image=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz\Customer Photos\Ella.png, Status=Inactive}]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of all [] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57431}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57431/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c310e716a654348642048e64ba7c39f5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57431}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57431/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c310e716a654348642048e64ba7c39f5
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at Repeative_codes.Generic_codes.WebElementWait(Generic_codes.java:45)
+at Locaters.Customer_module_locaters.Customer_email(Customer_module_locaters.java:117)
+at Whippets.com.Admin.Customer_Module.customer_search_and_edit_Button_click(Customer_Module.java:439)
+at Whippets.com.Admin.Customer_Module.customer_edit_check(Customer_Module.java:271)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- product_Edit -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:19:25 IST" name="Process_Kill" finished-at="2025-09-24T14:19:25 IST" duration-ms="157" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Process_Kill -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:19:25 IST" name="Setup" finished-at="2025-09-24T14:19:27 IST" duration-ms="1250" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="product_Edit(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:19:27 IST" name="product_Edit" data-provider="getProductEditData" finished-at="2025-09-24T14:20:19 IST" duration-ms="52895" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Discount %=14, Discount Price (AUD)=24.50, Discount Type=Percentage Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//Mocha Almond Crush.png, Pack of=Pack of 8, Product Name=Whippitz N₂O Cylinder – Mocha Almond Crush, Product Price (AUD)=175.00, Product Type=Group, Short Description=Coffee mocha with almond fusion, great for bakeries and gourmet beverages., Stock=65}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- product_Edit -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:20:19 IST" name="Process_Kill" finished-at="2025-09-24T14:20:20 IST" duration-ms="185" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Process_Kill -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:20:20 IST" name="Setup" finished-at="2025-09-24T14:20:21 IST" duration-ms="847" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="product_Edit(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:20:21 IST" name="product_Edit" data-provider="getProductEditData" finished-at="2025-09-24T14:21:15 IST" duration-ms="54893" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Discount %=, Discount Price (AUD)=9.00, Discount Type=Fixed Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//Kiwi Lime Spark.png, Pack of=Pack of 10, Product Name=Whippitz N₂O Cylinder – Kiwi Lime Spark, Product Price (AUD)=152.00, Product Type=Group, Short Description=Refreshing kiwi and lime blend, perfect for fruit tarts and tropical drinks., Stock=92}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- product_Edit -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:21:15 IST" name="Process_Kill" finished-at="2025-09-24T14:21:16 IST" duration-ms="221" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Process_Kill -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:21:16 IST" name="Setup" finished-at="2025-09-24T14:21:16 IST" duration-ms="835" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="product_Edit(java.util.TreeMap)[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:21:16 IST" name="product_Edit" data-provider="getProductEditData" finished-at="2025-09-24T14:22:15 IST" duration-ms="58710" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Discount %=19, Discount Price (AUD)=42.75, Discount Type=Percentage Discount, Image Path=C:\Users\PC-129\OneDrive\Documents\NetBeansProjects\Whippitz//ProductImages//Peanut Butter Indulgence.png, Pack of=Pack of 12, Product Name=Whippitz N₂O Cylinder – Peanut Butter Indulgence, Product Price (AUD)=225.00, Product Type=Group, Short Description=Rich peanut butter cream for premium cafés and dessert lounges., Stock=48}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- product_Edit -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Product_module@6db9f5a4]" started-at="2025-09-24T14:22:15 IST" name="Process_Kill" finished-at="2025-09-24T14:22:15 IST" duration-ms="183" status="PASS">
+        </test-method> <!-- customer_edit_check -->
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Customer_Module@313b2ea6]" started-at="2025-09-24T20:22:04 IST" name="Process_Kill" finished-at="2025-09-24T20:22:05 IST" duration-ms="231" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Process_Kill -->
-      </class> <!-- Whippets.com.Admin.Product_module -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- Whippets.com.Admin.Customer_Module -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
