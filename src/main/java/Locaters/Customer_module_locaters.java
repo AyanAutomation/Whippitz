@@ -43,9 +43,9 @@ public class Customer_module_locaters extends Generic_codes{
 	@FindBy(xpath="(//table)[1]//tr[2]//input")
 	private List <WebElement>  customer_list_filter_inputs;
 	@FindBy(xpath="(//tbody//td[7]//a[2])")
-	private List <WebElement>  customer_edit_buttons;/*
-	@FindBy(xpath="")
-	private WebElement  ;
+	private List <WebElement>  customer_edit_buttons;
+	@FindBy(xpath="(//table)[1]//select")
+	private WebElement  Status_select_dropdown_filter; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -159,10 +159,10 @@ public class Customer_module_locaters extends Generic_codes{
     return customer_list_filter_inputs;} 
     public List <WebElement> customer_edit_buttons(){
     WebElementWait(customer_edit_buttons);
-    return customer_edit_buttons;} /*
-    public WebElement (){
-    WebElementWait();
-    return ;} 
+    return customer_edit_buttons;} 
+    public WebElement Status_select_dropdown_filter(){
+    WebElementWait(Status_select_dropdown_filter);
+    return Status_select_dropdown_filter;}  /*
     public WebElement (){
     WebElementWait();
     return ;} 

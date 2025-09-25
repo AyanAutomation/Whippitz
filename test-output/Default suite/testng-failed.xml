@@ -6,8 +6,8 @@
       <class name="Whippets.com.Admin.Customer_Module">
         <methods>
           <include name="Process_Kill"/>
+          <include name="Customer_list_filter_Check"/>
           <include name="Setup"/>
-          <include name="customer_edit_check" invocation-numbers="6 7 8 9"/>
         </methods>
       </class> <!-- Whippets.com.Admin.Customer_Module -->
     </classes>
