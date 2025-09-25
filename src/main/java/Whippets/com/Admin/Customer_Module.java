@@ -312,8 +312,7 @@ public class Customer_Module extends Product_module{
                 	 Listen.Print_in_Report().log(Status.INFO, "Else Block Executed phone number validation toast not shown");
                 	 System.out.println("Else Block Executed phone number validation toast not shown");
                      System.out.println(); 	 
-                 }            
-     }
+                 }}
      
      
      
@@ -389,7 +388,7 @@ public class Customer_Module extends Product_module{
     	   JavascriptExecutor js = (JavascriptExecutor)d;
     	   
     	   
-    	   String address = "Mani Casadona, International Financial Hub 700160, International Finalcial Hub(CBD), Newtown, Kolkata, West Bengal, India";
+    	String address = "Mani Casadona, International Financial Hub 700160, International Finalcial Hub(CBD), Newtown, Kolkata, West Bengal, India";
     	   
     	p.Address_Autocomplete_feild().click();
    		Thread.sleep(800);
@@ -456,22 +455,22 @@ public class Customer_Module extends Product_module{
      	for(int i=0; i<customers_names.size();i++) {	
      	p.customer_list_filter_inputs().get(0).sendKeys(customers_names.get(i).trim());
      	Thread.sleep(800);
-     	Listen.Print_in_Report().log(Status.INFO, customers_names.get(i).trim().contains(p.names().get(0).getText())?"Testcase Passed Searched name"+customers_names.get(i)+" found in searched result":"Testcase Failed Searched name"+customers_names.get(i)+" found in searched result");	
-     	System.out.println(customers_names.get(i).trim().contains(p.names().get(0).getText())?"Testcase Passed Searched name"+customers_names.get(i)+" found in searched result":"Testcase Failed Searched name"+customers_names.get(i)+" found in searched result");
+     	Listen.Print_in_Report().log(Status.INFO, customers_names.get(i).trim().contains(p.names().get(0).getText())?"Testcase Passed Searched name "+customers_names.get(i)+" found in searched result":"Testcase Failed Searched name"+customers_names.get(i)+" found in searched result");	
+     	System.out.println(customers_names.get(i).trim().contains(p.names().get(0).getText())?"Testcase Passed Searched name "+customers_names.get(i)+" found in searched result":"Testcase Failed Searched name"+customers_names.get(i)+" found in searched result");
      	System.out.println();
      	p.customer_list_filter_inputs().get(0).clear();
      	Thread.sleep(800);
      	p.customer_list_filter_inputs().get(1).sendKeys(customers_Emails.get(i).trim());
      	Thread.sleep(800);	
-     	Listen.Print_in_Report().log(Status.INFO, customers_Emails.get(i).trim().contains(p.Customer_email().get(0).getText())?"Testcase Passed Searched Email"+customers_Emails.get(i)+" found in searched result":"Testcase Failed Searched Email"+customers_Emails.get(i)+" found in searched result");	
-     	System.out.println(customers_Emails.get(i).trim().contains(p.Customer_email().get(0).getText())?"Testcase Passed Searched Email"+customers_Emails.get(i)+" found in searched result":"Testcase Failed Searched Email"+customers_Emails.get(i)+" found in searched result");
+     	Listen.Print_in_Report().log(Status.INFO, customers_Emails.get(i).trim().contains(p.Customer_email().get(0).getText())?"Testcase Passed Searched Email "+customers_Emails.get(i)+" found in searched result":"Testcase Failed Searched Email"+customers_Emails.get(i)+" found in searched result");	
+     	System.out.println(customers_Emails.get(i).trim().contains(p.Customer_email().get(0).getText())?"Testcase Passed Searched Email "+customers_Emails.get(i)+" found in searched result":"Testcase Failed Searched Email"+customers_Emails.get(i)+" found in searched result");
      	System.out.println();
      	p.customer_list_filter_inputs().get(1).clear();	
      	Thread.sleep(800);
      	p.customer_list_filter_inputs().get(2).sendKeys(customers_phones.get(i).trim());
      	Thread.sleep(800);	
-     	Listen.Print_in_Report().log(Status.INFO, customers_phones.get(i).trim().contains(p.Customer_phnums().get(0).getText())?"Testcase Passed Searched Phone"+customers_phones.get(i)+" found in searched result":"Testcase Failed Searched Phone"+customers_Emails.get(i)+" found in searched result");	
-     	System.out.println(customers_phones.get(i).trim().contains(p.Customer_phnums().get(0).getText())?"Testcase Passed Searched Phone"+customers_phones.get(i)+" found in searched result":"Testcase Failed Searched Phone"+customers_Emails.get(i)+" found in searched result");
+     	Listen.Print_in_Report().log(Status.INFO, customers_phones.get(i).trim().contains(p.Customer_phnums().get(0).getText())?"Testcase Passed Searched Phone "+customers_phones.get(i)+" found in searched result":"Testcase Failed Searched Phone"+customers_Emails.get(i)+" found in searched result");	
+     	System.out.println(customers_phones.get(i).trim().contains(p.Customer_phnums().get(0).getText())?"Testcase Passed Searched Phone "+customers_phones.get(i)+" found in searched result":"Testcase Failed Searched Phone "+customers_Emails.get(i)+" found in searched result");
      	System.out.println();
      	p.customer_list_filter_inputs().get(2).clear();		
      	Thread.sleep(800);  	
@@ -495,8 +494,8 @@ public class Customer_Module extends Product_module{
          		
          		if(!stats.getText().trim().contains("Inactive")){
          			
-         			Listen.Print_in_Report().log(Status.INFO, "Testcase Failed"+stats+"found when only Inactive status filter is selected");
-         	     	System.out.println("Testcase Failed"+stats+"found when only Inactive status filter is selected");
+         			Listen.Print_in_Report().log(Status.INFO, "Testcase Failed "+stats+" found when only Inactive status filter is selected");
+         	     	System.out.println("Testcase Failed "+stats+" found when only Inactive status filter is selected");
          	     	System.out.println();}}
      		
      		d.navigate().refresh();
