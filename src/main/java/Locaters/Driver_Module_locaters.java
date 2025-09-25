@@ -81,7 +81,12 @@ public class Driver_Module_locaters extends Generic_codes{
     return password_field;} 
     public WebElement list(){
     WebElementWait(list);
-    return list;} 
+    return list;}  
+    public List<WebElement> second_column(){
+    list();
+    List<WebElement> second_column = list().findElements(By.xpath(".//td[2]"));
+    WebElementWait(second_column);
+    return second_column;} 
     public List<WebElement> Third_column(){
     list();
     List<WebElement> Third_column = list().findElements(By.xpath(".//td[3]"));

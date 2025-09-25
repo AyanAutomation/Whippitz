@@ -17,6 +17,7 @@ import com.aventstack.extentreports.Status;
 
 import Listeners_Reports.Listen;
 import Locaters.Dashboard_Locaters;
+import Locaters.Driver_Module_locaters;
 import Locaters.Login_locaters;
 import Locaters.Product_Module_locaters;
 import Repeative_codes.Generic_codes;
@@ -27,6 +28,11 @@ public class Product_module extends Side_Menu_options_Accessor{
 	List<String> products = new ArrayList<String>(); 
 	TreeSet<String> Uniqueproductset = new TreeSet<String>();
 	List<String> duplicates = new ArrayList<String>();
+	List<String> variations = new ArrayList<String>();
+	TreeMap<String,Integer> variation_stock = new TreeMap<String,Integer>();
+	
+	
+	
 	@Test
 	public void Product_list_Accessor() throws IOException, InterruptedException{
 		
@@ -442,6 +448,42 @@ public class Product_module extends Side_Menu_options_Accessor{
 			   p.search_box();
 		   }
 		
+		   
+		   
+		   @Test
+		   public void product_Variations_count_checker() throws IOException, InterruptedException{
+			   
+		   Product_Module_locaters p = new Product_Module_locaters(d);	   
+		   Driver_Module_locaters dr = new Driver_Module_locaters(d);
+			   
+		   variations.clear();
+		   menu_Accessor("Products","Variation List");
+		   p.variation_list_title();
+		   List <WebElement> variation_name_weblement = dr.second_column();
+		   for(WebElement variation_name:variation_name_weblement ){
+			   
+			   variations.add(variation_name.getText().trim());
+		   }Product_list_Accessor(); 
+		   p.search_box().sendKeys(variations.get(0));
+		   Thread.sleep(800);
+		   List<WebElement> no_of_eye_buttons = p.Product_view_buttons();
+		   for(WebElement eye_button:no_of_eye_buttons){
+			   
+			   eye_button.click();
+			   p.Add_Edit_form();
+			   String stock_number = p.Stock_field_in_view_form().getAttribute("value");
+			   variation_stock.put(variations.get(0), Integer.parseInt(stock_number));
+			   d.navigate().back();
+			   System.out.println(variations.get(0)+" "+ Integer.parseInt(stock_number));
+			   System.out.println();
+		   }   
+			   
+			   
+			   
+			   
+			   
+			   
+		   }
 		
 	
 	}

@@ -39,11 +39,11 @@ public class Product_Module_locaters extends Generic_codes{
 	@FindBy(xpath="(//tbody//td[6]//a[2])")
 	private List <WebElement>  Edit_buttons; 
 	@FindBy(xpath="//div[@class='toast-message']")
-	private WebElement  product_toast;/*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private WebElement  product_toast;
+	@FindBy(xpath="(//tbody//td[6]//a[1])")
+	private List <WebElement> Product_view_buttons; 
+	@FindBy(xpath="//*[text()='Admin | Product Variation']")
+	private WebElement  variation_list_title; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -149,10 +149,18 @@ public class Product_Module_locaters extends Generic_codes{
     return Edit_buttons;} 
     public WebElement product_toast(){
     WebElementWait(product_toast);
-    return product_toast;} /*
-    public WebElement (){
-    WebElementWait();
-    return ;}  */
+    return product_toast;} 
+    public List<WebElement> Product_view_buttons(){
+    WebElementWait(Product_view_buttons);
+    return Product_view_buttons;}  
+    public WebElement variation_list_title(){
+    WebElementWait(variation_list_title);
+    return variation_list_title;}    
+    public WebElement Stock_field_in_view_form(){
+    Add_Edit_form();
+    WebElement Stock_field_in_view_form = Add_Edit_form().findElement(By.xpath(".//input[@name='stock']"));
+    WebElementWait(Stock_field_in_view_form);
+    return Stock_field_in_view_form;}  
     
     
 
