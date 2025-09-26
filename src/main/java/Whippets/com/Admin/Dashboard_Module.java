@@ -48,12 +48,7 @@ public class Dashboard_Module extends Product_module{
 		   pack_and_count.put(packelements.get(n).getText().trim(), Integer.parseInt(stockelements.get(n).getText().trim()));
 		   Listen.Print_in_Report().log(Status.INFO, "DashBoad :-   "+packelements.get(n).getText().trim()+"  "+Integer.parseInt(stockelements.get(n).getText().trim()));
 		   System.out.println("DashBoad :-   "+packelements.get(n).getText().trim()+"  "+Integer.parseInt(stockelements.get(n).getText().trim()));
-		   }
-		   
-		   
-		   
-		   
-	   }
+		   }}
 		
 	}
 	

@@ -43,8 +43,10 @@ public class Side_Menu_options_Accessor extends Login{
 		    menu_itemsList = p.Sidemenus();
 			for(WebElement menu_item:menu_itemsList ){
 			if(menu_item.getText().contains(MenuOption)){
-			menu_item.click();
-			try{
+			if(MenuOption.contains("Orders")||MenuOption.contains("Delivery Issues")||MenuOption.contains("Feedbacks")||MenuOption.contains("CMS")||MenuOption.contains("Roles"))
+			{
+			menu_item.click();}
+			else{try{menu_item.click();
 			p.Product_Submenu_list();}
 			catch(Exception e){
 				menu_item.click();
@@ -54,7 +56,7 @@ public class Side_Menu_options_Accessor extends Login{
 		    if(op.getText().contains(Submenu_option)){
 			op.click();
 			Thread.sleep(600);
-			break;}}break;}}
+			break;}}}break;}}
 	
 
 }}

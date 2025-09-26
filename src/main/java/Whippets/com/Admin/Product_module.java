@@ -457,6 +457,7 @@ public class Product_module extends Side_Menu_options_Accessor{
 		   Driver_Module_locaters dr = new Driver_Module_locaters(d);
 			   
 		   variations.clear();
+		   variation_stock.clear();
 		   menu_Accessor("Products","Variation List");
 		   p.variation_list_title();
 		   List <WebElement> variation_name_weblement = dr.second_column();
@@ -477,12 +478,19 @@ public class Product_module extends Side_Menu_options_Accessor{
 			   String stock_number = p.Stock_field_in_view_form().getAttribute("value");
 			   total=total+Integer.parseInt(stock_number);
 			   d.navigate().back();}
+		       System.out.println(variations.get(m)+" no of eye buttons "+no_of_eye_buttons.size());
+		       no_of_eye_buttons.clear();
+		       Thread.sleep(800);
 		       variation_stock.put(variations.get(m), total);
 			   Listen.Print_in_Report().log(Status.INFO, variations.get(m)+" "+ total);
-			   System.out.println(variations.get(m)+" "+ total);
-			   System.out.println();}
-		   return variation_stock;
-		   }
+			   System.out.println("Product List :--    "+variations.get(m)+" "+ total);
+			   }
+		   return variation_stock;}
+		   
+		   
+		   
+		   
+		   
 		   
 		   
 		
