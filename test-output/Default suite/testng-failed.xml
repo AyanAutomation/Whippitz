@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Whippets.com.Admin.Customer_Module">
+      <class name="Whippets.com.Admin.Dashboard_Module">
         <methods>
           <include name="Process_Kill"/>
-          <include name="Customer_list_filter_Check"/>
           <include name="Setup"/>
+          <include name="Dashboard_product_count_check"/>
         </methods>
-      </class> <!-- Whippets.com.Admin.Customer_Module -->
+      </class> <!-- Whippets.com.Admin.Dashboard_Module -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

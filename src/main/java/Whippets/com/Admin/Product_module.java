@@ -451,7 +451,7 @@ public class Product_module extends Side_Menu_options_Accessor{
 		   
 		   
 		   @Test
-		   public void product_Variations_count_checker() throws IOException, InterruptedException{
+		   public TreeMap<String,Integer> product_Variations_count_collector() throws IOException, InterruptedException{
 			   
 		   Product_Module_locaters p = new Product_Module_locaters(d);	   
 		   Driver_Module_locaters dr = new Driver_Module_locaters(d);
@@ -461,29 +461,30 @@ public class Product_module extends Side_Menu_options_Accessor{
 		   p.variation_list_title();
 		   List <WebElement> variation_name_weblement = dr.second_column();
 		   for(WebElement variation_name:variation_name_weblement ){
-			   
-			   variations.add(variation_name.getText().trim());
-		   }Product_list_Accessor(); 
-		   p.search_box().sendKeys(variations.get(0));
+			  variations.add(variation_name.getText().trim());}
+		   
+		   Product_list_Accessor(); 
+		   
+		   for(int m=0; m<variations.size();m++) {
+		   p.search_box().clear();	   
+		   p.search_box().sendKeys(variations.get(m));
 		   Thread.sleep(800);
 		   List<WebElement> no_of_eye_buttons = p.Product_view_buttons();
+		   int total=0;
 		   for(WebElement eye_button:no_of_eye_buttons){
-			   
 			   eye_button.click();
 			   p.Add_Edit_form();
 			   String stock_number = p.Stock_field_in_view_form().getAttribute("value");
-			   variation_stock.put(variations.get(0), Integer.parseInt(stock_number));
-			   d.navigate().back();
-			   System.out.println(variations.get(0)+" "+ Integer.parseInt(stock_number));
-			   System.out.println();
-		   }   
-			   
-			   
-			   
-			   
-			   
-			   
+			   total=total+Integer.parseInt(stock_number);
+			   d.navigate().back();}
+		       variation_stock.put(variations.get(m), total);
+			   Listen.Print_in_Report().log(Status.INFO, variations.get(m)+" "+ total);
+			   System.out.println(variations.get(m)+" "+ total);
+			   System.out.println();}
+		   return variation_stock;
 		   }
+		   
+		   
 		
 	
 	}

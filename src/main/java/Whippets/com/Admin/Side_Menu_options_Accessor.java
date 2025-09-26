@@ -44,7 +44,11 @@ public class Side_Menu_options_Accessor extends Login{
 			for(WebElement menu_item:menu_itemsList ){
 			if(menu_item.getText().contains(MenuOption)){
 			menu_item.click();
-			p.Product_Submenu_list();
+			try{
+			p.Product_Submenu_list();}
+			catch(Exception e){
+				menu_item.click();
+				p.Product_Submenu_list();}
 			List<WebElement> product_submenuoptionsElments = p.options();
 			for(WebElement op:product_submenuoptionsElments){
 		    if(op.getText().contains(Submenu_option)){
