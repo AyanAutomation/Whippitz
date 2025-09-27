@@ -2,20 +2,20 @@
 <testng-results ignored="8" total="9" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-26T18:47:41 IST" name="Default suite" finished-at="2025-09-26T18:48:17 IST" duration-ms="35312">
+  <suite started-at="2025-09-27T23:06:48 IST" name="Default suite" finished-at="2025-09-27T23:07:37 IST" duration-ms="49070">
     <groups>
     </groups>
-    <test started-at="2025-09-26T18:47:41 IST" name="Default test" finished-at="2025-09-26T18:48:17 IST" duration-ms="35312">
+    <test started-at="2025-09-27T23:06:48 IST" name="Default test" finished-at="2025-09-27T23:07:37 IST" duration-ms="49070">
       <class name="Whippets.com.Admin.Dashboard_Module">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Dashboard_Module@3c0be339]" started-at="2025-09-26T18:47:41 IST" name="Setup" finished-at="2025-09-26T18:47:43 IST" duration-ms="1624" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Whippets.com.Admin.Dashboard_Module@34e9fd99]" started-at="2025-09-27T23:06:48 IST" name="Setup" finished-at="2025-09-27T23:06:50 IST" duration-ms="2285" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="Dashboard_product_count_check()[pri:0, instance:Whippets.com.Admin.Dashboard_Module@3c0be339]" started-at="2025-09-26T18:47:43 IST" name="Dashboard_product_count_check" finished-at="2025-09-26T18:48:16 IST" duration-ms="33439" status="PASS">
+        <test-method signature="Dashboard_product_count_check()[pri:0, instance:Whippets.com.Admin.Dashboard_Module@34e9fd99]" started-at="2025-09-27T23:06:50 IST" name="Dashboard_product_count_check" finished-at="2025-09-27T23:07:37 IST" duration-ms="46119" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Dashboard_product_count_check -->
-        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Dashboard_Module@3c0be339]" started-at="2025-09-26T18:48:16 IST" name="Process_Kill" finished-at="2025-09-26T18:48:17 IST" duration-ms="209" status="PASS">
+        <test-method is-config="true" signature="Process_Kill()[pri:0, instance:Whippets.com.Admin.Dashboard_Module@34e9fd99]" started-at="2025-09-27T23:07:37 IST" name="Process_Kill" finished-at="2025-09-27T23:07:37 IST" duration-ms="638" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Process_Kill -->

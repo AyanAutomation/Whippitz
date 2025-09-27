@@ -43,9 +43,9 @@ public class Product_Module_locaters extends Generic_codes{
 	@FindBy(xpath="(//tbody//td[6]//a[1])")
 	private List <WebElement> Product_view_buttons; 
 	@FindBy(xpath="//*[text()='Admin | Product Variation']")
-	private WebElement  variation_list_title; /*
-	@FindBy(xpath="")
-	private WebElement  ;
+	private WebElement  variation_list_title; 
+	@FindBy(xpath="//tbody//tr")
+	private List <WebElement>  rows;/*
 	@FindBy(xpath="")
 	private WebElement  ;*/
 	
@@ -59,6 +59,9 @@ public class Product_Module_locaters extends Generic_codes{
     public List <WebElement> Second_column(){
     WebElementWait(Second_column);
     return Second_column;}
+    public List <WebElement> rows(){
+    WebElementWait(rows);
+    return rows;}
     public WebElement select_dropdown(){
     WebElementWait(select_dropdown);
     return select_dropdown;}

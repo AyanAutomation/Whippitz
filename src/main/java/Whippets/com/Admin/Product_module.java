@@ -3,9 +3,11 @@ package Whippets.com.Admin;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -470,22 +472,36 @@ public class Product_module extends Side_Menu_options_Accessor{
 		   p.search_box().clear();	   
 		   p.search_box().sendKeys(variations.get(m));
 		   Thread.sleep(800);
-		   List<WebElement> no_of_eye_buttons = p.Product_view_buttons();
+		   List<WebElement> resultrows= p.rows();
 		   int total=0;
-		   for(WebElement eye_button:no_of_eye_buttons){
-			   eye_button.click();
-			   p.Add_Edit_form();
-			   String stock_number = p.Stock_field_in_view_form().getAttribute("value");
-			   total=total+Integer.parseInt(stock_number);
-			   d.navigate().back();}
-		       System.out.println(variations.get(m)+" no of eye buttons "+no_of_eye_buttons.size());
-		       no_of_eye_buttons.clear();
-		       Thread.sleep(800);
-		       variation_stock.put(variations.get(m), total);
-			   Listen.Print_in_Report().log(Status.INFO, variations.get(m)+" "+ total);
-			   System.out.println("Product List :--    "+variations.get(m)+" "+ total);
+		   for(WebElement resultrow:resultrows ){
+			   
+			   if(resultrow.getText().trim().contains(variations.get(m))) {
+			   
+				   resultrow.findElement(By.xpath(".//a[2]")).click();
+				   p.Add_Edit_form();
+				   String stock_number = p.Stock_field_in_view_form().getAttribute("value");
+				   total=total+Integer.parseInt(stock_number);
+				   d.navigate().back();
+				   p.search_box();
 			   }
-		   return variation_stock;}
+			   }
+		   variation_stock.put(variations.get(m), total);
+		   }
+		   
+		   for(Map.Entry<String,Integer> pair:variation_stock.entrySet()){
+			   
+			   Listen.Print_in_Report().log(Status.INFO, pair.getKey()+" :--- "+pair.getValue());
+			   System.out.println(pair.getKey()+" :--- "+pair.getValue());
+			   System.out.println();
+			   
+		   }
+		   
+		   
+		    return variation_stock;}
+	
+		   
+		   }
 		   
 		   
 		   
@@ -495,7 +511,7 @@ public class Product_module extends Side_Menu_options_Accessor{
 		   
 		
 	
-	}
+	
 	
 
 
