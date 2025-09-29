@@ -67,8 +67,8 @@ public class Dashboard_Module extends Product_module{
 				System.out.println("Pair matches testcase passed "+dashboard_pair.getKey()+" in dashboard is "+dashboard_pair.getValue()+" in product list count "+product_variation_and_count.get(dashboard_pair.getKey()));
 				System.out.println();
 			}else{
-				System.out.println("Pair don't match testcase Failed");
-				Listen.Print_in_Report().log(Status.INFO,"Pair don't match testcase Failed");
+				System.out.println(dashboard_pair.getValue()+"  Pair don't match testcase Failed");
+				Listen.Print_in_Report().log(Status.INFO,dashboard_pair.getValue()+"    Pair don't match testcase Failed");
 			}}}
 	
 	

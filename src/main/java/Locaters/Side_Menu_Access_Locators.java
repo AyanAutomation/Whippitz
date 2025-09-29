@@ -46,11 +46,13 @@ public class Side_Menu_Access_Locators extends Generic_codes{
     return options;}
     public WebElement page_title(){
     WebElementWait(page_title);
-    return page_title;}/*
-    public WebElement (){
-    WebElementWait();
-    return ;}
+    return page_title;}
+    public WebElement other_side_menus(String section ){
+    sidebar();
+    WebElement other_side_menus = sidebar().findElement(By.xpath(".//a[contains(@href, 'https://whippets.yourcloudnetwork.net/admin/" + section + "')]"));
+    WebElementWait(other_side_menus);
+    return other_side_menus;}
 	
-    */
+    
 
 }

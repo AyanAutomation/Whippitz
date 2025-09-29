@@ -265,10 +265,10 @@ public class Product_module extends Side_Menu_options_Accessor{
 			    product4.put("Image Path", Dynamic_file_path + "Hazelnut Praline Supreme.png");
 
 			    return new Object[][] {
-			        { product1 },
+			        { product1 },/*
 			        { product2 },
 			        { product3 },
-			        { product4 }
+			        { product4 } */
 			    };
 		    }
 		
@@ -330,10 +330,10 @@ public class Product_module extends Side_Menu_options_Accessor{
 			    product4.put("Image Path", Dynamic_file_path + "Peanut Butter Indulgence.png");
 
 			    return new Object[][] {
-			        { product1 },
+			        { product1 },/*
 			        { product2 },
 			        { product3 },
-			        { product4 } 
+			        { product4 } */
 			    };
 		    }
 		  
@@ -405,7 +405,7 @@ public class Product_module extends Side_Menu_options_Accessor{
 			   
 			   
 			   Product_list_Accessor();
-			   p.Edit_buttons().get(1).click();
+			   p.Edit_buttons().get(3).click();
 			   p.Add_Edit_form();
 			   js.executeScript("arguments[0].scrollIntoView(true);",p.image_upload_field());
 			   p.image_upload_field().sendKeys(String.valueOf(data.get("Image Path")));

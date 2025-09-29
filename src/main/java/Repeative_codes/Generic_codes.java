@@ -50,6 +50,7 @@ public class Generic_codes {
 		
     	Actions a = new Actions(d);
 		
+    	WebElementWait(element);
     	a.moveToElement(element).build().perform();
 		
 	}

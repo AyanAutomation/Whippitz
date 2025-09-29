@@ -18,9 +18,9 @@ public class Order_Module_Locaters extends Generic_codes{
 	@FindBy(xpath="//*[text()='Admin | Order']")
 	private WebElement  landed_in_order; 
 	@FindBy(xpath="//table[@class='table table-head-fixed text-nowrap dataTable no-footer'][1]//th[@tabindex='0']")
-	private List<WebElement>  Column_titles; /*
-	@FindBy(xpath="")
-	private WebElement  ;
+	private List<WebElement>  Column_titles; 
+	@FindBy(xpath="//h2")
+	private WebElement  entered_order_details_confirmation;/*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -59,9 +59,12 @@ public class Order_Module_Locaters extends Generic_codes{
     
     
     
+    public WebElement entered_order_details_confirmation(){
+    WebElementWait(entered_order_details_confirmation);
+    return entered_order_details_confirmation;} 
     public WebElement Order_list(){
     WebElementWait(Order_list);
-    return Order_list;} 
+    return Order_list;}
     public List<WebElement> first_column(){
     Order_list();	
     List<WebElement> first_column = Order_list().findElements(By.xpath(".//td[1]"));	
@@ -107,12 +110,12 @@ public class Order_Module_Locaters extends Generic_codes{
     return landed_in_order;} 
     public List<WebElement> Column_titles(){
     WebElementWait(Column_titles);
-    return Column_titles;} /*
-    public List<WebElement> (){
+    return Column_titles;} 
+    public List<WebElement> rows(){
     Order_list();	
-    List<WebElement> first_column = Order_list().findElements(By.xpath(".//td[1]"));	
-    WebElementWait(first_column);
-    return first_column;} */
+    List<WebElement> rows = Order_list().findElements(By.xpath(".//tbody//tr"));	
+    WebElementWait(rows);
+    return rows;} 
     
     
     

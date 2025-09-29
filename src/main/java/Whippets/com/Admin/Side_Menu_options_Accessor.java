@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
@@ -11,6 +12,7 @@ import com.aventstack.extentreports.Status;
 
 import Listeners_Reports.Listen;
 import Locaters.Side_Menu_Access_Locators;
+import Repeative_codes.Generic_codes;
 
 public class Side_Menu_options_Accessor extends Login{
 	
@@ -37,26 +39,39 @@ public class Side_Menu_options_Accessor extends Login{
 	public void menu_Accessor(String MenuOption, String Submenu_option ) throws IOException, InterruptedException{
 		
 		Side_Menu_Access_Locators p = new Side_Menu_Access_Locators(d);
+		Generic_codes g = new Generic_codes(d);
+		JavascriptExecutor js = (JavascriptExecutor)d;
 		
 		
 		    side_menu();
 		    menu_itemsList = p.Sidemenus();
-			for(WebElement menu_item:menu_itemsList ){
-			if(menu_item.getText().contains(MenuOption)){
-			if(MenuOption.contains("Orders")||MenuOption.contains("Delivery Issues")||MenuOption.contains("Feedbacks")||MenuOption.contains("CMS")||MenuOption.contains("Roles"))
+		    if(MenuOption.equalsIgnoreCase("order")||MenuOption.equalsIgnoreCase("delivery-issues")||MenuOption.equalsIgnoreCase("feedbacks")||MenuOption.equalsIgnoreCase("CMS")||MenuOption.equalsIgnoreCase("roles"))
 			{
-			menu_item.click();}
-			else{try{menu_item.click();
-			p.Product_Submenu_list();}
-			catch(Exception e){
-				menu_item.click();
+				Second_section_menu_items(MenuOption);	
+			}else {
+			for(WebElement menu_item:menu_itemsList ){
+				
+			if(menu_item.getText().equalsIgnoreCase(MenuOption)){
+				try{menu_item.click();
 				p.Product_Submenu_list();}
-			List<WebElement> product_submenuoptionsElments = p.options();
-			for(WebElement op:product_submenuoptionsElments){
-		    if(op.getText().contains(Submenu_option)){
-			op.click();
-			Thread.sleep(600);
-			break;}}}break;}}
+				catch(Exception e){
+					js.executeScript("arguments[0].click();", menu_item);
+					p.Product_Submenu_list();}
+				List<WebElement> product_submenuoptionsElments = p.options();
+				for(WebElement op:product_submenuoptionsElments){
+			    if(Submenu_option!=null && op.getText().equalsIgnoreCase(Submenu_option)){
+				op.click();
+				Thread.sleep(600);
+				break;}
+			    if(Submenu_option==null){ 
+					break;}}}}}}
+			
+			
+	 public void Second_section_menu_items(String Menu_name){
+		 
+		 Side_Menu_Access_Locators p = new Side_Menu_Access_Locators(d);
+		 
+		 p.other_side_menus(Menu_name).click();}
 	
 
-}}
+}
