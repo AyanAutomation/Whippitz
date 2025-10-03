@@ -5,9 +5,9 @@
     <classes>
       <class name="Whippets.com.Admin.Orders_Module">
         <methods>
+          <include name="Driver_assigning_to_order"/>
           <include name="Process_Kill"/>
           <include name="Setup"/>
-          <include name="row_data_collector"/>
         </methods>
       </class> <!-- Whippets.com.Admin.Orders_Module -->
     </classes>

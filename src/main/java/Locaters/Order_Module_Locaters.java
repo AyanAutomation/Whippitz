@@ -20,11 +20,11 @@ public class Order_Module_Locaters extends Generic_codes{
 	@FindBy(xpath="//table[@class='table table-head-fixed text-nowrap dataTable no-footer'][1]//th[@tabindex='0']")
 	private List<WebElement>  Column_titles; 
 	@FindBy(xpath="//h2")
-	private WebElement  entered_order_details_confirmation;/*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private WebElement  entered_order_details_confirmation;
+	@FindBy(xpath="//p[@class='mb-2'] | //p[@class='mb-0']")
+	private List<WebElement>  Order_details_text; 
+	@FindBy(id="driver")
+	private WebElement  driver_dropdown; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -116,6 +116,45 @@ public class Order_Module_Locaters extends Generic_codes{
     List<WebElement> rows = Order_list().findElements(By.xpath(".//tbody//tr"));	
     WebElementWait(rows);
     return rows;} 
+    public List<WebElement> Order_details_text(){
+    WebElementWait(Order_details_text);
+	return Order_details_text;} 
+    public WebElement driver_dropdown(){
+    WebElementWait(driver_dropdown);
+	return driver_dropdown;}/*
+    public WebElement (){
+    WebElementWait();
+	return ;}
+    public WebElement (){
+    WebElementWait();
+	return ;}
+    public WebElement (){
+    WebElementWait();
+	return ;}
+    public WebElement (){
+    WebElementWait();
+	return ;}
+    public WebElement (){
+    WebElementWait();
+	return ;}
+    public WebElement (){
+    WebElementWait();
+	return ;}
+    public WebElement (){
+    WebElementWait();
+	return ;}
+    public WebElement (){
+    WebElementWait();
+	return ;}
+    public WebElement (){
+    WebElementWait();
+	return ;}
+    public WebElement (){
+    WebElementWait();
+	return ;}
+    public WebElement (){
+    WebElementWait();
+	return ;} */
     
     
     

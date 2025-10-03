@@ -10,10 +10,14 @@ import java.util.TreeSet;
 import java.util.stream.IntStream;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
+import Listeners_Reports.Listen;
 import Locaters.Order_Module_Locaters;
 import Locaters.Product_Module_locaters;
 
@@ -25,6 +29,7 @@ public class Orders_Module extends Product_module{
 	TreeSet<String> Customer_name = new TreeSet<String>();
 	TreeSet<String> Driver_name = new TreeSet<String>();
 	TreeSet<String> row_datas = new TreeSet<String>();
+	List<String> Order_details = new ArrayList<>();
 	
 	@Test
 	public void order_list_accessor() throws IOException, InterruptedException{
@@ -88,9 +93,25 @@ public class Orders_Module extends Product_module{
 	       public void Driver_assigning_to_order() throws IOException, InterruptedException{
 		
 	    	   Order_Module_Locaters p = new Order_Module_Locaters(d);
+	    	   JavascriptExecutor js = (JavascriptExecutor)d;
 		       
-	    	   order_details_by_customer_name("Haatim Tai");
+	    	  String Drivername ="Nikolai Petrov";
 	    	   
+	    	   order_details_by_customer_name("Haatim Tai");
+	    	   js.executeScript("arguments[0].scrollIntoView(true);",p.driver_dropdown());
+	    	   Select s = new  Select(p.driver_dropdown());
+	    	   List <WebElement> options = s.getOptions();
+	    	   
+	    	   for(WebElement option:options){
+	    		   
+	    		   System.out.println("drivers are "+option.getText().trim());
+	    		   if(option.getText().trim().equalsIgnoreCase(Drivername)){
+	    			   
+	    			   s.deselectByVisibleText(Drivername);
+	    			   break;
+	    		   }
+		    		  System.out.println();
+	    	   }
 	    	   
 	    	   }
 	
@@ -122,8 +143,26 @@ public class Orders_Module extends Product_module{
 	    			 row.findElement(By.xpath(".//a[1]")).click();
 	    			 p.entered_order_details_confirmation();
 	    			 System.out.println(d.getCurrentUrl());
+	    			 System.out.println();
+	    			 Listen.Print_in_Report().log(Status.INFO, d.getCurrentUrl());
 	    			 break;
-	    			 }}}} 
+	    			 }}}
+	    	  
+	    	  List <WebElement> order_texts = p.Order_details_text();
+	    	  
+	    	  for(WebElement order_text:order_texts){
+	    		  
+	    		  Order_details.add(order_text.getText().trim());
+	    	/*	  System.out.println(order_text.getText().trim());
+	    		  System.out.println(); */
+	    		  Listen.Print_in_Report().log(Status.INFO,order_text.getText().trim());
+	    	  }
+	    	  
+	      
+	      
+	      
+	      
+	      } 
 	       
 	       
 	       
@@ -136,6 +175,7 @@ public class Orders_Module extends Product_module{
     	 Customer_name.clear();
     	 Driver_name.clear();
     	 row_datas.clear();
+    	 Order_details.clear();
      }
 
 
