@@ -24,13 +24,13 @@ public class Order_Module_Locaters extends Generic_codes{
 	@FindBy(xpath="//p[@class='mb-2'] | //p[@class='mb-0']")
 	private List<WebElement>  Order_details_text; 
 	@FindBy(id="driver")
-	private WebElement  driver_dropdown; /*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private WebElement  driver_dropdown; 
+	@FindBy(xpath="//*[@class='dataTables_scroll']")
+	private WebElement  slider; 
+	@FindBy(xpath="//*[@class='dataTables_scrollBody']")
+	private WebElement  dataTables_scrollBody;
+	@FindBy(xpath="//*[@class='dataTables_scrollHead']")
+	private WebElement  dataTables_scrollHead;/*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -121,19 +121,20 @@ public class Order_Module_Locaters extends Generic_codes{
 	return Order_details_text;} 
     public WebElement driver_dropdown(){
     WebElementWait(driver_dropdown);
-	return driver_dropdown;}/*
-    public WebElement (){
-    WebElementWait();
-	return ;}
-    public WebElement (){
-    WebElementWait();
-	return ;}
-    public WebElement (){
-    WebElementWait();
-	return ;}
-    public WebElement (){
-    WebElementWait();
-	return ;}
+	return driver_dropdown;}
+    public WebElement slider(){
+    WebElementWait(slider);
+	return slider;} 
+    public WebElement dataTables_scrollBody(){
+    WebElementWait(dataTables_scrollBody);
+	return dataTables_scrollBody;}
+    public WebElement dataTables_scrollHead(){
+    WebElementWait(dataTables_scrollHead);
+	return dataTables_scrollHead;}
+    public WebElement headerByText(String text, WebDriver d){
+    WebElement headerByText = d.findElement(By.xpath("//div[contains(@class,'dataTables_scrollHead')]//thead//th[normalize-space()='" + text + "']"));
+    WebElementWait(headerByText);
+    return headerByText;} /*
     public WebElement (){
     WebElementWait();
 	return ;}
