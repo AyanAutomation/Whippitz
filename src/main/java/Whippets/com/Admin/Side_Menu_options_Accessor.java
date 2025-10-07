@@ -27,7 +27,7 @@ public class Side_Menu_options_Accessor extends Login{
 		Side_Menu_Access_Locators p = new Side_Menu_Access_Locators(d);
 		
 		try{p.sidebar();
-		menu_itemsList = p.Sidemenus();}
+		}
 		catch(Exception ko) {
 		login();
 		p.sidebar();
@@ -44,14 +44,19 @@ public class Side_Menu_options_Accessor extends Login{
 		
 		
 		    side_menu();
-		    menu_itemsList = p.Sidemenus();
+		    menu_itemsList = p.Sidemenus(); 
+		    String Menu_text;
 		    if(MenuOption.equalsIgnoreCase("order")||MenuOption.equalsIgnoreCase("delivery-issues")||MenuOption.equalsIgnoreCase("feedbacks")||MenuOption.equalsIgnoreCase("CMS")||MenuOption.equalsIgnoreCase("roles"))
 			{
 				Second_section_menu_items(MenuOption);	
 			}else {
-			for(WebElement menu_item:menu_itemsList ){
+			OuterLoop:	
+			for(WebElement menu_item:menu_itemsList){
 				
-			if(menu_item.getText().equalsIgnoreCase(MenuOption)){
+				Menu_text = menu_item.getText();
+				
+			if(Menu_text.equalsIgnoreCase(MenuOption)){
+				
 				try{menu_item.click();
 				p.Product_Submenu_list();}
 				catch(Exception e){
@@ -62,9 +67,13 @@ public class Side_Menu_options_Accessor extends Login{
 			    if(Submenu_option!=null && op.getText().equalsIgnoreCase(Submenu_option)){
 				op.click();
 				Thread.sleep(600);
-				break;}
+				break OuterLoop;}
 			    if(Submenu_option==null){ 
-					break;}}}}}}
+					break OuterLoop;}}}
+			
+			}
+			
+			}}
 			
 			
 	 public void Second_section_menu_items(String Menu_name){
