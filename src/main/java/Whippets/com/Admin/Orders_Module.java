@@ -39,6 +39,7 @@ public class Orders_Module extends Product_module{
 		Order_Module_Locaters p = new Order_Module_Locaters(d);
 		Product_Module_locaters po = new Product_Module_locaters(d);
 		
+		all_Collections_clear();
 		menu_Accessor("order",null);
 		p.landed_in_order();
 		po.select_dropdown();
@@ -55,7 +56,7 @@ public class Orders_Module extends Product_module{
 		Order_Module_Locaters p = new Order_Module_Locaters(d);
 		JavascriptExecutor js = (JavascriptExecutor)d;
 		
-		//all_Collections_clear();
+		all_Collections_clear();
 		order_list_accessor();
 		Thread.sleep(800);try {
 		List<WebElement> Column_names = p.Column_titles();}
@@ -108,19 +109,19 @@ public class Orders_Module extends Product_module{
 	    	   Product_Module_locaters pd = new Product_Module_locaters(d);
 	    	   
 		       
-	    	  String Drivername ="Nikolai Petrov";
+	    	  String Drivername ="Nikolai Petrov";  
 	    	   
-	    	   order_details_by_customer_name("Sindbaad Sarkar");
-	    	   js.executeScript("arguments[0].scrollIntoView(true);",p.driver_dropdown());
+	         order_details_by_customer_name("Sindbaad Sarkar");
+	    	 js.executeScript("arguments[0].scrollIntoView(true);",p.driver_dropdown());
 	    	   Select s = new  Select(p.driver_dropdown());
 	    	   List <WebElement> options = s.getOptions();
 	    	   
-	    	   for(WebElement option:options){
-    		  /*   System.out.println("drivers are "+option.getText().trim());
-	    		   System.out.println(); */
+	    	    for(WebElement option:options){
+    		    System.out.println("drivers are "+option.getText().trim());
+	    		   System.out.println(); 
 	    		   if(option.getText().trim().equalsIgnoreCase(Drivername)){
 	    			   
-	    			   s.selectByContainsVisibleText(Drivername);
+	    			   s.selectByVisibleText(Drivername);
 	    			   lg.submit_button().click();
 	    			  try { pd.searchBox();} 
 	    			  catch(Exception eo){
@@ -134,68 +135,35 @@ public class Orders_Module extends Product_module{
 	    					 
 	    					 d.navigate().back();
 	    					 pd.searchBox();
-	    				 } 
-	    			  }
-	    			   break;}
-		    		  
-	    	   }
-	    	   
-	    	   }
+	    				 }}
+	    			   break;}}}
 	
-	     
-	      public void order_details_by_customer_name(String customer)throws IOException, InterruptedException{
+	      
+	      public void order_details_by_customer_name(String Customer_name)throws IOException, InterruptedException{
 	    	  
 	    	  Order_Module_Locaters p = new Order_Module_Locaters(d); 	  
 	    	  
+	    	  String customer= Customer_name;
 	    	  
-	    	  order_list_data_collector();
+	    	  order_list_accessor();
 	    	  List<WebElement> allrows = p.rows();
-	    	  Set<String> alldrivers = Column_names_and_Values.get("Driver");
-	    	  System.out.println("no of data in all drivers =  "+alldrivers.size());
-	    	  String rowcontents;
+              String row_driver_cell_text;
+	    	  String row_customer_cell_text;
 	    	  
-	    	  for(String driver:alldrivers){
-	    		  
-	    		  System.out.println(driver);
-	    	  }
-	    	  
-	    	  /*
-	    	  for(WebElement row:allrows){
-	    		
-	    		  rowcontents = row.getText().trim();
-	    		  
-	    		 if(rowcontents.contains(customer)){
-	    			 
-	    			 Boolean Driver_present=null;
-	    			 
-	    			for(String Drivernam:alldrivers) {
-	    				System.out.println("Driver name found   "+Drivernam);
-	    				
-	            	   if(rowcontents.contains(Drivernam.trim())){ 
-	    				
-	            		   Driver_present= true;
-	    				 break;}else{Driver_present = false;}}
-	               
-	          if(Driver_present==false) {
-	    			 row.findElement(By.xpath(".//a[1]")).click();
-	    			 p.entered_order_details_confirmation();
-	    			 System.out.println(d.getCurrentUrl());
-	    			 System.out.println();
-	    			 Listen.Print_in_Report().log(Status.INFO, d.getCurrentUrl());
-	    			 break;
-	    			 }}}
-	    	  
-	    	  List <WebElement> order_texts = p.Order_details_text();
-	    	  
-	    	  for(WebElement order_text:order_texts){
-	    		  
-	    		  Order_details.add(order_text.getText().trim());
-	    	/*	  System.out.println(order_text.getText().trim());
-	    		  System.out.println(); 
-	    		  Listen.Print_in_Report().log(Status.INFO,order_text.getText().trim());
-	    	  }
-	    	  
-	      */} 
+	    	
+	    	
+	    		  for(WebElement rowcontent:allrows) {
+	    			  
+	    			  row_driver_cell_text = rowcontent.findElement(By.xpath(".//td[6]")).getText().trim();
+	    	          row_customer_cell_text = rowcontent.findElement(By.xpath(".//td[2]")).getText().trim();
+	    			  
+	    	      if(row_customer_cell_text.equalsIgnoreCase(customer) && row_driver_cell_text.isEmpty()) {
+	    		                System.out.println("No driver assigned for this order — clicking row...");
+	   	    		            rowcontent.findElement(By.xpath(".//a[1]")).click();
+	   	    		            p.entered_order_details_confirmation();
+	   	    		            System.out.println("Clicked row and opened order details.");
+	   	    		            System.out.println();
+	   	    		            break ;}}} 
 	       
 	       
 	       
@@ -218,28 +186,12 @@ public class Orders_Module extends Product_module{
     	  JavascriptExecutor js = (JavascriptExecutor)d;
     	  Order_Module_Locaters p = new Order_Module_Locaters(d);
     	  
-    	  
-    	  
-    	  
     	   js.executeScript("arguments[0].scrollIntoView(true);", p.dataTables_scrollBody());
     	   Thread.sleep(300);
     	   js.executeScript("arguments[0].scrollLeft = arguments[1].offsetLeft + 200;", p.dataTables_scrollBody(), p.headerByText(headerText, d));
     	   js.executeScript("arguments[0].scrollIntoView({block:'start'});", p.dataTables_scrollHead());
-            Thread.sleep(250);/* 
-    	 * 
-    	 * 
-    	 * 
-    	 * js.executeScript("arguments[0].scrollIntoView(true);",p.slider());
-    	  Thread.sleep(800);
-    	  for(int m=0; m<n;m++){
-    		  js.executeScript("arguments[0].scrollLeft = arguments[1].offsetLeft;", p.slider());
-    		    Thread.sleep(800);}
-    	  js.executeScript("arguments[0].scrollIntoView(true);",p.landed_in_order());
-    	  Thread.sleep(800); */
-    	  
-    	  
-    	  
-      }
+            Thread.sleep(250);
+    	 }
 
 
 }
