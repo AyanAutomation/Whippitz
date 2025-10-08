@@ -217,58 +217,84 @@ public class Product_module extends Side_Menu_options_Accessor{
 			  String Dynamic_file_path = System.getProperty("user.dir") + "//ProductImages//";
 
 			  TreeMap<String, String> product1 = new TreeMap<>();
-			    product1.put("Product Name", "Whippitz N₂O Cylinder – Blueberry Frost");
+			    product1.put("Product Name", "Whippitz N₂O Cylinder – Coconut Cream Breeze");
 			    product1.put("Product Type", "Group");
-			    product1.put("Stock", "95");
-			    product1.put("Product Price (AUD)", "155.00");
+			    product1.put("Stock", "72");
+			    product1.put("Product Price (AUD)", "158.00");
 			    product1.put("Pack of", "Pack of 6");
 			    product1.put("Discount Type", "Fixed Discount");
 			    product1.put("Discount %", "");
-			    product1.put("Discount Price (AUD)", "12.00");
-			    product1.put("Short Description", "Cool blueberry cream flavour, perfect for smoothies and summer desserts.");
-			    product1.put("Image Path", Dynamic_file_path + "Blueberry Frost.png");
+			    product1.put("Discount Price (AUD)", "11.00");
+			    product1.put("Short Description", "Silky coconut cream profile tailored for summer sundaes, pies, and tropical shakes.");
+			    product1.put("Image Path", Dynamic_file_path + "Coconut Cream Breeze.png");
 
 			    TreeMap<String, String> product2 = new TreeMap<>();
-			    product2.put("Product Name", "Whippitz N₂O Cylinder – Caramel Mocha Royale");
+			    product2.put("Product Name", "Whippitz N₂O Cylinder – Lemon Meringue Zest");
 			    product2.put("Product Type", "Group");
-			    product2.put("Stock", "60");
-			    product2.put("Product Price (AUD)", "178.00");
+			    product2.put("Stock", "64");
+			    product2.put("Product Price (AUD)", "162.00");
 			    product2.put("Pack of", "Pack of 8");
 			    product2.put("Discount Type", "Percentage Discount");
-			    product2.put("Discount %", "15");
-			    product2.put("Discount Price (AUD)", "26.70");
-			    product2.put("Short Description", "Caramel mocha infusion, ideal for coffee bars and bakery frosting.");
-			    product2.put("Image Path", Dynamic_file_path + "Caramel Mocha Royale.png");
+			    product2.put("Discount %", "12");
+			    product2.put("Discount Price (AUD)", "19.44"); // 12% of 162.00
+			    product2.put("Short Description", "Bright lemon-vanilla balance ideal for tarts, pavlovas, and iced desserts.");
+			    product2.put("Image Path", Dynamic_file_path + "Lemon Meringue Zest.png");
 
 			    TreeMap<String, String> product3 = new TreeMap<>();
-			    product3.put("Product Name", "Whippitz N₂O Cylinder – Tropical Mango Rush");
+			    product3.put("Product Name", "Whippitz N₂O Cylinder – Cherry Cheesecake Dream");
 			    product3.put("Product Type", "Group");
 			    product3.put("Stock", "88");
-			    product3.put("Product Price (AUD)", "165.00");
+			    product3.put("Product Price (AUD)", "170.00");
 			    product3.put("Pack of", "Pack of 10");
 			    product3.put("Discount Type", "Fixed Discount");
 			    product3.put("Discount %", "");
-			    product3.put("Discount Price (AUD)", "15.00");
-			    product3.put("Short Description", "Exotic tropical mango cream, perfect for icy drinks and party desserts.");
-			    product3.put("Image Path", Dynamic_file_path + "Tropical Mango Rush.png");
+			    product3.put("Discount Price (AUD)", "9.00");
+			    product3.put("Short Description", "Lush cherry notes layered over creamy cheesecake—made for patisseries and cafés.");
+			    product3.put("Image Path", Dynamic_file_path + "Cherry Cheesecake Dream.png");
 
 			    TreeMap<String, String> product4 = new TreeMap<>();
-			    product4.put("Product Name", "Whippitz N₂O Cylinder – Hazelnut Praline Supreme");
+			    product4.put("Product Name", "Whippitz N₂O Cylinder – Salted Caramel Crunch");
 			    product4.put("Product Type", "Group");
-			    product4.put("Stock", "42");
-			    product4.put("Product Price (AUD)", "220.00");
+			    product4.put("Stock", "54");
+			    product4.put("Product Price (AUD)", "190.00");
 			    product4.put("Pack of", "Pack of 12");
 			    product4.put("Discount Type", "Percentage Discount");
-			    product4.put("Discount %", "20");
-			    product4.put("Discount Price (AUD)", "44.00");
-			    product4.put("Short Description", "Premium hazelnut praline flavour, designed for luxury dessert lounges.");
-			    product4.put("Image Path", Dynamic_file_path + "Hazelnut Praline Supreme.png");
+			    product4.put("Discount %", "15");
+			    product4.put("Discount Price (AUD)", "28.50"); // 15% of 190.00
+			    product4.put("Short Description", "Decadent caramel with a subtle sea-salt finish—perfect for waffles and bakes.");
+			    product4.put("Image Path", Dynamic_file_path + "Salted Caramel Crunch.png");
+
+			    TreeMap<String, String> product5 = new TreeMap<>();
+			    product5.put("Product Name", "Whippitz N₂O Cylinder – Matcha Green Velvet");
+			    product5.put("Product Type", "Group");
+			    product5.put("Stock", "76");
+			    product5.put("Product Price (AUD)", "168.00");
+			    product5.put("Pack of", "Pack of 6");
+			    product5.put("Discount Type", "Fixed Discount");
+			    product5.put("Discount %", "");
+			    product5.put("Discount Price (AUD)", "10.00");
+			    product5.put("Short Description", "Elegant matcha cream body for modern pastries, crepes, and beverage bars.");
+			    product5.put("Image Path", Dynamic_file_path + "Matcha Green Velvet.png");
+
+			    TreeMap<String, String> product6 = new TreeMap<>();
+			    product6.put("Product Name", "Whippitz N₂O Cylinder – Blue Raspberry Glacier");
+			    product6.put("Product Type", "Group");
+			    product6.put("Stock", "92");
+			    product6.put("Product Price (AUD)", "172.00");
+			    product6.put("Pack of", "Pack of 8");
+			    product6.put("Discount Type", "Percentage Discount");
+			    product6.put("Discount %", "10");
+			    product6.put("Discount Price (AUD)", "17.20"); // 10% of 172.00
+			    product6.put("Short Description", "Crisp blue-raspberry chill for frostings, frappes, and summer pop-ups.");
+			    product6.put("Image Path", Dynamic_file_path + "Blue Raspberry Glacier.png");
 
 			    return new Object[][] {
-			        { product1 },/*
+			    	{ product1 },
 			        { product2 },
 			        { product3 },
-			        { product4 } */
+			        { product4 },
+			        { product5 },
+			        { product6 }
 			    };
 		    }
 		
@@ -282,58 +308,84 @@ public class Product_module extends Side_Menu_options_Accessor{
 			  String Dynamic_file_path = System.getProperty("user.dir") + "//ProductImages//";
 
 			  TreeMap<String, String> product1 = new TreeMap<>();
-			    product1.put("Product Name", "Whippitz N₂O Cylinder – Raspberry Velvet");
+			    product1.put("Product Name", "Whippitz N₂O Cylinder – Coconut Cream Breeze");
 			    product1.put("Product Type", "Group");
-			    product1.put("Stock", "78");
-			    product1.put("Product Price (AUD)", "160.00");
+			    product1.put("Stock", "72");
+			    product1.put("Product Price (AUD)", "158.00");
 			    product1.put("Pack of", "Pack of 6");
 			    product1.put("Discount Type", "Fixed Discount");
 			    product1.put("Discount %", "");
-			    product1.put("Discount Price (AUD)", "10.00");
-			    product1.put("Short Description", "Smooth raspberry cream flavour, ideal for chilled desserts and frappes.");
-			    product1.put("Image Path", Dynamic_file_path + "Raspberry Velvet.png");
+			    product1.put("Discount Price (AUD)", "11.00");
+			    product1.put("Short Description", "Silky coconut cream profile tailored for summer sundaes, pies, and tropical shakes.");
+			    product1.put("Image Path", Dynamic_file_path + "Coconut Cream Breeze.png");
 
 			    TreeMap<String, String> product2 = new TreeMap<>();
-			    product2.put("Product Name", "Whippitz N₂O Cylinder – Mocha Almond Crush");
+			    product2.put("Product Name", "Whippitz N₂O Cylinder – Lemon Meringue Zest");
 			    product2.put("Product Type", "Group");
-			    product2.put("Stock", "65");
-			    product2.put("Product Price (AUD)", "175.00");
+			    product2.put("Stock", "64");
+			    product2.put("Product Price (AUD)", "162.00");
 			    product2.put("Pack of", "Pack of 8");
 			    product2.put("Discount Type", "Percentage Discount");
-			    product2.put("Discount %", "14");
-			    product2.put("Discount Price (AUD)", "24.50");
-			    product2.put("Short Description", "Coffee mocha with almond fusion, great for bakeries and gourmet beverages.");
-			    product2.put("Image Path", Dynamic_file_path + "Mocha Almond Crush.png");
+			    product2.put("Discount %", "12");
+			    product2.put("Discount Price (AUD)", "19.44"); // 12% of 162.00
+			    product2.put("Short Description", "Bright lemon-vanilla balance ideal for tarts, pavlovas, and iced desserts.");
+			    product2.put("Image Path", Dynamic_file_path + "Lemon Meringue Zest.png");
 
 			    TreeMap<String, String> product3 = new TreeMap<>();
-			    product3.put("Product Name", "Whippitz N₂O Cylinder – Kiwi Lime Spark");
+			    product3.put("Product Name", "Whippitz N₂O Cylinder – Cherry Cheesecake Dream");
 			    product3.put("Product Type", "Group");
-			    product3.put("Stock", "92");
-			    product3.put("Product Price (AUD)", "152.00");
+			    product3.put("Stock", "88");
+			    product3.put("Product Price (AUD)", "170.00");
 			    product3.put("Pack of", "Pack of 10");
 			    product3.put("Discount Type", "Fixed Discount");
 			    product3.put("Discount %", "");
 			    product3.put("Discount Price (AUD)", "9.00");
-			    product3.put("Short Description", "Refreshing kiwi and lime blend, perfect for fruit tarts and tropical drinks.");
-			    product3.put("Image Path", Dynamic_file_path + "Kiwi Lime Spark.png");
+			    product3.put("Short Description", "Lush cherry notes layered over creamy cheesecake—made for patisseries and cafés.");
+			    product3.put("Image Path", Dynamic_file_path + "Cherry Cheesecake Dream.png");
 
 			    TreeMap<String, String> product4 = new TreeMap<>();
-			    product4.put("Product Name", "Whippitz N₂O Cylinder – Peanut Butter Indulgence");
+			    product4.put("Product Name", "Whippitz N₂O Cylinder – Salted Caramel Crunch");
 			    product4.put("Product Type", "Group");
-			    product4.put("Stock", "48");
-			    product4.put("Product Price (AUD)", "225.00");
+			    product4.put("Stock", "54");
+			    product4.put("Product Price (AUD)", "190.00");
 			    product4.put("Pack of", "Pack of 12");
 			    product4.put("Discount Type", "Percentage Discount");
-			    product4.put("Discount %", "19");
-			    product4.put("Discount Price (AUD)", "42.75");
-			    product4.put("Short Description", "Rich peanut butter cream for premium cafés and dessert lounges.");
-			    product4.put("Image Path", Dynamic_file_path + "Peanut Butter Indulgence.png");
+			    product4.put("Discount %", "15");
+			    product4.put("Discount Price (AUD)", "28.50"); // 15% of 190.00
+			    product4.put("Short Description", "Decadent caramel with a subtle sea-salt finish—perfect for waffles and bakes.");
+			    product4.put("Image Path", Dynamic_file_path + "Salted Caramel Crunch.png");
+
+			    TreeMap<String, String> product5 = new TreeMap<>();
+			    product5.put("Product Name", "Whippitz N₂O Cylinder – Matcha Green Velvet");
+			    product5.put("Product Type", "Group");
+			    product5.put("Stock", "76");
+			    product5.put("Product Price (AUD)", "168.00");
+			    product5.put("Pack of", "Pack of 6");
+			    product5.put("Discount Type", "Fixed Discount");
+			    product5.put("Discount %", "");
+			    product5.put("Discount Price (AUD)", "10.00");
+			    product5.put("Short Description", "Elegant matcha cream body for modern pastries, crepes, and beverage bars.");
+			    product5.put("Image Path", Dynamic_file_path + "Matcha Green Velvet.png");
+
+			    TreeMap<String, String> product6 = new TreeMap<>();
+			    product6.put("Product Name", "Whippitz N₂O Cylinder – Blue Raspberry Glacier");
+			    product6.put("Product Type", "Group");
+			    product6.put("Stock", "92");
+			    product6.put("Product Price (AUD)", "172.00");
+			    product6.put("Pack of", "Pack of 8");
+			    product6.put("Discount Type", "Percentage Discount");
+			    product6.put("Discount %", "10");
+			    product6.put("Discount Price (AUD)", "17.20"); // 10% of 172.00
+			    product6.put("Short Description", "Crisp blue-raspberry chill for frostings, frappes, and summer pop-ups.");
+			    product6.put("Image Path", Dynamic_file_path + "Blue Raspberry Glacier.png");
 
 			    return new Object[][] {
-			        { product1 },/*
+			        { product1 },
 			        { product2 },
 			        { product3 },
-			        { product4 } */
+			        { product4 },
+			        { product5 },
+			        { product6 }
 			    };
 		    }
 		  
