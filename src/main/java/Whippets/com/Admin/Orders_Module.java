@@ -110,8 +110,9 @@ public class Orders_Module extends Product_module{
 	    	   
 		       
 	    	  String Drivername ="Nikolai Petrov";  
-	    	   
-	         order_details_by_customer_name("Sindbaad Sarkar");
+	    	
+	    	
+	         order_details_by_customer_name("Sindbaad Saarkar");
 	    	 js.executeScript("arguments[0].scrollIntoView(true);",p.driver_dropdown());
 	    	   Select s = new  Select(p.driver_dropdown());
 	    	   List <WebElement> options = s.getOptions();
@@ -137,6 +138,7 @@ public class Orders_Module extends Product_module{
 	    					 pd.searchBox();
 	    				 }}
 	    			   break;}}}
+	    	    
 	
 	      
 	      public void order_details_by_customer_name(String Customer_name)throws IOException, InterruptedException{
