@@ -168,8 +168,7 @@ public class Orders_Module extends Product_module{
 	   	    		            break ;}}} 
 	       
 	       
-	       
-	
+	      
      public void all_Collections_clear(){
     	 
     	 Column_names_and_Values.clear();
