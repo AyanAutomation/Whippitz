@@ -16,9 +16,9 @@ public class Variation_Module_Locaters extends Generic_codes{
 	@FindBy(xpath="//h3[text()='Admin | Product Variation']")
 	private WebElement  variation_list_landing_confirmation;
 	@FindBy(xpath="//table//tbody")
-	private WebElement  Table_List; /*
-	@FindBy(xpath="")
-	private WebElement  ;
+	private WebElement  Table_List; 
+	@FindBy(xpath="//form")
+	private WebElement  Add_Edit_form; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -64,18 +64,24 @@ public class Variation_Module_Locaters extends Generic_codes{
     public List<WebElement> delete_buttons(){
     List<WebElement> delete_buttons = Table_List().findElements(By.xpath(".//tr//a[2]"));
     WebElementWait(delete_buttons);
-    return delete_buttons;} /*
+    return delete_buttons;}
+    public WebElement Add_Edit_form(){
+    WebElementWait(Add_Edit_form);
+    return Add_Edit_form;}
+    public List<WebElement> inputs(){
+    Add_Edit_form();	
+    List<WebElement> inputs = Add_Edit_form().findElements(By.xpath(".//input[@class='form-control required']"));
+    WebElementWait(inputs);
+    return inputs;}
+    public WebElement submit(){
+    Add_Edit_form();
+    WebElement submit =	Add_Edit_form().findElement(By.xpath(".//button"));
+    WebElementWait(submit);
+    return submit;} /*
     public WebElement (){
     WebElementWait();
-    return ;}public WebElement (){
-    WebElementWait();
-    return ;}
+    return ;}  /*
     public WebElement (){
-    WebElementWait();
-    return ;}
-    public WebElement (){
-    WebElementWait();
-    return ;}public WebElement (){
     WebElementWait();
     return ;}
     public WebElement (){

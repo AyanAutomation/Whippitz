@@ -5,9 +5,9 @@
     <classes>
       <class name="Whippets.com.Admin.Variation_Module">
         <methods>
-          <include name="Variation_list_accessor"/>
           <include name="Process_Kill"/>
           <include name="Setup"/>
+          <include name="Add_Variation" invocation-numbers="8"/>
         </methods>
       </class> <!-- Whippets.com.Admin.Variation_Module -->
     </classes>
