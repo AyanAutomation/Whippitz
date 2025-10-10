@@ -60,10 +60,11 @@ public class Variation_Module_Locaters extends Generic_codes{
     Table_List();
     List<WebElement> edit_buttons = Table_List().findElements(By.xpath(".//tr//a[1]"));
     WebElementWait(edit_buttons);
-    return edit_buttons;}/*
-    public WebElement (){
-    WebElementWait();
-    return ;}
+    return edit_buttons;}
+    public List<WebElement> delete_buttons(){
+    List<WebElement> delete_buttons = Table_List().findElements(By.xpath(".//tr//a[2]"));
+    WebElementWait(delete_buttons);
+    return delete_buttons;} /*
     public WebElement (){
     WebElementWait();
     return ;}public WebElement (){
